@@ -1,0 +1,119 @@
+@keyframes simpleFadeIn {
+    0% { opacity: 0 }
+    100% { opacity: 1 }
+}
+
+:root {
+	--accordion-base-color: #003638;
+	--accordion-text-color: #003638;
+	--accordion-text-size: 16px;
+}
+
+.product-accordion__item {
+	border-bottom: 1px solid var(--accordion-base-color);
+}
+.product-accordion__title {
+	padding: 1rem 0;
+	position: relative;
+}
+.product-accordion__title:hover {
+	cursor: pointer;
+}
+.product-accordion__title:after {
+	background-image: url(accordion-arrow.svg);
+	background-repeat: no-repeat;
+	background-size: auto;
+	background-position: center;
+	content: '';
+	display: block;
+	height: 30px;
+	width: 30px;
+	position: absolute;
+	right: 0;
+	top: calc(50% - 10px);
+	transform: rotate(180deg);
+	transform-origin: center center;
+	transition: all 200ms cubic-bezier(.05,1.06,1,1);
+}
+.product-accordion__text * {
+	font-size: var(--accordion-text-size);
+}
+.product-accordion__body {
+	padding: 1rem 0;
+	transition: all 200ms cubic-bezier(.05,1.06,1,1);
+}
+
+.product-accordion__text * {
+	font-size: 15px;
+	line-height: 1.4em;
+}
+.product-accordion__text ul li {
+	margin-bottom: .25rem
+}
+
+.product-accordion__item.is--collapsed .product-accordion__title:after {
+	transform: rotate(0deg);
+}
+.product-accordion__item.is--collapsed .product-accordion__text {
+	display: none;
+}
+
+.product-accordion__item:not(.is--collapsed) .product-accordion__body {
+	animation-name: simpleFadeIn;
+    animation-duration: 800ms;
+}
+
+/* 
+.product-accordion__body {
+	color: var(--accordion-text-color);
+	font-size: var(--accordion-text-size);
+	display: flex;
+	position: relative;
+	line-height: 1;
+	padding: 1.5rem 0;
+}
+
+.product-accordion .summary__title {
+	display: flex;
+	flex: 1;
+}
+
+.product-accordion+.product-accordion {
+	margin-top: 0;
+	border-top: none;
+}
+
+.product-accordion {
+	margin-top: 2.5rem;
+	margin-bottom: 0;
+	border-top: 0.1rem solid rgba(var(--accordion-base-color), 1);
+	border-bottom: 0.1rem solid rgba(var(--accordion-base-color), 1);
+}
+
+.product-accordion__title {
+	display: inline-block;
+	max-width: calc(100% - 6rem);
+	min-height: 1.6rem;
+	margin: 0;
+	word-break: break-word;
+}
+
+.product-accordion .icon-product-accordion {
+	align-self: center;
+	min-width: 1.6rem;
+	margin-right: 1rem;
+	fill: rgb(var(--accordion-base-color));
+}
+
+.product-accordion details[open]>summary .icon-caret {
+	transform: rotate(180deg);
+}
+
+.product-accordion__content {
+	margin-bottom: 1.5rem;
+	word-break: break-word;
+}
+
+.product-accordion__content img {
+	max-width: 100%;
+} */

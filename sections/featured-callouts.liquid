@@ -1,0 +1,133 @@
+<div id="hero-{{ section.id }}" class="bg--texture" data-bg="{{ section.settings.bg_color | default: 'bg--lavender' }}"> 
+	<div class="inner">
+		<div class="columns section-callouts">
+			<div class="column pt--2 pb--2" data-col="2">
+				<h2 class="h--xl mb--1 mt--2" {{ block.shopify_attributes }}>
+					{{ section.settings.heading | newline_to_br }}
+				</h2>
+				{{ section.settings.text | newline_to_br }}
+				{%- if section.settings.button_label != blank -%}
+				<div class="mt--2" {{ section.shopify_attributes }}>
+					<a{% if section.settings.button_link != blank %} href="{{ section.settings.button_link }}"{% endif %} class="button button-arrow"{% if section.settings.button_link == blank %} aria-disabled="true"{% endif %}>{{ section.settings.button_label | escape }}</a>
+				</div>
+				{%- endif -%}
+			</div>
+			<div class="column" data-col="2">
+				<div class="callouts">
+					<div class="callouts-image"></div>
+					<div class="callouts-list">
+					{%- if section.settings.list_header != blank -%}
+						<div class="callouts-list-header">
+							{{ section.settings.list_header }}
+						</div>
+					{%- endif -%}
+					{%- for block in section.blocks -%}
+						{%- case block.type -%}
+						{%- when 'list' -%}
+						<div class="callouts-list-item"><span class="t--upper">{{ block.settings.list_item }}</span></div>
+						{%- endcase -%}
+					{%- endfor -%}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+"name": "Featured Callouts",
+"tag": "section",
+"settings": [
+	{
+		"type": "image_picker",
+		"id": "image",
+		"label": "Image"
+	},
+    {
+		"type": "textarea",
+        "id": "heading",
+        "label": "Heading"
+	},
+    {
+		"type": "textarea",
+        "id": "text",
+        "label": "Text"
+	},
+    {
+		"type": "text",
+        "id": "button_label",
+        "label": "Button Label"
+	},
+    {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button Link"
+    },
+	{
+		"type": "textarea",
+        "id": "list_header",
+        "label": "List Header"
+	},
+	{
+          "type": "select",
+          "id": "bg_color",
+          "options": [
+            {
+              "value": "bg--amaranth",
+              "label": "Amaranth"
+            },
+            {
+              "value": "bg--apricot",
+              "label": "Apricot"
+            },
+            {
+              "value": "bg--cerulean",
+              "label": "Cerulean"
+            },
+            {
+              "value": "bg--lavender",
+              "label": "Lavender"
+            },
+            {
+              "value": "bg--lemon",
+              "label": "Lemon"
+            },
+            {
+              "value": "bg--lilac",
+              "label": "Lilac"
+            },
+            {
+              "value": "bg--sunflower",
+              "label": "Sunflower"
+            },
+            {
+              "value": "bg--tangerine",
+              "label": "Tangerine"
+            }
+          ],
+          "default": "bg--lavender",
+          "label": "Lavender"
+    }
+],
+"blocks": [
+	{
+		"type": "list",
+		"name": "List",
+		"limit": 6,
+		"settings": [
+			{
+				"type": "text",
+				"id": "list_item",
+				"label": "Item"
+			}
+		]
+	}
+],
+"presets": [
+	{
+		"name": "Featured Callouts"
+	}
+]
+}
+{% endschema %}

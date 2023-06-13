@@ -1,0 +1,90 @@
+<div id="section-{{ section.id }}" class="">
+  <div class="pdp-features">
+    {% for block in section.blocks %}
+    <div class="pdp-features-column{% if block.settings.image_full == true %} reverse{% endif %}"{% if block.settings.bg_color != blank %} style="background-color: {{ block.settings.bg_color }}"{% endif %}>
+      {%- if block.settings.heading != blank -%}
+      <div class="pdp-features-body">
+        <h2 class="h--xl {{ block.settings.text_color }}">{{ block.settings.heading | newline_to_br }}</h2>
+        {% if block.settings.body != blank %}
+        <div class="mt--1 {{ block.settings.text_color }}">
+          {{ block.settings.body | newline_to_br }}
+        </div>
+        {% endif %}
+      </div>
+      {%- endif -%}
+      {%- if block.settings.image != blank -%}
+      <div class="pdp-features-image{% if block.settings.image_full == true %} image-full image-mask{% endif %}">
+        <picture>
+            <source srcset="{{ block.settings.image | img_url: '1000x' }}" media="(min-width: 800px)" />
+            <img src="{{ block.settings.image_mobile | img_url: '900x' }}" height="" width="" loading="lazy" alt="">
+         </picture>
+      </div>
+      {%- endif -%}
+    </div>
+    {% endfor %}
+</div>
+
+{% schema %}
+  {
+    "name": "PDP Features",
+    "tag": "section",
+    "blocks": [
+      {
+        "type": "column",
+        "name": "Column",
+        "settings": [
+          {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color"
+          },
+          {
+            "type": "select",
+            "id": "text_color",
+            "label": "Text Color",
+            "options": [
+                {
+                    "value": "c--base",
+                    "label": "Base"
+                },
+                {
+                    "value": "c--tan",
+                    "label": "Tan"
+                }
+            ],
+            "default": "c--base"
+          },
+          {
+            "type": "textarea",
+            "id": "heading",
+            "label": "Heading"
+          }, {
+            "type": "richtext",
+            "id": "body",
+            "label": "Body"
+          }, {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "checkbox",
+            "id": "image_full",
+            "label": "Image (Full)",
+            "info": "Scale image to full width"
+          },
+          {
+            "type": "image_picker",
+            "id": "image_mobile",
+            "label": "Image (Mobile)"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "PDP Features"
+      }
+    ]
+  }
+{% endschema %}

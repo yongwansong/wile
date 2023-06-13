@@ -1,0 +1,119 @@
+<div id="section-{{ section.id }}" class="hero_promos bg--white">
+    <div class="columns">
+        <div class="column bg--blue aspect-ratio-1-1 nogap t--center valign-center bg--silhouette" data-bg="blue" data-col="2">
+            <div class="m--5 z--2">
+
+                {% if section.settings.col1_heading != blank %}
+                <h3 class="h--sans c--tan h--sm">{{ section.settings.col1_heading | newline_to_br }}</h3>
+                {% endif %}
+                
+                <div class="mt--2 mb--2 rotating-messages">
+                {% for block in section.blocks %}
+                    <h4 class="h--xl c--tan h--sans">{{ block.settings.message }}</h4>
+                {% endfor %}
+                </div>
+
+                {% if section.settings.col1_subheading != blank %}
+                <p class="c--tan">{{ section.settings.col1_subheading | newline_to_br }}</p>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="column bg--blue aspect-ratio-1-1 nogap valign-center" data-col="2">
+            {%- if section.settings.col2_image != blank -%}
+				<div class="img-wrap">
+				<img srcset="{%- if section.settings.col2_image.width >= 375 -%}{{ section.settings.col2_image | img_url: '375x' }} 375w,{%- endif -%}
+					{%- if section.settings.col2_image.width >= 750 -%}{{ section.settings.col2_image | img_url: '750x' }} 750w,{%- endif -%}
+					{%- if section.settings.col2_image.width >= 1100 -%}{{ section.settings.col2_image | img_url: '1100x' }} 1100w,{%- endif -%}
+					{%- if section.settings.col2_image.width >= 1500 -%}{{ section.settings.col2_image | img_url: '1500x' }} 1500w,{%- endif -%}
+					{%- if section.settings.col2_image.width >= 1780 -%}{{ section.settings.col2_image | img_url: '1780x' }} 1780w,{%- endif -%}
+					{%- if section.settings.col2_image.width >= 2000 -%}{{ section.settings.col2_image | img_url: '2000x' }} 2000w,{%- endif -%}
+					{%- if section.settings.col2_image.width >= 2800 -%}{{ section.settings.col2_image | img_url: '2800x' }} 2800w{%- endif -%}"
+					sizes="{% if section.settings.col2_image_2 != blank and section.settings.stack_col2_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.col2_image_2 != blank %}50vw{% else %}100vw{% endif %}"
+					src="{{ section.settings.col2_image | img_url: '750x' }}"
+					loading="lazy"
+					alt="{{ section.settings.col2_image.alt | escape }}"
+					width="{{ section.settings.col2_image.width }}"
+					height="{{ section.settings.col2_image.width | divided_by: section.settings.image.aspect_ratio }}"
+				>
+				</div>
+			{%- endif -%}
+        </div>
+    </div>
+</div>
+
+{% javascript %}
+
+(function() {
+
+    let messages = document.querySelector('.rotating-messages'),
+        messages_items = document.querySelectorAll('.rotating-messages > h4'),
+        messages_next = 0;
+
+    function updateMessages(cnt) {
+        [].forEach.call(messages_items, function(item,index) {
+            if(index == cnt) {
+                messages_items[index].style.display = 'block';
+            } else {
+                messages_items[index].style.display = 'none';
+            }
+        })
+        
+        messages_next = cnt + 1;
+
+        if(messages_next >= messages_items.length) {
+            messages_next = 0;
+        }
+    }
+    
+    updateMessages(0);
+
+    setInterval(function(){
+        updateMessages(messages_next);
+    }, 3000);
+    
+})();
+
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Section Rotating Message",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "col1_heading",
+            "label": "Left colum – Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "col1_subheading",
+            "label": "Left column – Subheading"
+        },
+        {
+            "type": "image_picker",
+            "id": "col2_image",
+            "label": "Right column – Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "heading",
+            "name": "Messages",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "message",
+                    "label": "Message"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Section Rotating Messages"
+		}
+	]
+}
+{% endschema %}

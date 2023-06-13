@@ -1,0 +1,125 @@
+<div class="bg--yellow bg--silhouette">
+    <div class="section-rotator inner txt-center-align pt--3 pb--3" style="min-height:{{ section.settings.min_height | append: 'vh' }}">
+        
+        {% if section.settings.top_text != blank %}
+        <h3 class="h--sans c--tan h--md">{{ section.settings.top_text | newline_to_br }}</h3>
+        {% endif %}
+        
+      	{% for block in section.blocks %}
+        <div class="mt--2 mb--2 rotating-quotes" id="{{ section.id }}">
+            <h4 class="h--xxl c--dark-green">{{ block.settings.quote | newline_to_br }}</h4>
+          	{% if block.settings.logo != blank %}
+          	<img src="{{ block.settings.logo | img_url: 'master' }}" alt="{{ block.settings.logo_text | default: '' }}" 
+                height=""
+                width=""
+                loading="lazy"
+                style="max-width:{{ section.settings.logo_width | append: 'px' }}">
+          	{% endif %}
+        </div>
+      	{% endfor %}
+
+        {% if section.settings.btm_text != blank %}
+        <p class="c--tan h--md">{{ section.settings.btm_text | newline_to_br }}</p>
+        {% endif %}
+
+    </div>
+</div>
+
+{% javascript %}
+
+(function() {
+
+    let rotatingQuotes = document.querySelectorAll('.rotating-quotes'),
+        rotatingQuotesNext = 0;
+    
+    function updateRotatingQuote(cnt) {
+
+        [].forEach.call(rotatingQuotes, function(item,index) {
+            if(index == cnt) {
+                rotatingQuotes[index].style.display = 'block';
+            } else {
+                rotatingQuotes[index].style.display = 'none';
+            }
+        })
+        
+        rotatingQuotesNext = cnt + 1;
+
+        if(rotatingQuotesNext >= rotatingQuotes.length) {
+            rotatingQuotesNext = 0;
+        }
+    }
+    
+    updateRotatingQuote(0);
+
+    setInterval(function(){
+        updateRotatingQuote(rotatingQuotesNext);
+    }, 3000);
+    
+})();
+
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Section Rotater Quotes",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "top_text",
+            "label": "Top Text"
+        },
+        {
+            "type": "textarea",
+            "id": "btm_text",
+            "label": "Bottom Text"
+        },
+        {
+			"type": "range",
+			"id": "min_height",
+			"min": 0,
+			"max": 100,
+			"step": 10,
+            "default": 0,
+			"label": "Min Height"
+		},
+		{
+			"type": "range",
+			"id": "logo_width",
+			"min": 100,
+			"max": 600,
+			"step": 10,
+            "default": 200,
+			"label": "Logo width"
+		}
+    ],
+    "blocks": [
+        {
+            "type": "heading",
+            "name": "Quotes",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "quote",
+                    "label": "Quote"
+                },
+				{
+                    "type": "image_picker",
+                    "id": "logo",
+                    "label": "Logo"
+                },
+  				{
+                    "type": "text",
+                    "id": "logo_text",
+                    "label": "Logo Text"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Section Rotator Quotes"
+		}
+	]
+}
+{% endschema %}

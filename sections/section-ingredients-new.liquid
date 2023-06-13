@@ -1,0 +1,104 @@
+{% if product.metafields["custom_fields"]["product_ingredients"] != blank %}
+
+  <div id="section-{{ section.id }}" class="{{ section.settings.bg_color }}">
+
+    <div class="pt--5 pb--5">
+
+      {% if section.settings.headline != blank %}
+        <h2 class="h--xl t--center">{{ section.settings.headline | newline_to_br }}</h2>
+      {% endif %}
+
+      {% comment %}
+        - Ingredients metafield widget
+      {% endcomment %}
+
+      <div class="product-ingredients mt--2" id="block-{{ block.id }}">
+        <div class="product-ingredients__items">
+          {% for item in product.metafields["custom_fields"]["product_ingredients"] %}
+            <div class="product-ingredients__item">
+              {% if item.image %}
+                <div class="product-ingredients__image">
+                  <img src="{{ item.image }}" alt="{{ item.title }}" height="586" width="586" loading="lazy">
+                </div>
+              {% endif %}
+              <div class="product-ingredients__text {{ section.settings.bg_color }}">
+                <div class="product-ingredients__title">
+                  <h3 class="t--sm t--bold t--upper">{{ item.title }}</h3>
+                </div>
+                {% if item.description != blank %}
+                  <div class="product-ingredients__body">
+                    {{ item.description }}
+                  </div>
+                {% endif %}
+                {% if item["link"] != blank %}
+                   <a href="{{  item['link'] }}" class="t--xs">Learn More</a>
+                {% endif %}
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+{% endif %}
+
+<script type="module">
+  var ingredientsList = tns({
+		container: '.product-ingredients__items',
+		disable: true,
+		responsive: {
+			736: {
+				disable: false,
+				items: 4,
+				slideBy: 1,
+				loop: false,
+				autoplay: false,
+				controls: true,
+				autoplayButton: false,
+				autoHeight: false,
+				nav: false,
+				speed: 800
+			}
+		}
+	});
+</script>
+
+
+{% schema %}
+  {
+    "name": "Ingredients (New)",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "text",
+        "id": "headline",
+        "label": "Headline"
+      }, {
+        "type": "paragraph",
+        "content": "Ingredients are managed per product as custom meta fields"
+      }, {
+        "type": "select",
+        "id": "bg_color",
+        "label": "Background color",
+        "options": [
+          {
+            "value": "bg--white",
+            "label": "White"
+          }, {
+            "value": "bg--tan",
+            "label": "Tan"
+          }
+        ],
+        "default": "bg--white"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Ingredients (New)"
+      }
+    ]
+  }
+{% endschema %}

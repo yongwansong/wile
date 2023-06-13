@@ -1,0 +1,156 @@
+{%- capture featured_articles -%}
+  {%- for item in section.blocks -%}
+    {%- case item.type -%}
+        {%- when 'featured_article' -%}
+        {{- item.settings.article.id -}}
+        {%- if forloop.last == false -%},{%- endif -%}
+    {%- endcase -%}
+{%- endfor -%}
+{%- endcapture -%}
+
+{% assign featured_array = featured_articles | split: ',' %}
+{% assign featured_total = featured_array | size %}
+
+{% assign article_count = 0 %}
+{% assign article_limit = 3 %}
+{% assign article_show = article_limit | minus: featured_total -%}
+
+<!-- {{ article_show | size }} -->
+
+<div class="bg--white pt--5 pb--5">
+    <div class="inner">
+        {% if section.settings.headline != blank %}
+        <h3 class="h--xl t--center h--italic">{{ section.settings.headline }}</h3>
+        {% endif %}
+        <div class="columns mt--2">
+
+            {% for featured in section.blocks %}
+                {%- case featured.type -%}
+                    {%- when 'featured_article' -%}
+                    <div class="column" data-col="3">
+                        {%- render 'article-card-static', 
+                            article: featured.settings.article, 
+                            show_image: section.settings.show_image, 
+                            show_date: section.settings.show_date, 
+                            show_author: section.settings.show_author,
+                            show_excerpt: section.settings.show_excerpt
+                            show_comments: section.settings.show_comments
+                        -%}
+                    </div>
+                {%- endcase -%}
+            {% endfor %}
+          
+            {% if article_show > 0 %}
+			{% for link in linklists.blogs.links %}
+              {% assign blog = link.object %}
+              {% for article in blog.articles %}
+                  {% assign article_id = article.id | append: "" %}
+                  {% if featured_array contains article_id %}
+                  {% else %}
+                      <div class="column" data-col="3">
+                          {%- render 'article-card-static', 
+                              article: article, 
+                              show_image: section.settings.show_image, 
+                              show_date: section.settings.show_date, 
+                              show_author: section.settings.show_author,
+                              show_excerpt: section.settings.show_excerpt
+                              show_comments: section.settings.show_comments
+                          -%}
+                      </div>
+                      {% assign article_count = article_count | plus: 1 %}
+                  {% endif %}
+                  {% if article_count == article_show %}
+                  {% break %}
+                  {% endif %}
+              {% endfor %}
+			{% endfor %}
+            {% endif %}
+           
+        </div>
+    </div>
+</div>
+
+{% comment %}
+
+{% for link in linklists.blogs.links %}
+  {% assign blog = link.object %}
+  {% for article in blog.articles %}
+    <h2><a href="{{ article.url }}">{{ article.title }}</a></h2>
+  {% endfor %} 
+{% endfor %}
+{% endcomment %}
+
+{% schema %}
+{
+	"name": "Featured Articles",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "headline",
+            "label": "Headline"
+        },
+        {
+            "type": "checkbox",
+            "id": "show_image",
+            "label": "Show Image",
+            "default": true
+        },
+        {
+            "type": "checkbox",
+            "id": "show_date",
+            "label": "Show Date",
+            "default": false
+        },
+        {
+			"type": "checkbox",
+			"id": "show_author",
+			"label": "Show Author",
+			"default": false
+		},
+        {
+			"type": "checkbox",
+			"id": "show_excerpt",
+			"label": "Show Excerpt",
+			"default": false
+		},
+        {
+			"type": "checkbox",
+			"id": "show_comments",
+			"label": "Show Comments",
+			"default": false
+		}
+    ],
+    "blocks": [
+        {
+            "type": "featured_article",
+            "name": "Featured Article",
+            "limit": 3,
+            "settings": [
+                {
+                    "type": "article",
+                    "id": "article",
+                    "label": "Article"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Featured Articles"
+		}
+	]
+}
+{% endschema %}
+
+{% comment %}
+{% for article in blogs.journal.articles limit: 3 %}
+<div class="column" data-col="3">
+    <div class="article-card article-card-border">
+        <h3 class="h--xs mb--1 t--upper">{% for tag in article.tags limit: 1 %}{{ tag }} {% endfor %}</h3>
+        <h4 class="h--md">{{ article.title }}</h4>
+        <a href="{{ article.url }}" class="t--sm t--link mt--2">Read More</a>
+    </div>
+</div>
+{% endfor %}
+{% endcomment %}

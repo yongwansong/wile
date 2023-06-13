@@ -1,0 +1,150 @@
+{% comment %}
+{%- capture products -%}
+  {%- for item in section.blocks -%}
+    {%- case item.type -%}
+        {%- when 'featured_article' -%}
+        {{- item.settings.article.id -}}
+        {%- if forloop.last == false -%},{%- endif -%}
+    {%- endcase -%}
+{%- endfor -%}
+{%- endcapture -%}
+
+{% assign featured_array = featured_articles | split: ',' %}
+{% assign featured_total = featured_array | size %}
+
+{% assign products_count = 0 %}
+{% assign products_limit = 3 %}
+{% assign article_show = article_limit | minus: featured_total -%}
+{% endcomment %}
+
+<div class="{{ section.settings.bg_color }} pt--5 pb--5">
+    <div class="inner">
+
+        {% if section.settings.headline != blank or section.settings.body != blank %}
+        <div class="t--center">
+            {% if section.settings.headline != blank %}
+            <h3 class="h--xl mb--1">{{ section.settings.headline }}</h3>
+            {% endif %}
+            {{ section.settings.body }}
+        </div>
+        {% endif %}
+
+        <div class="splide products-slider slide__arrows mt--2" data-splide='{"type":"slide","perPage":4,"pagination":false,"clones":0,"breakpoints": {"600": {"perPage": 1}}}'>
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev" aria-label="Previous"></button>
+                <button class="splide__arrow splide__arrow--next" aria-label="Next"></button>
+            </div>
+            <div class="splide__track">
+                <div class="splide__list">
+                    {% for block in section.blocks %}
+                        {%- case block.type -%}
+                            {%- when 'item' -%}
+                            <div class="splide__slide">
+                                {%- capture title -%}
+                                    {% if block.settings.title != blank %}
+                                    {{ block.settings.title }}
+                                    {% else %}
+                                    {{ block.settings.product.title }}
+                                    {% endif %}
+                                {%- endcapture -%}
+                                {%- render 'card-product', 
+                                    product: block.settings.product,
+                                    image: block.settings.image,
+                                    title: title,
+                                    description: block.settings.description | default: ''
+                                -%}
+                            </div>
+                        {%- endcase -%}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+      
+      	{%- if section.settings.button_link != blank -%}
+	    <div class="t--center">
+        <a href="{{ section.settings.button_link }}" class="button mt--3 button-arrow">{{ section.settings.button_label | escape }}</a>
+        </div>
+        {%- endif -%}
+
+    </div>
+</div>
+
+{% schema %}
+{
+	"name": "Featured Products",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "headline",
+            "label": "Headline"
+        },
+        {
+            "type": "richtext",
+            "id": "body",
+            "label": "Body"
+        },
+        {
+            "type": "select",
+            "id": "bg_color",
+            "label": "Background color",
+            "options": [
+                {
+                    "value": "bg--white",
+                    "label": "White"
+                },
+                {
+                    "value": "bg--tan",
+                    "label": "Tan"
+                }
+            ],
+            "default": "bg--white"
+        },
+		{
+            "type": "text",
+            "id": "button_label",
+            "default": "Button label",
+            "label": "Button label"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "limit": 12,
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Product"
+                },
+                {
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Featured Products"
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,116 @@
+{% comment %}<script src="{{ 'global.js' | asset_url }}" defer="defer"></script>{% endcomment %}
+
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="theme-color" content="#003537">
+	<link rel="canonical" href="{{ canonical_url }}">
+	<link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+	<title>{{ page_title }}</title>
+	{%- if settings.favicon != blank -%}
+	<link rel="icon" type="image/png" href="{{ settings.favicon | img_url: '32x32' }}">
+	{%- endif -%}
+	{% if page_description %}
+	<meta name="description" content="{{ page_description | escape }}">
+	{% endif %}
+	<meta name="facebook-domain-verification" content="ypi9o4g8mgjd852g0c0lsr9knaf7mx" />
+	<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-W3Q8LJ5');</script>
+	{{ content_for_header }}
+	{% render 'meta-tags' %}
+	<script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+	<script 
+		src="//code.jquery.com/jquery-3.6.0.min.js"
+		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+		crossorigin="anonymous"></script>
+	{{ 'theme.min.css' | append: '?v=1.5' | asset_url | stylesheet_tag }}
+	<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+	<script src="{{ 'site.min.js' | asset_url }}" defer="defer"></script>
+	{%- render 'bold-subscription-widget' -%}
+	{{ 'bsub.js' | asset_url | script_tag }}
+	{{ 'bsub.scss.css' | asset_url | stylesheet_tag }}
+	{%  comment %}{% render 'taboola_base' %}{% endcomment %}
+	{% comment %}{% render 'quantcast_base' %}{% endcomment %}
+	<script type="text/javascript">
+	var AddShoppersWidgetOptions = { 'loadCss': false, 'pushResponse': false };
+	(!function(){
+		var t=document.createElement("script");
+		t.type="text/javascript",
+		t.async=!0,
+		t.id="AddShoppers",
+		t.src="https://shop.pe/widget/widget_async.js#625053b727f7c370c573a927",
+		document.getElementsByTagName("head")[0].appendChild(t)
+	}());
+	</script>
+	{% render 'wsg-custom' %}
+	{% render 'analyzify-product-datalayer.liquid' %}
+	{{ 'tiny-slider.css' | append: '?v=1.2' | asset_url | stylesheet_tag }}
+    <script src="{{ 'tiny-slider.js' | asset_url }}" defer="defer"></script>
+
+{% render 'digismoothie-giftbox' %}
+</head>
+
+
+{% assign layouts = "index,landing" | split: ',' %}
+
+{%- capture pageLayout -%}
+{%- if layouts contains template.name or layouts contains template.suffix -%}
+{%- else -%}
+page-inner
+{%- endif -%}
+{%- endcapture -%}
+
+<body class="{{ pageLayout }}{% if template.name == 'product' %} bg--tan{% endif %}">
+	
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3Q8LJ5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+
+	{%- render 'skip-content' -%}
+
+	<div class="siteheader">
+		{%- section 'announcement' -%}
+		{%- section 'header' -%}
+	</div>
+
+	<main class="sitecontent" role="main" tabindex="-1" id="MainContent">
+		{{ content_for_layout }}
+	</main>
+
+	{% section 'footer' %}
+
+	<script>
+		window.routes = {
+			cart_add_url: '{{ routes.cart_add_url }}',
+			cart_change_url: '{{ routes.cart_change_url }}',
+			cart_update_url: '{{ routes.cart_update_url }}'
+		};
+		window.cartStrings = {
+			error: "{{ 'sections.cart.cart_error' | t }}",
+			quantityError: "{{ 'sections.cart.cart_quantity_error_html' | t }}"
+		}
+		window.variantStrings = {
+			addToCart: "{{ 'products.product.add_to_cart' | t }}",
+			soldOut: "{{ 'products.product.sold_out' | t }}",
+			unavailable: "{{ 'products.product.unavailable' | t }}"
+		}
+	</script>
+
+	<script src="{{ 'component-slider.min.js' | asset_url }}" defer="defer"></script>
+	<script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=Xf5uH7"></script>
+
+	{% render 'subscribe-it-helper' %}
+	{% comment %} <!-- CRITEO START --> {% endcomment %}
+	{% render 'criteo-tracking' %}
+	{% comment %} <!-- CRITEO END --> {% endcomment %}
+	{% render 'preorder-now' %}
+</body>
+
+</html>

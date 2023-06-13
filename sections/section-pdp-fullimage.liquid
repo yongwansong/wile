@@ -1,0 +1,42 @@
+<div id="section-{{ section.id }}">
+  <div class="pdp-fullimage">
+    {%- if section.settings.image != blank -%}
+      <picture>
+        <source srcset="{{ section.settings.image | img_url: '2400x' }}" media="(min-width: 800px)" width="2400" height="" />
+        <img
+          src="{{ section.settings.image_mobile | img_url: '900x' }}"
+          loading="lazy"
+          height=""
+          width="900"
+          alt="">
+      </picture>
+    {%- endif -%}
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "PDP Full Image",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "color",
+        "id": "bg_color",
+        "label": "Background Color"
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      }, {
+        "type": "image_picker",
+        "id": "image_mobile",
+        "label": "Image (Mobile)"
+      }
+    ],
+    "presets": [
+      {
+        "name": "PDP Full Image"
+      }
+    ]
+  }
+{% endschema %}

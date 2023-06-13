@@ -1,0 +1,160 @@
+<div id="hero-{{ section.id }}" class="hero_banner">
+  {%- if section.settings.image != blank -%}
+  	<div class="hero_banner-media">
+  	{% if section.settings.image_mobile != blank %}
+  		<picture>
+          	<source media="(min-width: 700px)" srcset="{{ section.settings.image | img_url: '2000x' }}" sizes="100vw">
+    		<img src="{{ section.settings.image_mobile | img_url: '600x' }}" alt="" height="" width="" loading="lazy">
+		</picture>
+  	{% else %}
+      <img srcset="{%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
+        {%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+        {%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
+        {%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+        {%- if section.settings.image.width >= 2800 -%}{{ section.settings.image | img_url: '2800x' }} 2800w{%- endif -%}"
+        sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
+        src="{{ section.settings.image | img_url: '900x' }}"
+        loading="lazy"
+        alt="{{ section.settings.image.alt | escape }}"
+        width="{{ section.settings.image.width }}"
+        height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
+      >
+    {% endif %}
+    </div>
+  {%- endif -%}
+
+  <div class="hero_banner-content">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <h1 class="hero_banner-heading h--xxl{% if section.settings.text_reverse %} c--white{% endif %}" {{ block.shopify_attributes }}>
+              {{ block.settings.heading | newline_to_br }}
+            </h1>
+          {%- when 'text' -%}
+            <div class="hero_banner-text mb--2{% if section.settings.text_reverse %} c--white{% endif %}" style="max-width:420px" {{ block.shopify_attributes }}>
+              {{ block.settings.text | escape }}
+            </div>
+          {%- when 'buttons' -%}
+            <div class="hero_banner-buttons{% if block.settings.button_label_1 != blank and block.settings.button_link_1 != blank and block.settings.button_label_2 != blank and block.settings.button_link_2 != blank %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
+              {%- if block.settings.button_label_1 != blank -%}
+                <a{% if block.settings.button_link_1 != blank %} href="{{ block.settings.button_link_1 }}"{% endif %} class="button button-solid"{% if block.settings.button_link_1 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_1 | escape }}</a>
+              {%- endif -%}
+              {%- if block.settings.button_label_2 != blank -%}
+                <a{% if block.settings.button_link_2 != blank %} href="{{ block.settings.button_link_2 }}"{% endif %} class="button button-solid ml--1"{% if block.settings.button_link_2 == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label_2 | escape }}</a>
+              {%- endif -%}
+              <br>
+              {% if section.settings.shop_all == true %}
+              <a href="{{ routes.collections_url }}" class="t--link t--xs mt--1">Browse all products</a>
+              {% endif %}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "t:sections.hero-banner.name",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "t:sections.hero-banner.settings.image.label"
+    },
+	{
+      "type": "image_picker",
+      "id": "image_mobile",
+      "label": "Mobile (600x1000)"
+    },
+    {
+      "type": "checkbox",
+			"id": "text_reverse",
+			"label": "Reverse text color (white)",
+			"default": false
+    },
+	{
+      "type": "checkbox",
+	  "id": "shop_all",
+	  "label": "Show Browse Products",
+	  "default": false
+    }
+  ],
+  "blocks": [
+    {
+      "type": "heading",
+      "name": "t:sections.hero-banner.blocks.heading.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "heading",
+          "default": "Image banner",
+          "label": "t:sections.hero-banner.blocks.heading.settings.heading.label"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.hero-banner.blocks.text.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Give customers details about the banner image(s) or content on the template.",
+          "label": "t:sections.hero-banner.blocks.text.settings.text.label"
+        }
+      ]
+    },
+    {
+      "type": "buttons",
+      "name": "t:sections.hero-banner.blocks.buttons.name",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "button_label_1",
+          "default": "Button label",
+          "label": "t:sections.hero-banner.blocks.buttons.settings.button_label_1.label",
+          "info": "t:sections.hero-banner.blocks.buttons.settings.button_label_1.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_1",
+          "label": "t:sections.hero-banner.blocks.buttons.settings.button_link_1.label"
+        },
+        {
+          "type": "text",
+          "id": "button_label_2",
+          "default": "Button label",
+          "label": "t:sections.hero-banner.blocks.buttons.settings.button_label_2.label",
+          "info": "t:sections.hero-banner.blocks.buttons.settings.button_label_2.info"
+        },
+        {
+          "type": "url",
+          "id": "button_link_2",
+          "label": "t:sections.hero-banner.blocks.buttons.settings.button_link_2.label"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "t:sections.image-banner.presets.name",
+      "blocks": [
+        {
+          "type": "heading"
+        },
+        {
+          "type": "text"
+        },
+        {
+          "type": "buttons"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

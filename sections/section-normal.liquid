@@ -1,0 +1,137 @@
+<div id="hero-{{ section.id }}" class="hero_promos bg--white">
+    <div class="columns">
+        <div class="column bg--red aspect-ratio-1-1 nogap t--center valign-center bg--silhouette" data-bg="red" data-col="2">
+            <div class="m--5 z--2">
+
+                {% if section.settings.col1_heading != blank %}
+                <h3 class="h--sans c--tan h--sm">{{ section.settings.col1_heading | newline_to_br }}</h3>
+                {% endif %}
+                
+                <div class="mt--2 mb--2 rotating-messages">
+                {% for block in section.blocks %}
+                    <h4 class="h--xl c--tan h--sans">{{ block.settings.message }}</h4>
+                {% endfor %}
+                </div>
+
+                {% if section.settings.col1_subheading != blank %}
+                <p class="c--tan">{{ section.settings.col1_subheading | newline_to_br }}</p>
+                {% endif %}
+
+            </div>
+        </div>
+        <div class="column bg--blue aspect-ratio-1-1 nogap valign-center" data-col="2">
+            <div class="m--5">
+                {% if section.settings.col2_subheading != blank %}
+                <h3 class="h--sans c--tan h--sm mb--1">{{ section.settings.col2_subheading | newline_to_br }}</h3>
+                {% endif %}
+                {% if section.settings.col2_heading != blank %}
+                <h3 class="h--xl c--tan mb--2">{{ section.settings.col2_heading | newline_to_br }}</h3>
+                {% endif %}
+                {% if section.settings.col2_body != blank %}
+                <p class="c--tan">{{ section.settings.col2_body}}</p>
+                {% endif %}
+                {%- if section.settings.col2_button_label != blank -%}
+                <div class="mt--2" {{ section.shopify_attributes }}>
+                    <a{% if section.settings.col2_button_link != blank %} href="{{ section.settings.col2_button_link }}"{% endif %} class="button button-rev button-arrow"{% if section.settings.col2_button_link == blank %} aria-disabled="true"{% endif %}>{{ section.settings.col2_button_label | escape }}</a>
+                </div>
+                {%- endif -%}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% javascript %}
+
+(function() {
+
+    let messages = document.querySelector('.rotating-messages'),
+        messages_items = document.querySelectorAll('.rotating-messages > h4'),
+        messages_next = 0;
+    
+    function updateMessages(cnt) {
+        [].forEach.call(messages_items, function(item,index) {
+            if(index == cnt) {
+                messages_items[index].style.display = 'block';
+            } else {
+                messages_items[index].style.display = 'none';
+            }
+        })
+        
+        messages_next = cnt + 1;
+
+        if(messages_next >= messages_items.length) {
+            messages_next = 0;
+        }
+    }
+    
+    updateMessages(0);
+
+    setInterval(function(){
+        updateMessages(messages_next);
+    }, 3000);
+    
+})();
+
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Section Normal",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "col1_heading",
+            "label": "Left colum – Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "col1_subheading",
+            "label": "Left column – Subheading"
+        },
+        {
+            "type": "textarea",
+            "id": "col2_heading",
+            "label": "Right colum – Heading"
+        },
+        {
+            "type": "textarea",
+            "id": "col2_subheading",
+            "label": "Right colum – Subheading"
+        },
+        {
+            "type": "textarea",
+            "id": "col2_body",
+            "label": "Right column – Body"
+        },
+        {
+            "type": "text",
+            "id": "col2_button_label",
+            "label": "Right column - Button Label"
+        },
+        {
+            "type": "url",
+            "id": "col2_button_link",
+            "label": "Right column - Button Link"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "heading",
+            "name": "Messages",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "message",
+                    "label": "Message"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Section Normal"
+		}
+	]
+}
+{% endschema %}

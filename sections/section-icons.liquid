@@ -1,0 +1,123 @@
+<div id="section-{{ section.id }}" class="{{ section.settings.bg_color }}">
+    {% if section.settings.heading != blank %}
+    <div class="columns inner">
+        <h2 class="h--xl mb--2 c--tan">{{ section.settings.heading | newline_to_br }}</h2>
+    </div>
+    {% endif %}
+
+    <div class="columns wrap inner section-icons">
+    {%- for block in section.blocks -%}
+        {%- case block.type -%}
+        {%- when 'icon' -%}
+        <div class="column mt--1 mb--1 t--center" data-col="{{ section.blocks | size }}">
+            <div>
+                <img src="{{ block.settings.image | img_url: '200x' }}" 
+					alt="" 
+					style="max-width:{{ section.settings.max_width | append: 'px' }}"
+					height="{{ block.settings.image.height }}" 
+					width="{{ block.settings.image.width }}" 
+					loading="lazy">
+            </div>
+            <div class="t--sm t--serif {{ section.settings.txt_color }}">
+                 {{ block.settings.label | newline_to_br }}
+            </div>
+        </div>
+        {%- endcase -%}
+    {%- endfor %}
+    </div>
+
+</div>
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Section Icons",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+			"type": "range",
+			"id": "max_width",
+			"min": 50,
+			"max": 200,
+			"step": 10,
+			"default": 100,
+			"unit": "px",
+			"label": "Icon Size"
+		},
+        {
+			"type": "select",
+			"id": "bg_color",
+			"label": "Background color",
+			"options": [
+				{
+					"value": "bg--tan",
+					"label": "Tan"
+				},
+				{
+					"value": "bg--yellow",
+					"label": "Yellow"
+				},
+				{
+					"value": "bg--blue",
+					"label": "Blue"
+				},
+				{
+					"value": "bg--green-dark",
+					"label": "Dark Green"
+				},
+				{
+					"value": "bg--peach",
+					"label": "Peach"
+				}
+			],
+			"default": "bg--tan"
+		},
+        {
+			"type": "select",
+			"id": "txt_color",
+			"label": "Text color",
+			"options": [
+				{
+					"value": "c--base",
+					"label": "Base"
+				},
+				{
+					"value": "c--tan",
+					"label": "Tan"
+				}
+			],
+			"default": "c--base"
+		}
+    ],
+    "blocks": [
+        {
+            "type": "icon",
+            "name": "Icon",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "label",
+                    "label": "Label"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Section Icons"
+		}
+	]
+}
+{% endschema %}

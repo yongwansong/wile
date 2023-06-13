@@ -1,0 +1,113 @@
+<div id="hero-{{ section.id }}" class="hero_carousel">
+  
+  {%- for block in section.blocks -%}
+  <div>
+    <div class="hero_banner">
+
+      {%- if block.settings.image != blank -%}
+      <div class="hero_banner-media">
+        <picture>
+            <source srcset="{{ block.settings.image | img_url: '2000x' }}" media="(min-width: 800px)" />
+            <img src="{{ block.settings.image_mobile | img_url: '900x' }}" loading="lazy" alt="" height="" width="">
+         </picture>
+      </div>
+      {%- endif -%}
+
+      <div class="hero_banner-content">
+
+          {%- if block.settings.heading != blank -%}
+          <h1 class="hero_banner-heading h--xxl{% if section.settings.text_reverse %} c--white{% endif %}" {{ block.shopify_attributes }}>
+             {{ block.settings.heading | newline_to_br }}
+          </h1>
+          {%- endif -%}
+
+          {%- if block.settings.text != blank -%}
+          <div class="hero_banner-text mb--2{% if section.settings.text_reverse %} c--white{% endif %}" {{ block.shopify_attributes }}>
+              {{ block.settings.text | newline_to_br }}
+          </div>
+          {%- endif -%}
+
+          {%- if block.settings.button_label != blank -%}
+          <a{% if block.settings.button_link != blank %} href="{{ block.settings.button_link }}"{% endif %} class="button button-solid"{% if block.settings.button_link == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label | escape }}</a>
+          {%- endif -%}
+
+
+      </div>
+
+    </div>
+  </div>
+  {%- endfor -%}
+
+</div>
+
+<script type="module">
+  var slider = tns({
+    container: '.hero_carousel',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    controls: true,
+    autoplayButton: false,
+    nav: false,
+    speed: 800
+  });
+</script>
+
+
+{% schema %}
+{
+	"name": "Hero Carousel",
+	"tag": "section",
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "settings": [
+				{
+                  "type": "image_picker",
+                  "id": "image",
+                  "label": "Image (Large)"
+                },
+                {
+                  "type": "image_picker",
+                  "id": "image_mobile",
+                  "label": "Image (Mobile)"
+                },
+                {
+                  "type": "checkbox",
+                  "id": "text_reverse",
+                  "label": "Reverse text color (white)",
+                  "default": false
+                },
+                {
+                  "type": "textarea",
+                  "id": "heading",
+                  "default": "Image banner",
+                  "label": "Headline"
+                },
+                {
+                  "type": "richtext",
+                  "id": "text",
+                  "label": "Text"
+                },
+                {
+                  "type": "text",
+                  "id": "button_label",
+                  "default": "Learn More",
+                  "label": "Button Label"
+                },
+                {
+                  "type": "url",
+                  "id": "button_link",
+                  "label": "Button Link"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Hero Carousel"
+		}
+	]
+}
+{% endschema %}

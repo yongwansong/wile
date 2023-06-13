@@ -1,0 +1,134 @@
+<div class="{{ section.settings.bg_color }} pt--5 pb--5">
+    <div class="inner">
+
+        {% if section.settings.headline != blank or section.settings.body != blank %}
+        <div class="t--center">
+            {% if section.settings.headline != blank %}
+            <h3 class="h--xl mb--1">{{ section.settings.headline }}</h3>
+            {% endif %}
+            {{ section.settings.body }}
+        </div>
+        {% endif %}
+        
+        <div class="splide cross-sell slide__arrows mt--2">
+            <div class="splide__arrows">
+            <div class="splide__track">
+                <div class="splide__list">
+                    {% for block in section.blocks %}
+                        {%- case block.type -%}
+                            {%- when 'item' -%}
+                            <div class="splide__slide">
+                                {%- render 'card-cross-sell', 
+                                    product: block.settings.product,
+                                    image: block.settings.image,
+                                    description: block.settings.description | default: ''
+                                -%}
+                            </div>
+                        {%- endcase -%}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div id="cross-sell-slider" class="splide mt--1">
+            <div class="splide__track">
+                <div class="splide__list">
+                    {% for block in section.blocks %}
+                        {%- case block.type -%}
+                            {%- when 'item' -%}
+                            {%- capture title -%}
+                                {% if block.settings.title != blank %}
+                                {{ block.settings.title | escape }}
+                                {% else %}
+                                {{ block.settings.product.title | escape }}
+                                {% endif %}
+                            {%- endcapture -%}
+                            <div class="splide__slide">
+                                <img
+                                height=""
+                                width=""
+                                loading="lazy"
+								src="{{ block.settings.image | img_url: '100x' }}"
+								alt="{{ block.settings.image.alt | escape }}">
+                                <div class="splide__slide-label">{{ title }}</div>
+                            </div>
+                        {%- endcase -%}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="{{ 'component-cross-sell.min.js' | asset_url }}" defer="defer"></script>
+
+
+{% schema %}
+{
+	"name": "Cross-Sell",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "headline",
+            "label": "Headline"
+        },
+        {
+            "type": "richtext",
+            "id": "body",
+            "label": "Body"
+        },
+        {
+            "type": "select",
+            "id": "bg_color",
+            "label": "Background color",
+            "options": [
+                {
+                    "value": "bg--white",
+                    "label": "White"
+                },
+                {
+                    "value": "bg--tan",
+                    "label": "Tan"
+                }
+            ],
+            "default": "bg--white"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "limit": 5,
+            "settings": [
+                {
+                    "type": "product",
+                    "id": "product",
+                    "label": "Product"
+                },
+                {
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Cross-Sell"
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,145 @@
+{% comment %}{{ block.settings.color_scheme }}{% endcomment %}
+
+<div class="announcement-bar" role="region" aria-label="{{ 'sections.header.announcement' | t }}" {{ block.shopify_attributes }}>
+
+{%- for block in section.blocks -%}
+
+	{% assign pdpOnly = block.settings.pdp_only %}
+  {%- case block.type -%}
+    {%- when 'announcement' -%}
+
+	  {% if pdpOnly == true %}
+
+		{% if template contains 'product' %}
+
+ 
+        {%- if block.settings.text != blank -%}
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+          {%- endif -%}
+              <span class="announcement-bar__text">
+                {{ block.settings.text | escape }}
+                {% comment %}{%- if block.settings.link != blank -%}
+                  {% render 'icon-arrow' %}
+                {%- endif -%}{% endcomment %}
+              </span>
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+
+		{% endif %}
+
+	 {% else %}
+
+	
+        {%- if block.settings.text != blank -%}
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+          {%- endif -%}
+              <span class="announcement-bar__text">
+                {{ block.settings.text | escape }}
+                {% comment %}{%- if block.settings.link != blank -%}
+                  {% render 'icon-arrow' %}
+                {%- endif -%}{% endcomment %}
+              </span>
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+
+	 {% endif %}
+
+
+  {%- endcase -%}
+{%- endfor -%}
+
+  </div>
+  
+  
+{% javascript %}
+
+	let announcementItems = document.querySelectorAll('.announcement-bar__text');
+	let announcementCurrent = 0;
+	let announcementTotal = announcementItems.length;
+
+	announcementItems[0].classList.add('active');
+
+	function rotateItems() {
+
+		[].forEach.call(announcementItems, function(item, index) {
+			if(index == announcementCurrent) {
+				item.classList.add('active');
+			} else {
+				item.classList.remove('active');
+			}
+		});
+	}
+	if(announcementTotal > 1) {
+		setInterval(function(){
+			announcementCurrent++;
+			if(announcementCurrent >= announcementTotal) {
+				announcementCurrent = 0;
+			}
+			rotateItems();
+		}, 3000);
+	}
+
+	rotateItems();
+
+{% endjavascript %}
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "max_blocks": 12,
+  "blocks": [
+    {
+      "type": "announcement",
+      "name": "t:sections.announcement-bar.blocks.announcement.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+        },
+        {
+          "type": "select",
+          "id": "color_scheme",
+          "options": [
+            {
+              "value": "bg--green-dark",
+              "label": "Dark Green"
+            },
+            {
+              "value": "bg--yellow",
+              "label": "Yellow"
+            }
+          ],
+          "default": "bg--green-dark",
+          "label": "Dark Green"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.link.label"
+        },
+		{
+  			"type": "checkbox",
+  			"id": "pdp_only",
+  			"label": "PDP Only",
+  			"default": false
+		}
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "announcement"
+      }
+    ]
+  }
+}
+{% endschema %}

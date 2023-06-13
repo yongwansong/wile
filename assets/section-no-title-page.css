@@ -1,0 +1,32 @@
+.page-title {
+  visibility: hidden;
+}
+
+.main-page-title {
+  visibility: hidden;
+}
+
+.h0 {
+  visibility: hidden;
+}
+
+h2 {
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (min-width: 750px) {
+  .main-page-title {
+    visibility: hidden;
+  }
+}
+
+.page-placeholder-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.page-placeholder {
+  width: 52.5rem;
+  height: 52.5rem;
+}

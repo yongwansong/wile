@@ -1,0 +1,149 @@
+<div class="inner inner-narrow pt--5 pb--5">
+    {% if section.settings.heading != blank or section.settings.body != blank %}
+    <div class="mb--3 t--center">
+    {% endif %}
+    {% if section.settings.heading != blank %}
+    <h1 class="h--xl mb--1">{{ section.settings.heading }}</h1>
+    {% endif %}
+    {% if section.settings.body != blank %}
+    {{ section.settings.body }}
+    {% endif %}
+    {% if section.settings.heading != blank or section.settings.body != blank %}
+    </div>
+    {% endif %}
+    {% render "customer-fields", form_id: "bbtamL" %}
+</div>
+
+
+
+
+
+{% schema %}
+  {
+      "name": "Survey",
+      "tag": "section",
+      "settings": [
+          {
+              "type": "textarea",
+              "id": "heading",
+              "label": "Heading"
+          },
+          {
+              "type": "textarea",
+              "id": "body",
+              "label": "Body"
+          },
+          {
+              "type": "textarea",
+              "id": "discount",
+              "label": "Discount"
+          },
+          {
+              "type": "text",
+              "id": "product",
+              "label": "Product ID"
+          }
+      ],
+      "presets": [
+          {
+              "name": "Survey"
+          }
+      ]
+  }
+  {% endschema %}
+
+
+
+
+
+  {% stylesheet %}
+	.cf-field textarea,
+	.cf-field input[type="text"], 
+	.cf-field input[type="email"], 
+	.cf-field input[type="password"] {
+		padding: 1em !important;
+		border: 1px solid #bbb !important;;
+	}
+	.cf-field input[type="text"], 
+	.cf-field input[type="email"], 
+	.cf-field input[type="password"] {
+		height: 2.5rem !important;;
+	}
+  {% endstylesheet %}
+
+
+
+{%- assign promo_name = section.settings.discount -%}
+{%- assign promo_product = section.settings.product -%}
+<script>
+  let promo = '{{ promo_name }}';
+  let pid= '{{ promo_product }}';
+</script>
+
+{% javascript %}
+
+    function getCookie(name) {
+	    var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+	    return v ? v[2] : null;
+	}
+
+    function clearCart(variant_id, qty) {
+        jQuery.ajax({
+            type: "POST",
+            url: '/cart/clear.js',
+            data: '',
+            dataType: 'json',
+            success: function() { 
+                addItemToCart(variant_id, qty);
+            },
+            error: function(XMLHttpRequest, textStatus) {
+
+            }
+          });
+          return false;
+    }
+
+    function addItemToCart(variant_id, qty) {
+        jQuery.ajax({
+            type: 'POST',
+            url: '/cart/add.js',
+            data: {
+                "id": variant_id,
+                "quantity": qty
+            },
+            dataType: 'json',
+            success: function(data) {
+				document.cookie = 'survey_complete=true;';
+                window.location.href = '/checkout'; 
+            }
+        });
+    }
+
+	(function(){
+	
+    	let discount = getCookie('discount_code');
+		let complete = getCookie('survey_complete');
+
+		if(complete != null) {
+	
+			let content = document.querySelector('[data-cf-form="bbtamL"]');
+			let confirmation = '<h1 class="h--xl mb--1">Thank you, it looks like you have already completed the survey.</h1>';
+			content.parentNode.innerHTML = confirmation;
+
+		} else {
+	
+			if(discount != undefined) {
+        		switch(discount) {
+            		case promo:
+                		clearCart(pid, 1);
+                		break;
+        		}
+    	
+    		}
+		}
+	})();
+
+
+	
+      
+  {% endjavascript %}

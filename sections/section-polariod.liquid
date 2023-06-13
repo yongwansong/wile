@@ -1,0 +1,114 @@
+<div id="section-{{ section.id }}" class="{{ section.settings.bg_color }}">
+    <div class="inner pt--2 pb--2">
+        <div class="polaroids">
+        {%- for block in section.blocks -%}
+        {%- case block.type -%}
+            {%- when 'photo' -%}
+                <div class="polaroids-image">
+                    <img src="{{ block.settings.image | img_url: '900x' }}"
+                        loading="lazy"
+                        alt="{{ section.settings.image.alt | escape }}"
+                        width="{{ section.settings.image.width }}"
+                        height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}">
+                </div>
+        {%- endcase -%}
+        {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% javascript %}
+
+(function(){
+
+    let polaroids = document.querySelectorAll('.polaroids-image');
+
+        [].forEach.call(polaroids, function(item) {
+            item.style.position = 'absolute';
+            item.style.left = '50%';
+        });
+    
+    function isInViewport(elem) {
+        let bounding = elem.getBoundingClientRect(),
+            bottom = window.innerHeight || document.documentElement.clientHeight;
+            return (
+                bounding.top >= 0 &&
+                bounding.left >= 0 &&
+                bounding.bottom <= bottom
+            );
+    }
+
+    window.addEventListener('scroll', function () {
+
+        let scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
+        [].forEach.call(polaroids, function(inview, index) {
+            if (isInViewport(inview, index)) {
+                inview.setAttribute('data-inview', 'true');
+            }
+        });
+
+    }, false);
+
+})();
+
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Section Polaroid",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "select",
+            "id": "bg_color",
+            "label": "Background color",
+            "options": [
+                {
+                    "value": "bg--white",
+                    "label": "White"
+                },
+                {
+                    "value": "bg--tan",
+                    "label": "Tan"
+                },
+                {
+                    "value": "bg--yellow",
+                    "label": "Yellow"
+                },
+                {
+                    "value": "bg--blue",
+                    "label": "Blue"
+                },
+                {
+                    "value": "bg--green-dark",
+                    "label": "Dark Green"
+                },
+                {
+                    "value": "bg--peach",
+                    "label": "Peach"
+                }
+            ],
+            "default": "bg--tan"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "photo",
+            "name": "Photo",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Section Polariod"
+		}
+	]
+}
+{% endschema %}

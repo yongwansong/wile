@@ -1,0 +1,152 @@
+{% liquid
+	assign colors = 'bg--blue,bg--green-dark' | split: ','
+	assign button_rev = false
+%}
+
+{%- if colors contains section.settings.bg_color -%}
+	{%- assign button_rev = true %}
+    {%- assign text_color = 'c--tan' -%}
+	{%- else -%}
+    {%- assign text_color = 'c--base' -%}
+{%- endif -%}
+
+<div id="hero-{{ section.id }}" class="hero_promos {{ section.settings.bg_color }}"> 
+	<div class="columns">
+		<div class="column aspect-ratio-1-1 nogap t--center valign-center" data-col="2">
+			{%- if section.settings.image != blank -%}
+				<div class="img-wrap">
+				<img srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | img_url: '375x' }} 375w,{%- endif -%}
+					{%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '900x' }} 750w,{%- endif -%}
+					{%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
+					{%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+					{%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
+					{%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+					{%- if section.settings.image.width >= 2800 -%}{{ section.settings.image | img_url: '2800x' }} 2800w{%- endif -%}"
+					sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
+					src="{{ section.settings.image | img_url: '750x' }}"
+					loading="lazy"
+					alt="{{ section.settings.image.alt | escape }}"
+					width="{{ section.settings.image.width }}"
+					height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
+				>
+				</div>
+			{%- endif -%}
+		</div>
+		<div class="column aspect-ratio-1-1 nogap valign-center" data-col="2">
+			<div class="m--5 t--center">
+				{%- for block in section.blocks -%}
+					{%- case block.type -%}
+					{%- when 'heading' -%}
+						<h3 class="h--lg {{ text_color }} mb--2" {{ block.shopify_attributes }}>
+							{{ block.settings.heading | newline_to_br }}
+						</h2>
+					{%- when 'text' -%}
+						<div class="{{ text_color }}" {{ block.shopify_attributes }}>
+							{{ block.settings.text | newline_to_br }}
+						</div>
+					{%- when 'button' -%}
+						<div class="mt--2" {{ block.shopify_attributes }}>
+						{%- if block.settings.button_label != blank -%}
+							<a{% if block.settings.button_link != blank %} href="{{ block.settings.button_link }}"{% endif %} class="button button-arrow{% if button_rev %} button-rev{% endif %}"{% if block.settings.button_link == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label | escape }}</a>
+						{%- endif -%}
+						</div>
+					{%- endcase -%}
+				{%- endfor -%}
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+"name": "Featured Product",
+"tag": "section",
+"settings": [
+	{
+		"type": "image_picker",
+		"id": "image",
+		"label": "Image"
+	},
+	{
+        "type": "select",
+        "id": "bg_color",
+        "label": "Background color",
+        "options": [
+            {
+                "value": "bg--white",
+                "label": "White"
+            },
+            {
+                "value": "bg--tan",
+                "label": "Tan"
+            },
+            {
+                "value": "bg--yellow",
+                "label": "Yellow"
+            },
+            {
+                "value": "bg--blue",
+                "label": "Blue"
+            },
+            {
+                "value": "bg--green-dark",
+                "label": "Dark Green"
+            },
+            {
+                "value": "bg--peach",
+                "label": "Peach"
+            }
+        ],
+        "default": "bg--green-dark"
+    }
+],
+"blocks": [
+	{
+		"type": "heading",
+		"name": "Heading",
+		"limit": 1,
+		"settings": [
+			{
+				"type": "textarea",
+				"id": "heading",
+				"label": "Heading"
+			}
+		]
+	},
+	{
+		"type": "text",
+		"name": "Text",
+		"limit": 1,
+		"settings": [
+			{
+				"type": "textarea",
+				"id": "text",
+				"label": "Text"
+			}
+		]
+	},
+	{
+		"type": "button",
+		"name": "Button",
+		"limit": 1,
+		"settings": [
+			{
+				"type": "text",
+				"id": "button_label",
+				"label": "Button Label"
+			},
+			{
+				"type": "url",
+				"id": "button_link",
+				"label": "Button Link"
+			}
+		]
+	}
+],
+"presets": [
+	{
+		"name": "Featured Product"
+	}
+]
+}
+{% endschema %}

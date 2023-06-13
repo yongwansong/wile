@@ -1,0 +1,127 @@
+<div id="section-{{ section.id }}" class="{{ section.settings.bg_color }}{% if section.settings.show_silhouette %} bg--silhouette{% endif %}">
+    
+    <div class="inner pt--5 pb--5">
+   
+        {% if section.settings.headline != blank %}
+            <h2 class="h--sm t--upper t--center">{{ section.settings.headline | newline_to_br }}</h2>
+        {% endif %}
+
+        <div class="tabslider mt--3 mb--3">
+
+            <div class="tabslider-nav">
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                {%- when 'item' -%}
+                <a href="#{{ block.settings.label}}" class="tabslider-nav-item">{{ block.settings.label }}</a>
+                {%- endcase -%}
+            {%- endfor %}
+            </div>
+
+            {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'item' -%}
+                    <div class="tabslider-content t--center mt--3">
+                        {%- capture tabTitle -%}
+                        {%- if block.settings.title == blank -%}
+                        {{ block.settings.label }}
+                        {%- else -%}
+                        {{ block.settings.title }}
+                        {%- endif -%}
+                        {%- endcapture -%}
+                        <div class="tabslider-title">
+                            <h3 class="h--xxxl mb--1">{{ tabTitle | newline_to_br }}</h3>
+                        </div>
+                        {{ block.settings.description | newline_to_br }}
+                    </div>
+            {%- endcase -%}
+            {%- endfor %}
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ 'component-tabslider.min.js' | asset_url }}" defer="defer"></script>
+
+
+{% schema %}
+{
+	"name": "Stages",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "headline",
+            "label": "Headline"
+        },
+        {
+			"type": "select",
+			"id": "bg_color",
+			"label": "Background color",
+			"options": [
+				{
+					"value": "bg--white",
+					"label": "White"
+				},
+				{
+					"value": "bg--tan",
+					"label": "Tan"
+				},
+				{
+					"value": "bg--yellow",
+					"label": "Yellow"
+				},
+				{
+					"value": "bg--blue",
+					"label": "Blue"
+				},
+				{
+					"value": "bg--green-dark",
+					"label": "Dark Green"
+				},
+				{
+					"value": "bg--peach",
+					"label": "Peach"
+				}
+			],
+			"default": "bg--white"
+		},
+        {
+			"type": "checkbox",
+			"id": "show_silhouette",
+			"label": "Show silhouette background",
+			"default": false
+		}
+    ],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Stages"
+		}
+	]
+}
+{% endschema %}

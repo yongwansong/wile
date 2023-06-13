@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="{{ 'section-no-title-page.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'section-no-title-page.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="page-width page-width--narrow">
+    <h2 class="main-page-title page-title h0">
+      {%- if section.settings.page.title != blank -%}
+        {{ section.settings.page.title | escape }}
+      {%- else -%}
+        Page title
+      {%- endif -%}
+    </h2>
+</div>
+
+

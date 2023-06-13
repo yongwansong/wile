@@ -1,0 +1,316 @@
+$bsub-color-bg: transparent;
+$bsub-color-bg-hover: #003638;
+$bsub-color-bg-active-green: #003638;
+$bsub-color-widget-border: #003638;
+$bsub-color-group-border: #003638;
+$bsub-color-active-blue: #3B63FF;
+$bsub-color-active-green: #003638;
+
+// @keyframes bsub-fadeInFromNone {
+//   0% {
+//     display: none;
+//     opacity: 0;
+//   }
+
+//   1% {
+//     display: block;
+//     opacity: 0;
+//   }
+
+//   100% {
+//     display: block;
+//     opacity: 1;
+//   }
+// }
+
+
+.bsub-widget__groups-container {
+  display: flex;
+  justify-content: space-between;
+  > div {
+    max-width: calc(50% - .5em);
+    width: 100%;
+  }
+}
+
+@media all and (max-width: 599px) {
+  .bsub-widget__groups-container {
+    flex-direction: column;
+    > div {
+      max-width: calc(100% - .5em);
+    }
+  }
+}
+.bsub-widget__group {
+  border: 2px solid $bsub-color-group-border;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  > div {
+    margin-left: 0;
+    width: 100%;
+  }
+  strong {
+    font-family: 'wigrum-bold';
+  	font-weight: normal;
+  }
+
+  &.selected {
+    border-color: $bsub-color-active-green;
+    background-color: $bsub-color-active-green;
+    cursor: pointer;
+    * {
+      color: #F7EFDD
+    }
+  }
+
+  // input:checked + & {
+  //   border-color: $bsub-color-active-green;
+  //   background-color: $bsub-color-active-green;
+  //   color: #F7EFDD;
+  // }
+}
+.bsub-widget__group-label {
+  padding: 1em;
+}
+.bsub-widget__plan {
+  width: 100%
+}
+.bsub-widget__group-label,
+.bsub-widget__plan-label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    line-height: 1em;
+    margin: 0;
+    transition: 0.3s;
+    width: 100%;
+    &:hover {
+      cursor: pointer;
+    }
+}
+.bsub-widget__plan-header,
+.bsub-widget__group-header {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    margin-left: 10px;
+}
+.bsub-widget__group-text,
+.bsub-widget__plan-text {
+    flex: 1
+}
+
+.bsub-widget-subtext {
+  font-size: 12px;
+  display: block;
+}
+.bsub-widget-badge {
+  color: $bsub-color-active-green !important;
+  font-size: 12px;
+  background-color: #FABB16;
+  padding: .125em .5em;
+  margin-left: .5em;
+  top: -.125em;
+  position: relative;
+}
+
+// .bsub__hidden {
+//   display: none;
+// }
+
+// // TODO: Stop BSUB from pushing React widget CSS
+// .bsub-widget {
+//   padding: 0 !important;
+//   border: 0 !important;
+//   margin: 0 !important;
+
+//   legend {
+//     margin-bottom: 5px;
+//   }
+// }
+
+// .bsub-widget__wrapper {
+//   padding: 0;
+//   border-radius: 0;
+//   border: none;
+//   background-color: transparent;
+//   font-size: 14px;
+
+//   fieldset {
+//     border: 0;
+//   	background-color: inherit;
+//     margin: 0;
+//     padding: 0;
+//   }
+
+//   legend {
+//     font-size: 11px;
+//   	text-transform: uppercase;
+//     letter-spacing: 3px;
+//   }
+// }
+
+// .bsub-widget__wrapper--single {
+//   .bsub-widget__groups-container {
+//   	display: none;
+//   }
+
+//   .bsub-widget__plans-container,
+//   .bsub-widget__options-container {
+//   	margin-top: 0;
+//   }
+// }
+
+// .bsub-widget__description {
+//   margin-top: 20px;
+//   padding-top: 10px;
+//   color: black;
+//   border-top: 1px solid $bsub-color-group-border;
+// }
+
+// .bsub-widget__groups-container {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: stretch;
+
+//   input[type='radio'] {
+//   	display: none;
+//   }
+
+//   &:only-child {
+//   	margin-bottom: 0;
+//   }
+// }
+
+// .bsub-widget__group {
+//   flex: 1 1 100%;
+// }
+
+// @media screen and (min-width: 700px) {
+//   .bsub-widget__groups-container {
+//     flex-direction: row;
+//   }
+//   .bsub-widget__group {
+//     & + & {
+//     	margin-left: 1em;
+//     }
+//   }
+// }
+
+// .bsub-widget__group-header {
+//   display: flex !important;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   height: 100%;
+//   text-align: center;
+//   padding: .5em;
+//   transition: 0.3s;
+//   line-height: 1.3em;
+//   border: 2px solid $bsub-color-group-border;
+//   border-radius: 0;
+
+//   @media screen and (min-width: 700px) {
+//     padding:  0;
+//   }
+
+//   .bsub-widget__image {
+//     display: block;
+//     width: 4em;
+//     height: 4em;
+//     display: none !important;
+//   }
+
+//   &:hover {
+//       border-color: #003436;
+//       cursor: pointer;
+//     // box-shadow: 0px 0px 6px 3px rgba(0,0,0,0.1);
+//   }
+
+//   input:checked + & {
+//     border-color: #003638;
+//     background-color: #003638;
+//     color: #F7EFDD;
+//   }
+// }
+
+// .bsub-widget__group-label {
+//   height: 100%;
+//   width: 100%;
+// }
+
+// .bsub-widget__group-discount-summary {
+//   font-size: 12px;
+// }
+
+// .bsub-widget__plans-container,
+// .bsub-widget__options-container {
+//   animation: bsub-fadeInFromNone 100ms ease-in-out;
+//   margin-top: 24px;
+
+//   input[type='radio'] {
+//   	display: none;
+//   }
+
+//   fieldset + fieldset {
+//   	margin-top: 10px;
+//   }
+// }
+
+// .bsub-widget__plan,
+// .bsub-widget__option {
+//   width: 100%;
+
+//   & + & {
+//   	margin-top: 5px;
+//   }
+// }
+
+// .bsub-widget__plan-header {
+//   display: flex !important;
+//   font-size: 13px;
+//   align-items: center;
+//   padding: 6px;
+//   border-radius: 8px;
+
+//   .bsub-widget__image {
+//     width: 20px;
+//     height: 20px;
+//     margin-right: 8px;
+//   }
+
+//   .bsub-widget__text {
+//     flex-grow: 1;
+//   }
+
+//   input:checked + &  {
+//     color: $bsub-color-active-green;
+//     background: $bsub-color-bg-active-green;
+//     padding: 1em;
+
+//     .bsub-widget__unchecked-icon {
+//       display: none;
+//     }
+//   }
+
+//   input:not(:checked) + &  {
+//     .bsub-widget__checked-icon {
+//       display: none;
+//     }
+
+//     &:hover {
+//       background: $bsub-color-bg-hover;
+//     }
+//   }
+// }
+
+// .bsub-cart__selling-plan-details,
+// .bsub-cart-popup__selling-plan-details {
+//   font-size: 12px;
+// }
+
+// .bsub-widget__plan-label {
+//   width: 100%;
+//   text-align: left;
+// }

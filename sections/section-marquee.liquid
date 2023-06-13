@@ -1,0 +1,75 @@
+<div id="{{ section.id }}" class="bg--green-dark">
+  <div class="inner txt-center-align pt--2 pb--2">
+    <h2 class="t--sm c--yellow t--upper">As Seen On</h2>
+    <div class="marquee">
+      <div class="marquee-items">
+        {%- for block in section.blocks -%}
+          <div class="marquee-item">
+            <img
+              src="{{ block.settings.image | img_url: '300x' }}"
+              alt=""
+              height=""
+              width=""
+              loading="lazy"
+              style="max-height: {{ section.settings.image_max | append: 'px' }};width: auto">
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  var ingredientsList = tns({
+  container: '.marquee-items',
+    items: 1,
+    controls: false,
+    autoplay: true,
+    autoplayButtonOutput: false,
+    autoplayTimeout: 3000,
+    nav: false,
+    speed: 800,
+    center: true,
+    responsive: {
+      860: {
+          items: 3
+      }
+    }
+});</script>
+
+{% schema %}
+  {
+    "name": "Marquee",
+    "tag": "section",
+    "settings": [
+      {
+        "type": "range",
+        "min": 50,
+        "max": 100,
+        "step": 10,
+        "default": 50,
+        "unit": "px",
+        "id": "image_max",
+        "label": "Max Height"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "item",
+        "name": "Item",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Marquee"
+      }
+    ]
+  }
+{% endschema %}

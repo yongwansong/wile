@@ -1,0 +1,178 @@
+<div id="section-{{ section.id }}" class="curve_content curve_content-align-{{ section.settings.align }}" style="background-color: {{ section.settings.bg_color }}">
+
+    <div class="pt--3 pb--3">
+        <div class="curve_content-body">
+        {%- for block in section.blocks -%}
+            {%- assign textStringClass = '<p class="t--sm mt--1 ' | append: section.settings.text_color | append: '">' %}
+            {%- case block.type -%}
+                {%- when 'headline' -%}
+                    <h2 class="h--xl mb--1 {{ block.settings.headline_color }}">{{ block.settings.headline_text | newline_to_br }}</h2>
+                {%- when 'body' -%}
+                    {{ block.settings.body_text | replace: '<p>', textStringClass | newline_to_br }}
+                {%- when 'list' -%}
+                    <div class="curve_content-list">
+                        {% if block.settings.list_icon != blank %}
+                        {% assign image = block.settings.list_icon %}
+                        <img src="{{ image | img_url }}" alt="" class="curve_content-list--icon" width="{{ image.width }}" height="{{ image.height }}" loading="lazy">
+                        {% else %}
+                        {% render 'icon-checkmark-v2', class: section.settings.text_color %}
+                        {% endif %}
+                        <div class="t--sm">
+                            {{ block.settings.list_text | replace: '<p>', textStringClass | newline_to_br }}
+                        </div>
+                    </div>
+            {%- endcase -%}
+        {%- endfor %}
+        </div>
+    </div>
+
+    
+    <div class="curve_content-imagewrapper">
+        <div class="curve_content-image">
+        
+        {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'image' -%}
+                    {% if block.settings.image_mobile != blank %}
+                    <picture>
+                        <source media="(min-width: 700px)" srcset="{{ block.settings.image | img_url: '1400x' }}" sizes="100vw">
+                        <img src="{{ block.settings.image_mobile | img_url: '600x' }}" alt="" width="{{ block.settings.image.width }}" height="{{ block.settings.image.height }}" loading="lazy">
+                    </picture>
+                    {% else %}
+                    <picture>
+                        <img src="{{ block.settings.image | img_url: '1400x' }}" alt="" width="" height="" loading="lazy">
+                    </picture>
+                    {% endif %}
+            {%- endcase -%}
+        {%- endfor %}
+        </div>
+    </div>
+
+</div>
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Section Text with Image",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background color",
+            "default": "#F7EFDD"
+        },
+        {
+            "type": "select",
+            "id": "text_color",
+            "label": "Text Color",
+            "options": [
+                {
+                    "value": "c--base",
+                    "label": "Base"
+                },
+                {
+                    "value": "c--tan",
+                    "label": "Tan"
+                }
+            ],
+            "default": "c--base"
+        },
+        {
+            "type": "select",
+            "id": "align",
+            "label": "Align image (desktop)",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Left"
+                },
+                {
+                    "value": "right",
+                    "label": "Right"
+                }
+            ],
+            "default": "right"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "headline",
+            "name": "Headline",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "headline_text",
+                    "label": "Text"
+                },
+                {
+                    "type": "select",
+                    "id": "headline_color",
+                    "label": "Color",
+                    "options": [
+                        {
+                            "value": "c--base",
+                            "label": "Base"
+                        },
+                        {
+                            "value": "c--tan",
+                            "label": "Tan"
+                        }
+                    ],
+                    "default": "c--base"
+                }
+            ]
+        },
+        {
+            "type": "image",
+            "name": "Image",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image_mobile",
+                    "label": "Image (Mobile)"
+                }
+            ]
+        },
+        {
+            "type": "body",
+            "name": "Body",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "body_text",
+                    "label": "Text"
+                }
+            ]
+        },
+        {
+            "type": "list",
+            "name": "List",
+            "settings": [
+                {
+                    "type": "richtext",
+                    "id": "list_text",
+                    "label": "Text"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "list_icon",
+                    "label": "Icon"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Section Text with Image"
+		}
+	]
+}
+{% endschema %}

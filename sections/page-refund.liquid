@@ -1,0 +1,17 @@
+<div class="inner page-singlecolumn">
+    <h1 class="h--xxl mb--2">
+      {{ page.title | escape }}
+    </h1>
+    <div class="rte">
+      {{ page.content }}
+      {{ shop.refund_policy }}
+      {{ shop.shipping_policy }}
+    </div>
+</div>
+  
+{% schema %}
+{
+    "name": "Refund",
+    "tag": "section"
+}
+{% endschema %}

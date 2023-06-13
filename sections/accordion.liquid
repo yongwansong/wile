@@ -1,0 +1,166 @@
+{%- liquid
+	assign colors = 'bg--blue,bg--green-dark' | split: ','
+	if colors contains section.settings.bg_color
+		assign text_color = 'c--tan'
+	else 
+		assign text_color = 'c--base'
+	endif
+%}
+
+<div id="{{ section.id }}" class="{{ section.settings.bg_color }}">
+	<div class="pt--4 pb--4 t--center">
+		<div class="body mb--2{% if section.settings.large_accordion == false %} inner{% endif %}">
+		{%- for block in section.blocks -%}
+		{%- case block.type -%}
+			{%- when 'heading' -%}
+				{% if block.settings.subheading != blank %}
+					<h2 class="h--sm h--sans mb--2 mt--2 {{ text_color }}">{{ block.settings.subheading | newline_to_br }}</h2>
+				{% endif %}
+				{% if block.settings.heading != blank %}
+					<h3 class="{{ block.settings.heading_size }} mb--4 {{ text_color }}">{{ block.settings.heading | newline_to_br }}</h3>
+				{% endif %}
+			{%- when 'item' -%}
+				<div class="accordion {{ text_color }}{% if section.settings.large_accordion == true %} accordion-large{% endif %}" {{ block.shopify_attributes }}>
+					<div class="inner accordion-title js-accordion-toggle"{% if section.settings.max_width != '1400' %} style="max-width:{{ section.settings.max_width | append: 'px' }}"{% endif %}>
+						{{ block.settings.title | newline_to_br }}
+					</div>
+					<div class="inner accordion-summary"{% if section.settings.max_width != '1400' %} style="max-width:{{ section.settings.max_width | append: 'px' }}"{% endif %}>
+						{{ block.settings.summary | newline_to_br }}
+					</div>
+				</div>
+			{%- endcase -%}
+		{%- endfor -%}
+		</div>
+	</div>
+</div>
+
+{% javascript %}
+
+let accordionElems = document.querySelectorAll('.js-accordion-toggle');
+
+[].forEach.call(accordionElems, function(el) {
+	el.parentNode.classList.add('is--collapsed');
+	el.addEventListener('click', function(e) {
+		el.parentNode.classList.toggle('is--collapsed');
+	});
+})
+
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Accordion",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "select",
+			"id": "bg_color",
+			"label": "Background color",
+			"options": [
+				{
+					"value": "bg--tan",
+					"label": "Tan"
+				},
+				{
+					"value": "bg--yellow",
+					"label": "Yellow"
+				},
+				{
+					"value": "bg--blue",
+					"label": "Blue"
+				},
+				{
+					"value": "bg--green-dark",
+					"label": "Dark Green"
+				},
+				{
+					"value": "bg--peach",
+					"label": "Peach"
+				}
+			],
+			"default": "bg--tan"
+		},
+		{
+			"type": "range",
+			"id": "max_width",
+			"min": 700,
+			"max": 1400,
+			"step": 100,
+			"default": 1400,
+			"unit": "px",
+			"label": "Max width"
+		},
+		{
+			"type": "checkbox",
+			"id": "large_accordion",
+			"label": "Large Accordion",
+			"default": false
+		}
+	],
+	"blocks": [
+		{
+			"type": "heading",
+			"name": "Heading",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "textarea",
+					"id": "subheading",
+					"label": "Subheadline"
+				},
+				{
+					"type": "textarea",
+					"id": "heading",
+					"label": "Headline"
+				},
+				{
+					"type": "select",
+					"id": "heading_size",
+					"label": "Heading size",
+					"options": [
+						{
+							"value": "h--xxl",
+							"label": "XX-Large"
+						},
+						{
+							"value": "h--xl",
+							"label": "X-Large"
+						},
+						{
+							"value": "h--lg",
+							"label": "Large"
+						}
+					],
+					"default": "h--lg"
+				}
+			]
+		},
+		{
+			"type": "item",
+			"name": "Accordian Item",
+			"settings": [
+				{
+					"type": "textarea",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "textarea",
+					"id": "summary",
+					"label": "Summary"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Accordion",
+			"blocks": [
+				{
+					"type": "heading"
+				}
+			]
+		}
+	]
+}
+{% endschema %}

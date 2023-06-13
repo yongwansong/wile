@@ -1,0 +1,77 @@
+{% comment %}
+		Renders an article card for a given blog with settings to either show the image or not.
+
+		Accepts:
+		- blog: {Object} Blog object
+		- article: {Object} Article object
+		- show_image: {String} The setting either show the article image or not. If it's not included it will show the image by default
+
+		Usage:
+		{% render 'article-card' blog: blog, article: article, show_image: section.settings.show_image %}
+{% endcomment %}
+
+{% comment %}
+{% if article.image == blank or show_image == false %} article-card--no-image{% endif %}
+
+{% endcomment %}
+
+<article class="article-card" aria-labelledby="Article-{{ article.id }}">
+		<a href="{{ article.url }}" class="article-content">
+
+			{%- if show_image == true and article.image -%}
+			<div class="article-card__image">
+				<img src="{{ article.image | img_url: '800x600', crop: 'center', scale: 1 }}"
+					alt="{{ article.image.src.alt | escape }}"
+					width="{{ article.image.width }}"
+					height="{{ article.image.height }}"
+					loading="lazy">
+			</div>
+			{%- endif -%}
+	
+			<div class="article-card__info">
+				<header class="article-card__header" {{ block.shopify_attributes }}>
+						
+					{%- if article.tags.size > 0 -%}
+						{%- for tag in article.tags limit: 1 -%}
+							<span class="t--xs t--upper t--serif">{{ tag }}</span>
+						{%- endfor -%}
+					{%- endif -%}
+
+					<h2 class="article-card__title h--md mt--1" id="Article-{{ article.id }}">
+						{{ article.title | escape }}
+					</h2>
+					{%- if show_date %}
+					<span class="t--xs t--upper t--serif">
+						{{- article.published_at | time_tag: format: 'month_year' -}}
+					</span>
+					{%- endif -%}
+					{%- if show_author %}
+					<span class="t--xs t--upper t--serif">
+						{{- article.author -}}
+					</span>
+					{%- endif -%}
+
+				</header>
+
+				{% if show_excerpt %}
+					{%- if article.excerpt.size > 0 or article.content.size > 0 -%}
+					<p class="article-card__excerpt rte-width" {{ block.shopify_attributes }}>
+						{%- if article.excerpt.size > 0 -%}
+						{{ article.excerpt | strip_html | truncatewords: 30 }}
+						{%- else -%}
+						{{ article.content | strip_html | truncatewords: 30 }}
+						{%- endif -%}
+					</p>
+					{%- endif -%}
+				{% endif %}
+
+				{% if show_comments %}
+					{%- if article.comments_count > 0 and blog.comments_enabled? -%}
+						<span>{{ 'blogs.article.comments' | t: count: article.comments_count }}</span>
+					{%- endif -%}
+				{% endif %}
+
+			</div>
+		</a>
+	</article>
+	

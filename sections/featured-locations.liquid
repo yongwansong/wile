@@ -1,0 +1,73 @@
+<div id="section-{{ section.id }}" class="bg--tan">
+    <div class="featured-locations inner">
+        {% if section.settings.heading != blank %}
+        <div class="featured-locations-block">
+            <h2 class="h--lg">{{ section.settings.heading | newline_to_br }}</h2>
+        </div>
+        {% endif %}
+        <div class="featured-locations-block featured-locations-logos">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'logo' -%}
+            <div>
+                <img src="{{ block.settings.image | img_url: '300x' }}" alt="" style="height:{{ section.settings.max_height | append: 'px' }};width:auto" height="{{ block.settings.image.height }}" width="{{ block.settings.image.width }}" loading="lazy">
+            </div>
+        {%- endcase -%}
+        {%- endfor %}
+        </div>
+        <div class="featured-locations-block">
+            <a href="/pages/store-locator" class="button button-arrow">Find Near You</a>
+        </div>
+        
+    </div>
+</div>
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Featured Locations",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+			"type": "range",
+			"id": "max_height",
+			"min": 50,
+			"max": 100,
+			"step": 10,
+			"default": 100,
+			"unit": "px",
+			"label": "Logo Size"
+		}
+    ],
+    "blocks": [
+        {
+            "type": "logo",
+            "name": "Logo",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Alt Text"
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Featured Locations"
+		}
+	]
+}
+{% endschema %}

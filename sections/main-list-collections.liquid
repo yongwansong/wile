@@ -1,0 +1,164 @@
+{{ 'component-card.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width">
+
+	{% comment %}<h1 class="h--xxl">{{ section.settings.title | escape }}</h1>{% endcomment %}
+
+	{%- liquid
+    case section.settings.sort
+      when 'products_high' or 'products_low'
+        assign collections = collections | sort: 'all_products_count'
+      when 'date' or 'date_reversed'
+        assign collections = collections | sort: 'published_at'
+    endcase
+
+    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+      assign collections = collections | reverse
+    endif
+  -%}
+
+	<div class="card-collection--grid pt--2 pb--4">
+		{%- for collection in collections -%}
+		{% comment %}{%- render 'card-collection', collection: collection -%}{% endcomment %}
+		{%- paginate collection.products by section.settings.products_per_page -%}
+
+		<div class="inner pt--2" id="main-collection-product-grid" data-id="{{ section.id }}">
+
+			<h1 class="h--xxl">{{ collection.title | escape }}</h1>
+			{% comment %}
+			<div class="mt--1">
+				{{ 'sections.collection_template.product_count' | t: product_count: collection.products_count, count: collection.all_products_count }}
+			</div>
+			{% endcomment %}
+
+			{%- if collection.products.size == 0 -%}
+
+			{% comment %}{{ 'sections.collection_template.empty' | t }}<br>{% endcomment %}
+
+			{%- else -%}
+
+			<div class="card-products--grid pt--2">
+				{%- for product in collection.products -%}
+				{% if product.id != '7328105201877' and product.id != '7942499500245' %}
+				{% render 'card-product', product: product %}
+				{% endif %}
+				{%- endfor -%}
+				{% render 'bv-inline-ratings', product: product %}
+			</div>
+
+			{%- if paginate.pages > 1 -%}
+			{% render 'pagination', paginate: paginate, anchor: '', class: '' %}
+			{%- endif -%}
+
+			{%- endif -%}
+
+		</div>
+
+		{%- endpaginate -%}
+		{% endfor %}
+	</div>
+
+</div>
+
+{% schema %}
+{
+"name": "t:sections.main-list-collections.name",
+"class": "spaced-section",
+"settings": [
+{
+"type": "text",
+"id": "title",
+"label": "t:sections.main-list-collections.settings.title.label",
+"default": "Collections"
+},
+{
+"type": "select",
+"id": "sort",
+"options": [
+{
+"value": "alphabetical",
+"label": "t:sections.main-list-collections.settings.sort.options__1.label"
+},
+{
+"value": "alphabetical_reversed",
+"label": "t:sections.main-list-collections.settings.sort.options__2.label"
+},
+{
+"value": "date_reversed",
+"label": "t:sections.main-list-collections.settings.sort.options__3.label"
+},
+{
+"value": "date",
+"label": "t:sections.main-list-collections.settings.sort.options__4.label"
+},
+{
+"value": "products_high",
+"label": "t:sections.main-list-collections.settings.sort.options__5.label"
+},
+{
+"value": "products_low",
+"label": "t:sections.main-list-collections.settings.sort.options__6.label"
+}
+],
+"default": "alphabetical",
+"label": "t:sections.main-list-collections.settings.sort.label"
+},
+{
+"type": "select",
+"id": "image_ratio",
+"options": [
+{
+"value": "adapt",
+"label": "t:sections.main-list-collections.settings.image_ratio.options__1.label"
+},
+{
+"value": "portrait",
+"label": "t:sections.main-list-collections.settings.image_ratio.options__2.label"
+},
+{
+"value": "square",
+"label": "t:sections.main-list-collections.settings.image_ratio.options__3.label"
+}
+],
+"default": "adapt",
+"label": "t:sections.main-list-collections.settings.image_ratio.label",
+"info": "t:sections.main-list-collections.settings.image_ratio.info"
+},
+{
+"type": "select",
+"id": "color_scheme",
+"options": [
+{
+"value": "accent-1",
+"label": "t:sections.main-list-collections.settings.color_scheme.options__1.label"
+},
+{
+"value": "accent-2",
+"label": "t:sections.main-list-collections.settings.color_scheme.options__2.label"
+},
+{
+"value": "background-1",
+"label": "t:sections.main-list-collections.settings.color_scheme.options__3.label"
+},
+{
+"value": "background-2",
+"label": "t:sections.main-list-collections.settings.color_scheme.options__4.label"
+},
+{
+"value": "inverse",
+"label": "t:sections.main-list-collections.settings.color_scheme.options__5.label"
+}
+],
+"default": "background-1",
+"label": "t:sections.main-list-collections.settings.color_scheme.label"
+},
+{
+"type": "checkbox",
+"id": "image_padding",
+"default": false,
+"label": "t:sections.main-list-collections.settings.image_padding.label"
+}
+]
+}
+{% endschema %}

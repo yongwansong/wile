@@ -1,0 +1,119 @@
+<div id="section-{{ section.id }}" class="{{ section.settings.bg_color }}">
+    
+    <div class="inner pt--5 pb--5">
+   
+        {% if section.settings.headline != blank %}
+            <h2 class="h--xxl t--center">{{ section.settings.headline | newline_to_br }}</h2>
+        {% endif %}
+
+        <div class="tabslider mt--3 mb--3">
+
+            <div class="tabslider-nav">
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                {%- when 'item' -%}
+                <a href="#{{ block.settings.label}}" class="tabslider-nav-item">{{ block.settings.label }}</a>
+                {%- endcase -%}
+            {%- endfor %}
+            </div>
+
+            {%- for block in section.blocks -%}
+            {%- case block.type -%}
+                {%- when 'item' -%}
+                    <div class="tabslider-content show--image mt--3">
+                        <div class="tabslider-content-inner">
+                            <div class="tabslider-image">
+                                <img src="{{ block.settings.image | img_url: '900x' }}"
+                                    loading="lazy"
+                                    alt="{{ block.settings.image.alt | escape }}"
+                                    width="{{ block.settings.image.width }}"
+                                    height="{{ block.settings.image.width | divided_by: block.settings.image.aspect_ratio }}">
+                            </div>
+                            {%- capture tabTitle -%}
+                            {%- if block.settings.title == blank -%}
+                            {{ block.settings.label }}
+                            {%- else -%}
+                            {{ block.settings.title }}
+                            {%- endif -%}
+                            {%- endcapture -%}
+                            <div class="tabslider-body">
+                                <h3 class="h--xl mb--1">{{ tabTitle | newline_to_br }}</h3>
+                                {{ block.settings.description | newline_to_br }}
+                            </div>
+                        </div>
+                    </div>
+            {%- endcase -%}
+            {%- endfor %}
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ 'component-tabslider.min.js' | asset_url }}" defer="defer"></script>
+
+
+{% schema %}
+{
+	"name": "Ingredients",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "headline",
+            "label": "Headline"
+        },
+        {
+			"type": "select",
+			"id": "bg_color",
+			"label": "Background color",
+			"options": [
+				{
+					"value": "bg--white",
+					"label": "White"
+				},
+				{
+					"value": "bg--tan",
+					"label": "Tan"
+				}
+			],
+			"default": "bg--white"
+		}
+    ],
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Image"
+                },
+                {
+                    "type": "text",
+                    "id": "label",
+                    "label": "Label"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Title"
+                },
+                {
+                    "type": "textarea",
+                    "id": "description",
+                    "label": "Description"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Ingredients"
+		}
+	]
+}
+{% endschema %}

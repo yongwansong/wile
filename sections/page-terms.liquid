@@ -1,0 +1,16 @@
+<div class="inner page-singlecolumn">
+    <h1 class="h--xxl mb--2">
+      {{ page.title | escape }}
+    </h1>
+    <div class="rte">
+      {{ page.content }}
+      {{ shop.terms_of_service }}
+    </div>
+</div>
+  
+{% schema %}
+{
+    "name": "Terms",
+    "tag": "section"
+}
+{% endschema %}

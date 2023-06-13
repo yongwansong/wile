@@ -1,0 +1,94 @@
+
+{%- assign darkBackgrounds = 'bg--green-dark' | split: ',' %}
+{%- capture textColor -%}
+	{%- if darkBackgrounds contains section.settings.bg_color -%}
+	c--white
+	{%- else -%}
+	c--base
+	{%- endif -%}
+{%- endcapture -%}
+
+<div class="ticker {{ section.settings.bg_color }}">
+	<div class="ticker-scroller">
+		<div class="ticker-list">
+		{%- for block in section.blocks -%}
+			{%- case block.type -%}
+				{%- when 'text' -%}
+					<div class="ticker-item {{ textColor }}">{{ block.settings.text  }}</div>
+			{%- endcase -%}
+		{%- endfor -%}
+		</div>
+	</div>
+	{%- if section.settings.image != blank -%}
+	<div class="ticker-image">
+		<img srcset="{%- if section.settings.image.width >= 375 -%}{{ section.settings.image | img_url: '375x' }} 375w,{%- endif -%}
+			{%- if section.settings.image.width >= 750 -%}{{ section.settings.image | img_url: '750x' }} 750w,{%- endif -%}
+			{%- if section.settings.image.width >= 1100 -%}{{ section.settings.image | img_url: '1100x' }} 1100w,{%- endif -%}
+			{%- if section.settings.image.width >= 1500 -%}{{ section.settings.image | img_url: '1500x' }} 1500w,{%- endif -%}
+			{%- if section.settings.image.width >= 1780 -%}{{ section.settings.image | img_url: '1780x' }} 1780w,{%- endif -%}
+			{%- if section.settings.image.width >= 2000 -%}{{ section.settings.image | img_url: '2000x' }} 2000w,{%- endif -%}
+			{%- if section.settings.image.width >= 2800 -%}{{ section.settings.image | img_url: '2800x' }} 2800w{%- endif -%}"
+			sizes="{% if section.settings.image_2 != blank and section.settings.stack_images_on_mobile %}(min-width: 750px) 50vw, 100vw{% elsif section.settings.image_2 != blank %}50vw{% else %}100vw{% endif %}"
+			src="{{ section.settings.image | img_url: '750x' }}"
+			loading="lazy"
+			alt="{{ section.settings.image.alt | escape }}"
+			width="{{ section.settings.image.width }}"
+			height="{{ section.settings.image.width | divided_by: section.settings.image.aspect_ratio }}"
+		>
+	</div>
+	{%- endif -%}
+</div>
+
+{% schema %}
+{
+"name": "Ticker",
+"tag": "section",
+"settings": [
+	{
+		"type": "image_picker",
+		"id": "image",
+		"label": "Add image below ticker"
+	},
+	{
+		"type": "select",
+		"id": "bg_color",
+		"label": "Background color",
+		"options": [
+			{
+				"value": "bg--white",
+				"label": "White"
+			},
+			{
+				"value": "bg--green-dark",
+				"label": "Dark Green"
+			}
+		],
+		"default": "bg--white"
+	}
+],
+"blocks": [
+	{
+		"type": "text",
+		"name": "Item",
+		"limit": 6,
+		"settings": [
+			{
+				"type": "text",
+				"id": "text",
+				"label": "Text"
+			}
+		]
+	}
+],
+"presets": [
+	{
+		"name": "Ticker",
+		"blocks": [
+			{
+				"type": "text"
+			}
+		]
+	}
+]
+}
+{% endschema %}

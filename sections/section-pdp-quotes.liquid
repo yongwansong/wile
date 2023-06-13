@@ -1,0 +1,109 @@
+<div id="{{ section.id }}" class="bg--green-dark">
+    
+    <div class="txt-center-align pt--3 pb--3">
+
+        <div class="section-pdp-quotes inner">
+            {% render 'quote-stars' %}
+            <div class="section-pdp-quotes-items">
+            {%- for block in section.blocks -%}
+                <div class="section-pdp-quote">
+                    <div class="section-pdp-quote-body">
+                    {%- if block.settings.quote != blank -%}
+                        <blockquote class="h--lg c--tan t--serif">{{ block.settings.quote | newline_to_br }}</blockquote>
+                        {%- if block.settings.author != blank -%}
+                        <cite>{{ block.settings.author }}</cite>
+                        {%- endif -%}
+                    {%- endif -%}
+                    </div>
+                </div>
+            {%- endfor -%}
+            </div>
+
+        </div>
+
+  </div>
+
+  {% comment %}
+  <div>
+    <div class="hero_banner">
+
+      {%- if block.settings.image != blank -%}
+      <div class="hero_banner-media">
+        <picture>
+            <source srcset="{{ block.settings.image | img_url: '2000x' }}" media="(min-width: 800px)" />
+            <img src="{{ block.settings.image_mobile | img_url: '900x' }}" height="" width="" loading="lazy" alt="">
+         </picture>
+      </div>
+      {%- endif -%}
+
+      <div class="hero_banner-content">
+
+          {%- if block.settings.heading != blank -%}
+          <h1 class="hero_banner-heading h--xxl{% if section.settings.text_reverse %} c--white{% endif %}" {{ block.shopify_attributes }}>
+             {{ block.settings.heading | newline_to_br }}
+          </h1>
+          {%- endif -%}
+
+          {%- if block.settings.text != blank -%}
+          <div class="hero_banner-text mb--2{% if section.settings.text_reverse %} c--white{% endif %}" {{ block.shopify_attributes }}>
+              {{ block.settings.text | escape }}
+          </div>
+          {%- endif -%}
+
+          {%- if block.settings.button_label != blank -%}
+          <a{% if block.settings.button_link != blank %} href="{{ block.settings.button_link }}"{% endif %} class="button button-solid"{% if block.settings.button_link == blank %} aria-disabled="true"{% endif %}>{{ block.settings.button_label | escape }}</a>
+          {%- endif -%}
+
+
+      </div>
+
+    </div>
+  </div>
+  {%- endfor -%} {%- endcomment -%}
+
+</div>
+
+<script type="module">
+  var pdpQuote = tns({
+    container: '.section-pdp-quotes-items',
+    items: 1,
+    slideBy: 'page',
+    autoplay: true,
+    controls: true,
+    autoplayButton: false,
+    autoHeight: false,
+    nav: false,
+    speed: 800
+  });
+</script>
+
+
+{% schema %}
+{
+	"name": "PDP Quotes",
+	"tag": "section",
+    "blocks": [
+        {
+            "type": "item",
+            "name": "Item",
+            "settings": [
+                {
+                  "type": "text",
+                  "id": "quote",
+                  "label": "Quote"
+                },
+                {
+                  "type": "text",
+                  "id": "author",
+                  "label": "Author"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "PDP Quotes"
+		}
+	]
+}
+{% endschema %}

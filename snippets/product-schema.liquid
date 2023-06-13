@@ -1,0 +1,70 @@
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": {{ product.title | json }},
+    "url": {{ shop.url | append: product.url | json }},
+    {%- for media in product.media limit: 1 -%}
+		{% if media.media_type == 'image' %}
+        "image": [
+          {{ media.preview_image | img_url: media_size | prepend: "https:" | json }}
+        ],
+		{% endif %}
+    {%- endfor -%}
+    {%-  comment  -%}
+    {%- if product.selected_or_first_available_variant.featured_media -%}
+      {%- assign media_size = product.selected_or_first_available_variant.featured_media.preview_image.width | append: 'x' -%}
+      "image": [
+        {{ product.selected_or_first_available_variant.featured_media | img_url: media_size | prepend: "https:" | json }}
+      ],
+    {%- endif -%}
+    {%-  endcomment  -%}
+    "description": {{ product.description | strip_html | json }},
+    {%- if product.selected_or_first_available_variant.sku != blank -%}
+    "sku": {{ product.selected_or_first_available_variant.sku | json }},
+    {%- endif -%}
+    "brand": {
+      "@type": "Brand",
+      "name": {{ product.vendor | json }}
+    },
+    "offers": [
+      {%- for variant in product.variants -%}
+        {%- capture validUntil -%}
+        {%- if variant.available -%}
+          {%- assign seconds = 30 | times: 24 | times: 60 | times: 60 -%}
+          {{- 'now' | date: "%s" | plus: seconds | date: "%Y-%m-%d" -}}
+        {%- endif -%}
+        {%- endcapture -%}
+        {
+          "@type" : "Offer",
+          {%- if variant.sku != blank -%}
+            "sku": {{ variant.sku | json }},
+          {%- endif -%}
+          "availability" : "http://schema.org/{% if variant.available %}InStock{% else %}OutOfStock{% endif %}",
+          "price" : {{ variant.price | divided_by: 100.00 | json }},
+          "priceCurrency" : {{ cart.currency.iso_code | json }},
+          "url" : {{ shop.url | append: variant.url | json }},
+          "priceValidUntil" :  {{ validUntil | json }}
+        }{% unless forloop.last %},{% endunless %}
+      {%- endfor -%}
+    ]
+  }
+</script>
+
+{% comment %}
+{% if product.metafields.bazaarvoice.reviews %} {{ product.metafields.bazaarvoice.reviews | json }}{% endif %}
+{% assign ryviu = product.metafields.ryviu %}
+{% if ryviu %}
+  {%- assign aggregateRating = ryviu.product_reviews_info | split: ";" -%}
+  {%- assign r_avg = aggregateRating[1] | plus: 0 -%}
+  {%- assign r_count = aggregateRating[0] | plus: 0 -%}
+  {%- if r_count > 0 -%}       
+    "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "{{ r_avg }}",
+    "reviewCount": "{{ r_count }}"
+    },
+{%- endif -%}
+{% endif %}
+
+{%  endcomment %}

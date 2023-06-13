@@ -1,0 +1,99 @@
+<div class="bg--green-dark bg--silhouette">
+    <div class="section-rotator inner txt-center-align pt--3 pb--3" style="min-height:{{ section.settings.min_height | append: 'vh' }}">
+        
+        {% if section.settings.top_text != blank %}
+        <h3 class="h--sans c--tan h--md">{{ section.settings.top_text | newline_to_br }}</h3>
+        {% endif %}
+        
+        <div class="mt--2 mb--2 rotating-messages" id="{{ section.id }}">
+        {% for block in section.blocks %}
+            <h4 class="h--xxl c--yellow">{{ block.settings.message }}</h4>
+        {% endfor %}
+        </div>
+
+        {% if section.settings.btm_text != blank %}
+        <p class="c--tan h--md">{{ section.settings.btm_text | newline_to_br }}</p>
+        {% endif %}
+
+    </div>
+</div>
+
+{% javascript %}
+
+(function() {
+
+    let messages = document.querySelector('.rotating-messages'),
+        messages_items = document.querySelectorAll('.rotating-messages > h4'),
+        messages_next = 0;
+    
+    function updateMessages(cnt) {
+        [].forEach.call(messages_items, function(item,index) {
+            if(index == cnt) {
+                messages_items[index].style.display = 'block';
+            } else {
+                messages_items[index].style.display = 'none';
+            }
+        })
+        
+        messages_next = cnt + 1;
+
+        if(messages_next >= messages_items.length) {
+            messages_next = 0;
+        }
+    }
+    
+    updateMessages(0);
+
+    setInterval(function(){
+        updateMessages(messages_next);
+    }, 3000);
+    
+})();
+
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Section Rotater",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "top_text",
+            "label": "Top Text"
+        },
+        {
+            "type": "textarea",
+            "id": "btm_text",
+            "label": "Bottom Text"
+        },
+        {
+			"type": "range",
+			"id": "min_height",
+			"min": 0,
+			"max": 100,
+			"step": 10,
+            "default": 0,
+			"label": "Min Height"
+		}
+    ],
+    "blocks": [
+        {
+            "type": "heading",
+            "name": "Messages",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "message",
+                    "label": "Message"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Section Rotator"
+		}
+	]
+}
+{% endschema %}

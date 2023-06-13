@@ -1,0 +1,70 @@
+<div id="infographic-{{ section.id }}" class="bg--white">
+    <div class="inner pb--1"{% if section.settings.max_width != '1400' %} style="max-width:{{ section.settings.max_width | append: 'px' }}"{% endif %}>
+        <div class="columns">
+            {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                    {%- when 'column' -%}
+                        <div class="column t--center" data-col="{{ section.blocks | size }}">
+                            <video id="video-{{ section.id }}" class="videodetect" autoplay muted playsinline loop>
+                                <source src="{{ block.settings.url }}"
+                                        type="video/mp4">
+                                <!-- fallback image -->
+                            </video>
+                            {%- if block.settings.caption != blank -%}
+                            <div class="mt--2 mb--2">
+                                {{ block.settings.caption }}
+                            </div>
+                            {%- endif -%}
+                        </div>
+                {%- endcase -%}
+            {%- endfor -%}
+        </div>
+    </div>
+</div>
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Infographics",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "range",
+            "id": "max_width",
+            "min": 700,
+            "max": 1400,
+            "step": 100,
+            "default": 1400,
+            "unit": "px",
+            "label": "Max width"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "column",
+            "name": "Column",
+            "limit": 2,
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "url",
+                    "label": "Path to file",
+                    "info": "Copy file path from Settings > Files"
+                },
+                {
+                    "type": "textarea",
+                    "id": "caption",
+                    "label": "Caption"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Infographics"
+		}
+	]
+}
+{% endschema %}

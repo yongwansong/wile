@@ -1,0 +1,97 @@
+<div id="section-{{ section.id }}" class="bg--green-dark">
+    <div class="columns inner">
+        <div class="column mt--5 mb--5 t--center" data-col="1">
+            
+            {% if section.settings.heading != blank %}
+            <h2 class="h--xl mb--2 c--tan">{{ section.settings.heading | newline_to_br }}</h2>
+            {% endif %}
+
+            <div class="versus-table">
+                <div class="versus-table-col">
+                    <div class="versus-table-block"></div>
+                    <div class="versus-table-block"><span class="t--serif c--yellow t--lg">Wile</span></div>
+                    <div class="versus-table-block"><span class="t--serif c--tan t--xs">Other Supplements</span></div>
+                </div>
+                {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                {%- when 'list' -%}
+                <div class="versus-table-col">
+                    <div class="versus-table-block"><span class="t--serif c--tan t--sm">{{ block.settings.column | newline_to_br }}</span></div>
+                    <div class="versus-table-block checked"></div>
+                    <div class="versus-table-block other"></div>
+                </div>
+                {%- endcase -%}
+                {%- endfor %}
+            </div>
+
+            <div class="versus-table stacked">
+                <div class="versus-table-row">
+                    <div class="versus-table-block"></div>
+                    <div class="versus-table-block"><span class="t--serif c--yellow t--lg">Wile</span></div>
+                    <div class="versus-table-block"><span class="t--serif c--tan t--xs">Other Supplements</span></div>
+                </div>
+                {%- for block in section.blocks -%}
+                {%- case block.type -%}
+                {%- when 'list' -%}
+                <div class="versus-table-row">
+                    <div class="versus-table-block"><span class="t--serif c--tan t--sm">{{ block.settings.column | newline_to_br }}</span></div>
+                    <div class="versus-table-block checked"></div>
+                    <div class="versus-table-block other"></div>
+                </div>
+                {%- endcase -%}
+                {%- endfor %}
+            </div>
+
+            {%- if section.settings.button_link != blank -%}
+                <a href="{{ section.settings.button_link }}" class="button mt--3 button-arrow button-attention">{{ section.settings.button_label | escape }}</a>
+            {%- endif -%}
+
+        </div>
+    </div>
+</div>
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+{
+	"name": "Section Versus",
+	"tag": "section",
+    "settings": [
+        {
+            "type": "textarea",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "text",
+            "id": "button_label",
+            "default": "Button label",
+            "label": "Button label"
+        },
+        {
+            "type": "url",
+            "id": "button_link",
+            "label": "Button Link"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "list",
+            "name": "List",
+            "settings": [
+                {
+                    "type": "textarea",
+                    "id": "column",
+                    "label": "Column"
+                }
+            ]
+        }
+    ],
+	"presets": [
+		{
+			"name": "Section Versus"
+		}
+	]
+}
+{% endschema %}
