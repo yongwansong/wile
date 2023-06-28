@@ -23,6 +23,12 @@
 				</li>
 				{%- endfor -%}
               
+              	{%- if section.settings.quiz_link != blank -%}
+              	<li class="siteheader-nav-list__item hide-on-desktop">
+                  	<a href="{{ section.settings.quiz_link }}" class="siteheader-nav-link siteheader-nav-btn">{{ section.settings.quiz_label }}</a>
+             	</li>
+              	{%- endif -%}
+              
 				{%- if shop.customer_accounts_enabled -%}
 				<li class="siteheader-nav-list__item m--visible">
 					<a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="siteheader-nav-link">
@@ -65,8 +71,8 @@
 		</div>
 		<div class="siteheader-menu">
 			{%- if section.settings.quiz_link != blank -%}
-                <a href="{{ section.settings.quiz_link }}" class="siteheader-nav-link siteheader-nav-btn">{{ section.settings.quiz_label }}</a>
-              	{%- endif -%}
+                <a href="{{ section.settings.quiz_link }}" class="siteheader-nav-link siteheader-nav-btn hide-on-mobile">{{ section.settings.quiz_label }}</a>
+            {%- endif -%}
           	<a href="/pages/store-locator" class="siteheader-nav-link m--hidden">Find Us</a>
 			{%- if shop.customer_accounts_enabled -%}
 			<a href="{%- if customer -%}{{ routes.account_login_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="siteheader-nav-link m--hidden">
@@ -94,7 +100,18 @@
 		</div>
 	</div>
 </header>
-
+<style>
+	@media screen and (min-width: 1024px) {
+		.hide-on-desktop{
+			display: none;
+		}
+	}
+	@media screen and (max-width: 1024px) {
+		.hide-on-mobile{
+			display: none;
+		}
+	}
+</style>
 {%- if request.page_type != 'cart' -%}
 	{%- render 'cart-notification' -%}
 {%- endif -%}
