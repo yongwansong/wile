@@ -94,15 +94,7 @@
 		</div>
 	</div>
 </header>
-<style>
-	#best-sellers{
-		display:none;
-	}
-	body.variant > #best-sellers{
-		display: block !important;
-	}
 
-</style>
 {%- if request.page_type != 'cart' -%}
 	{%- render 'cart-notification' -%}
 {%- endif -%}
