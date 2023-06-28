@@ -25,6 +25,7 @@
 		})(window,document,'script','dataLayer','GTM-W3Q8LJ5');</script>
 	{{ content_for_header }}
 	{% render 'meta-tags' %}
+	<script src="https://www.googleoptimize.com/optimize.js?id=OPT-KZBMSCV"></script>
 	<script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
 	<script 
 		src="//code.jquery.com/jquery-3.6.0.min.js"
@@ -68,7 +69,7 @@ page-inner
 {%- endif -%}
 {%- endcapture -%}
 
-<body class="{{ pageLayout }}{% if template.name == 'product' %} bg--tan{% endif %}">
+<body class="{{ pageLayout }}{% if template.name == 'product' %} bg--tan{% endif %} variant">
 	
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3Q8LJ5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
