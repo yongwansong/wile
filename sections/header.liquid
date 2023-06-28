@@ -18,7 +18,7 @@
 			<ul class="siteheader-nav-list" role="list">
 				
 				{%- for link in section.settings.menu.links -%}
-				<li class="siteheader-nav-list__item">
+				<li class="siteheader-nav-list__item" id="{{link.title | handleize}}">
 					<a href="{{ link.url }}" class="siteheader-nav-link{% if link.current %} siteheader-nav-link--active{% endif %}"{% if link.current %} aria-current="page" {% endif %}>{{ link.title | escape }}</a>
 				</li>
 				{%- endfor -%}
@@ -97,7 +97,15 @@
 		</div>
 	</div>
 </header>
+<style>
+	#best-sellers{
+		display:none;
+	}
+	body.variant > #best-sellers{
+		display: block !important;
+	}
 
+</style>
 {%- if request.page_type != 'cart' -%}
 	{%- render 'cart-notification' -%}
 {%- endif -%}
