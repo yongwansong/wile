@@ -77,7 +77,7 @@
     </div>
     <div class="siteheader-menu">
       {%- if section.settings.quiz_link != blank -%}
-        <a href="{{ section.settings.quiz_link }}" class="siteheader-nav-link siteheader-nav-btn hide-on-desktop">{{ section.settings.quiz_label }}</a>
+        <a href="{{ section.settings.quiz_link }}" class="siteheader-nav-link siteheader-nav-btn hide-on-desktop hide-on-mobile">{{ section.settings.quiz_label }}</a>
       {%- endif -%}
       <a href="/pages/store-locator" class="siteheader-nav-link m--hidden">Find Us</a>
       {%- if shop.customer_accounts_enabled -%}
