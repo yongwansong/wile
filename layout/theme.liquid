@@ -69,7 +69,10 @@ page-inner
 {%- endif -%}
 {%- endcapture -%}
 
-<body class=" {{ pageLayout }}{% if template.name == 'product' %} bg--tan{% endif %}">
+<body 
+	class=" {{ pageLayout }}{% if template.name == 'product' %} bg--tan{% endif %}"
+	data-ribbon="b"
+>
 	
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3Q8LJ5" height="0" width="0" style="display:none;visibility:hidden"></iframe>
