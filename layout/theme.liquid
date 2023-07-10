@@ -38,6 +38,7 @@
 	{%- render 'bold-subscription-widget' -%}
 	{{ 'bsub.js' | asset_url | script_tag }}
 	{{ 'bsub.scss.css' | asset_url | stylesheet_tag }}
+	{{ 'custom-main.min.css' | asset_url | stylesheet_tag: preload: true }}
 	{%  comment %}{% render 'taboola_base' %}{% endcomment %}
 	{% comment %}{% render 'quantcast_base' %}{% endcomment %}
 	<script type="text/javascript">
