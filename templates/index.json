@@ -1,1 +1,1042 @@
-{"sections":{"16563507299406e79e":{"type":"hero-carousel","blocks":{"789ffcda-88fd-4545-82cc-bcfbd5459a6c":{"type":"item","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Wile-MemorialDayHeroBanner-02_Image.png","image_mobile":"shopify:\/\/shop_images\/Wile-MemorialDayHeroBanner-Mobile_Image.png","text_reverse":false,"heading":"Save up to\n30% sitewide","text":"<p>20% OFF SITEWIDE <strong>(CODE: MDW20)<\/strong><\/p><p>25% OFF ANY 2 PRODUCTS <strong>(CODE: MDW25)<\/strong><\/p><p>30% OFF ANY 3+ PRODUCTS <strong>(CODE: MDW30)<\/strong><\/p>","button_label":"SHOP NOW","button_link":"shopify:\/\/collections"}},"e67de3f0-7d9d-4f1b-a4f7-9ea59f702dd8":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Wile-LibidoLaunchAssets-Homepage-02_With_Badge.png","image_mobile":"shopify:\/\/shop_images\/Wile-LibidoLaunchAssets-mobile-new.jpg","text_reverse":false,"heading":"Libido. \nBack in Stock.","text":"<p>Get the product that sold out in 3 days.<\/p>","button_label":"SHOP","button_link":"shopify:\/\/products\/libido-tincture"}},"10a5ee41-e46a-4eac-93e4-e3224708f126":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_02.jpg","image_mobile":"shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_02_mobile.jpg","text_reverse":false,"heading":"What's right \nfor me?","text":"<p>Get help for mood swings, sleep, stress, perimenopause & more.<\/p>","button_label":"Take The Quiz","button_link":"#quiz-17HjjZ"}},"7d676822-d640-4d07-92bb-ba32ad39763e":{"type":"item","settings":{"image":"shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_01.jpg","image_mobile":"shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_01_mobile.jpg","text_reverse":false,"heading":"It's your power.\nTake it.","text":"<p>Shop clinically backed, naturopath-formulated wellness for grown women 40+.<\/p>","button_label":"SHOP","button_link":"shopify:\/\/collections"}},"f09e09f9-3bc3-4671-ad64-666b2c31b563":{"type":"item","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/banner-blackfridaysale.png","image_mobile":"shopify:\/\/shop_images\/banner-blackfridaysale-mobile.png","text_reverse":false,"heading":"Holiday savings \nare here!","text":"<p>Use the Holiday code below at checkout <br\/>to get instant savings.<br\/><br\/>20% off sitewide (<strong>Holiday20<\/strong>) or<br\/>30% off when you buy 3 or more (<strong>Holiday30<\/strong>)<br\/><\/p>","button_label":"Shop","button_link":"shopify:\/\/collections"}},"3a27cb17-cacb-40f6-9bc8-ac185b7e5c93":{"type":"item","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_03_6832ab1b-097d-4c87-afda-8bb639b8e4a2.jpg","image_mobile":"shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_03_mobile_a9061532-bedd-4f33-af07-70e26611c1ad.jpg","text_reverse":false,"heading":"Find Wile at \nWhole Foods","text":"","button_label":"Find Stores","button_link":"shopify:\/\/pages\/store-locator"}},"262397f9-f78e-472c-ac40-897131f21684":{"type":"item","disabled":true,"settings":{"image":"shopify:\/\/shop_images\/Wile-ForiaCollab-Homepage.png","image_mobile":"shopify:\/\/shop_images\/Wile-ForiaCollab-Homepage-Mobile03.png","text_reverse":false,"heading":"Meet Your\nPleasure Duo","text":"","button_label":"SHOP NOW","button_link":"shopify:\/\/products\/libido-tincture"}}},"block_order":["789ffcda-88fd-4545-82cc-bcfbd5459a6c","e67de3f0-7d9d-4f1b-a4f7-9ea59f702dd8","10a5ee41-e46a-4eac-93e4-e3224708f126","7d676822-d640-4d07-92bb-ba32ad39763e","f09e09f9-3bc3-4671-ad64-666b2c31b563","3a27cb17-cacb-40f6-9bc8-ac185b7e5c93","262397f9-f78e-472c-ac40-897131f21684"],"settings":{}},"hero_banner":{"type":"hero-banner","disabled":true,"blocks":{"heading":{"type":"heading","settings":{"heading":"It's your power.\nTake it."}},"ff9b0c8d-8aa2-44b0-9ef3-2c6125b37ce8":{"type":"text","settings":{"text":"Over 40ish? Find the right supplements to work with your body, mind and mood."}},"button":{"type":"buttons","settings":{"button_label_1":"Take The Quiz","button_link_1":"#quiz-17HjjZ","button_label_2":"","button_link_2":""}}},"block_order":["heading","ff9b0c8d-8aa2-44b0-9ef3-2c6125b37ce8","button"],"settings":{"image":"shopify:\/\/shop_images\/Wile-WebsiteBanner-WholeFoods-02.png","image_mobile":"shopify:\/\/shop_images\/Wile-MobileBanner-WholeFoods-02_01.png","text_reverse":true,"shop_all":true}},"16593105591ce8f066":{"type":"featured-locations","blocks":{"3c79f9ba-631e-483d-b7f2-fefa80c456f8":{"type":"logo","settings":{"label":"Whole Foods Market","image":"shopify:\/\/shop_images\/logo-wholefoods.png"}},"2d6cce50-9d81-44f6-be73-d6128f493d7a":{"type":"logo","disabled":true,"settings":{"label":"Walgreens","image":"shopify:\/\/shop_images\/logo-walgreens_d5b12016-1847-4699-8e9a-2fd26e23f243.png"}},"457b1934-e2aa-4a94-8444-3c9022e41b2a":{"type":"logo","settings":{"label":"","image":"shopify:\/\/shop_images\/cvs-logo_857e3781-73ab-42a5-a8e4-eb30d0d8c71d.png"}},"2e3f0c8e-b36f-43e2-9767-efbe079ba481":{"type":"logo","settings":{"label":"","image":"shopify:\/\/shop_images\/Fresh_Thyme_new_banner_logo_Aug2020_974aee69-da0e-4460-aea2-5fbcca9ff51e.png"}},"7383924f-6861-4aea-a007-2608210b7102":{"type":"logo","settings":{"label":"","image":"shopify:\/\/shop_images\/Plum_Markets.webp"}}},"block_order":["3c79f9ba-631e-483d-b7f2-fefa80c456f8","2d6cce50-9d81-44f6-be73-d6128f493d7a","457b1934-e2aa-4a94-8444-3c9022e41b2a","2e3f0c8e-b36f-43e2-9767-efbe079ba481","7383924f-6861-4aea-a007-2608210b7102"],"settings":{"heading":"Now available at:","max_height":100}},"1627846172c2617e68":{"type":"featured-callouts","blocks":{"614d4017-c149-4f08-b45a-2a6a5f7d9af5":{"type":"list","settings":{"list_item":"Improves mood"}},"424bc1e3-fa09-4644-9075-1bfdcbc0de62":{"type":"list","settings":{"list_item":"Manage stress"}},"938948f9-b907-4bc6-b8e4-0c69d36f5de7":{"type":"list","settings":{"list_item":"Fewer mood swings"}},"5650d529-8ff1-405a-a673-0ffcc7a7f8d8":{"type":"list","settings":{"list_item":"Smoother periods"}},"62ff92e1-d3d9-402a-b758-d37b8daef6f9":{"type":"list","settings":{"list_item":"Less intense PMS"}},"b8f4d6d2-955e-43d0-96ee-abc56ed1d635":{"type":"list","settings":{"list_item":"Reduce hot flashes"}}},"block_order":["614d4017-c149-4f08-b45a-2a6a5f7d9af5","424bc1e3-fa09-4644-9075-1bfdcbc0de62","938948f9-b907-4bc6-b8e4-0c69d36f5de7","5650d529-8ff1-405a-a673-0ffcc7a7f8d8","62ff92e1-d3d9-402a-b758-d37b8daef6f9","b8f4d6d2-955e-43d0-96ee-abc56ed1d635"],"settings":{"image":"shopify:\/\/shop_images\/pill.png","heading":"It's not you. \nIt's your hormones.","text":"Start earlier, and perimenopause will travel more lightly. \nStart wherever you are, and feel more like yourself.","button_label":"Learn More","button_link":"shopify:\/\/pages\/the-science-womens-homone-support-wellness","list_header":"","bg_color":"bg--lavender"}},"1633657888fa5a6307":{"type":"section-rotator","blocks":{"87c7dfcb-fc17-4628-a178-8965aa6e94da":{"type":"heading","settings":{"message":"To get dizzy easily?"}},"a24923a2-1c15-4773-aceb-d596c0aa7fe9":{"type":"heading","settings":{"message":"For 3 am random wakeups?"}},"60cb6cfd-0859-410f-897f-4e6c9c23b034":{"type":"heading","settings":{"message":"To smell different?"}},"3e1301f1-ac6d-4738-8d5d-0a46eb4ec317":{"type":"heading","settings":{"message":"To go middle rager"}},"61bb5044-7627-46db-8f4d-dbc88f3b4dd5":{"type":"heading","settings":{"message":"For sudden cankles?"}},"4072be1f-8944-4128-8528-2de74b2cc1e0":{"type":"heading","settings":{"message":"To sneeze or wheeze?"}},"d48af5ad-4b79-47f4-b1d9-2c779f1b7bef":{"type":"heading","settings":{"message":"To feel the #$@$ it?"}},"cc55135b-9b94-44af-abaf-354168ff7f6d":{"type":"heading","settings":{"message":"For sudden onset tummy?"}},"db5f1155-7715-4e05-8952-7062a47c2337":{"type":"heading","settings":{"message":"To forget.. wait...what?"}},"c3ea2104-a656-42d9-8b33-07fb14e83efa":{"type":"heading","settings":{"message":"For sex to hurt?"}}},"block_order":["87c7dfcb-fc17-4628-a178-8965aa6e94da","a24923a2-1c15-4773-aceb-d596c0aa7fe9","60cb6cfd-0859-410f-897f-4e6c9c23b034","3e1301f1-ac6d-4738-8d5d-0a46eb4ec317","61bb5044-7627-46db-8f4d-dbc88f3b4dd5","4072be1f-8944-4128-8528-2de74b2cc1e0","d48af5ad-4b79-47f4-b1d9-2c779f1b7bef","cc55135b-9b94-44af-abaf-354168ff7f6d","db5f1155-7715-4e05-8952-7062a47c2337","c3ea2104-a656-42d9-8b33-07fb14e83efa"],"settings":{"top_text":"Is It Normal...","btm_text":"Yes, absolutely normal.\nBut why live with it?","min_height":40}},"16336576690c02c3a1":{"type":"featured-products","blocks":{"57f957b9-2d0e-40da-8fa7-0f90eab86e53":{"type":"item","settings":{"product":"hot-flash-plant-based-herbal-supplement","image":"shopify:\/\/shop_images\/Wile_HotFlash-Front.png","title":"Hot Flash","description":"Handle the #1 issue \n& nothing but."}},"aa4b7493-43ba-4eae-8b8e-2e5d55c54370":{"type":"item","settings":{"product":"40-plus-period-support-supplement","image":"shopify:\/\/shop_images\/Wile_40_PeriodSupport_Front.jpg","title":"40+ Period Support","description":"Unpredictable periods? \nNo thank you."}},"59c86010-6006-41f0-be1d-190264eb39c0":{"type":"item","settings":{"product":"perimenopause-support-supplement","image":"shopify:\/\/shop_images\/Wile-PSProductNoBadge1_8e148a28-87b4-4998-b7ff-00bdd73a7175.png","title":"Perimenopause Support","description":"Get ahead of perimenopause or smooth it out."}},"f5818a39-ce51-4540-927f-5c781ba94ca5":{"type":"item","settings":{"product":"womens-stress-herbal-supplement","image":"shopify:\/\/shop_images\/Wile_WomensStress_Front.jpg","title":"Stress","description":"Manage daily absurdity and improve your inner ballast."}}},"block_order":["57f957b9-2d0e-40da-8fa7-0f90eab86e53","aa4b7493-43ba-4eae-8b8e-2e5d55c54370","59c86010-6006-41f0-be1d-190264eb39c0","f5818a39-ce51-4540-927f-5c781ba94ca5"],"settings":{"headline":"Build Your System","body":"<p>Peri is never the same. How can your plan be? <\/p>","bg_color":"bg--tan","button_label":"Button label","button_link":""}},"16336577354848cf06":{"type":"featured-products","blocks":{"e666c074-a04a-4474-bc31-405527fb1098":{"type":"item","settings":{"product":"un-anger","image":"shopify:\/\/shop_images\/Wile-UnAnger_Front.jpg","title":"Un-Anger","description":"Irritable? On edge? \nReady for a fight?"}},"b53743cf-bd87-4542-8159-706e92a8e7bd":{"type":"item","settings":{"product":"un-worry","image":"shopify:\/\/shop_images\/Wile-UnWorry_Front.jpg","title":"Un-Worry","description":"Jittery? Fretful?\nIn the spin?"}},"6d3be520-855e-4cbb-acf1-e8510e67c1e4":{"type":"item","settings":{"product":"burnout-relief","image":"shopify:\/\/shop_images\/Wile-BurnoutRelief_Front.jpg","title":"Burnout Relief","description":""}},"c3f67a84-1aa4-45e0-8c54-db9e1b62b4e4":{"type":"item","settings":{"product":"stave-the-crave-chai-herbal-powder","image":"shopify:\/\/shop_images\/stc-featured.jpg","title":"","description":"Anti-Stress Eating Chai.\nYep, you read that right."}}},"block_order":["e666c074-a04a-4474-bc31-405527fb1098","b53743cf-bd87-4542-8159-706e92a8e7bd","6d3be520-855e-4cbb-acf1-e8510e67c1e4","c3f67a84-1aa4-45e0-8c54-db9e1b62b4e4"],"settings":{"headline":"FEEL BETTER. NOW-ER.","body":"<p>Get a ritual for on-demand H.E.L.P. for stress, mood and what comes with them. <\/p>","bg_color":"bg--white","button_label":"Button label","button_link":""}},"1634060950f9dfc18b":{"type":"cross-sell","disabled":true,"blocks":{"df8fe0af-60f4-4458-b60a-ea32565698cf":{"type":"item","settings":{"product":"perimenopause-support-supplement","image":"shopify:\/\/shop_images\/Wile_40_HormonalWellness_Front.png","title":"40+ Hormone Wellness","description":"Around 35 or 40, our female hormone levels naturally start to decrease. Stress and stress hormones often skyrocket. This disrupts our bodies and lives in big ways that few women know about."}},"186c2c46-0998-4aba-9a47-e32c55620ca5":{"type":"item","settings":{"product":"perimenopause-support-supplement","image":"shopify:\/\/shop_images\/Wile-BurnoutRelief_Front.png","title":"Burnout","description":""}},"c4050a82-60bb-4756-90f6-9fd3dff8fc94":{"type":"item","settings":{"product":"perimenopause-support-supplement","image":"shopify:\/\/shop_images\/Wile_HotFlash-Front_c29c2619-3ed0-4497-9a75-f186f97c08f8.png","title":"Hot Flash Relief","description":""}},"55deb8d5-33c5-4f28-b8c1-2c37571e2805":{"type":"item","settings":{"product":"perimenopause-support-supplement","image":"shopify:\/\/shop_images\/Wile_WomensStress_Front.png","title":"Stress","description":""}}},"block_order":["df8fe0af-60f4-4458-b60a-ea32565698cf","186c2c46-0998-4aba-9a47-e32c55620ca5","c4050a82-60bb-4756-90f6-9fd3dff8fc94","55deb8d5-33c5-4f28-b8c1-2c37571e2805"],"settings":{"headline":"Shop Your Solution","body":"<p>PERIMENOPAUSE IS NEVER THE SAME<\/p>","bg_color":"bg--tan"}},"1651688950ec11ffc3":{"type":"section-rotator-quotes","blocks":{"4f8c6742-96f6-4510-be9c-f2ddd209dbee":{"type":"heading","settings":{"quote":"“This brand is on a mission \nto help women over 40.”","logo":"shopify:\/\/shop_images\/logo-instyle.png","logo_text":"InStyle"}},"3c0bf463-3d87-48f0-afc4-ca30851a7c94":{"type":"heading","settings":{"quote":"“Wile is ushering in an era \nof a shame-free menopause.”","logo":"shopify:\/\/shop_images\/logo-forbes.png","logo_text":"Forbes"}},"56fbd60c-703e-4131-ab37-15f5789c87bc":{"type":"heading","settings":{"quote":"“The mission of empowering \nwomen over 40.”","logo":"shopify:\/\/shop_images\/logo-beautyindependent.png","logo_text":"Beauty Independent"}},"e4819ac9-176b-4f02-95a8-eb7b65b01fd3":{"type":"heading","settings":{"quote":"Judy Greer’s new supplement \nbrand is redefining her 40s.”","logo":"shopify:\/\/shop_images\/logo-hollywood.png","logo_text":"The Hollywood Reporter"}}},"block_order":["4f8c6742-96f6-4510-be9c-f2ddd209dbee","3c0bf463-3d87-48f0-afc4-ca30851a7c94","56fbd60c-703e-4131-ab37-15f5789c87bc","e4819ac9-176b-4f02-95a8-eb7b65b01fd3"],"settings":{"top_text":"","btm_text":"","min_height":50,"logo_width":200}},"16265580862358a86b":{"type":"maincontent","disabled":true,"blocks":{"16265580862358a86b-0":{"type":"heading","settings":{"subheading":"","heading":"“This is the product of thousands of hours of working with women inside my practice. It’s a process of listening and understanding our lives and bodies.","heading_size":"h--xl"}},"01687705-5308-4eee-a50c-4396e441d020":{"type":"text","settings":{"text":"I formulate for them and now I’m excited to help many more take the reins of their own well-being and transformation through this era of life. Feeling ‘old’ is optional. Plants truly do have the capacity to work with us to return us to our full power and perhaps find something even better.”","text_size":"t--md"}},"31098937-e805-44d8-8c3b-65587f4f9a1f":{"type":"quote","settings":{"image":"shopify:\/\/shop_images\/jillian_128ba74b-213a-4b0d-8749-baacf8bc62e2.png","image_width":100,"caption":"Dr. Jillian Stansbury\nNaturopathic Family Physician,\nHealing Arts Apothecary"}}},"block_order":["16265580862358a86b-0","01687705-5308-4eee-a50c-4396e441d020","31098937-e805-44d8-8c3b-65587f4f9a1f"],"settings":{"show_badge":false,"bg_image":"shopify:\/\/shop_images\/bg-plants.jpg","bg_color":"bg--green-dark","spacing":"pt--5 pb--5","max_width":1000,"show_silhouette":false}},"1626556311bf6aa17f":{"type":"ticker","blocks":{"c530a39a-559d-4e6d-8022-7009776c3965":{"type":"text","settings":{"text":"Clinically backed"}},"1626556311bf6aa17f-0":{"type":"text","settings":{"text":"Vegan"}},"cc5e4404-2ef7-40bf-868e-2453dde6f71c":{"type":"text","settings":{"text":"100% plant derived"}},"27a39da7-5b10-49c0-9680-aa6014164714":{"type":"text","settings":{"text":"Naturopath-formulated"}}},"block_order":["c530a39a-559d-4e6d-8022-7009776c3965","1626556311bf6aa17f-0","cc5e4404-2ef7-40bf-868e-2453dde6f71c","27a39da7-5b10-49c0-9680-aa6014164714"],"settings":{"bg_color":"bg--green-dark"}},"162655642654c9ce78":{"type":"maincontent","blocks":{"162655642654c9ce78-0":{"type":"heading","settings":{"subheading":"IT’S ALL ABOUT THE INGREDIENTS, BABE.","heading":"Plants work almost as \nhard as women do.","heading_size":"h--xxl"}},"50c1ba8a-a0f4-411d-8809-fdacaab9abce":{"type":"text","settings":{"text":"Feel like you again without synthetic formulas. Wile uses adaptogens, phytoestrogens nervines, all clinically backed.","text_size":"t--md"}},"2cb7beb2-12b9-4b64-a3cf-10e954f01cf5":{"type":"button","settings":{"button_label":"The Science","button_link":"shopify:\/\/pages\/the-science-womens-homone-support-wellness"}}},"block_order":["162655642654c9ce78-0","50c1ba8a-a0f4-411d-8809-fdacaab9abce","2cb7beb2-12b9-4b64-a3cf-10e954f01cf5"],"settings":{"show_badge":false,"bg_image":"shopify:\/\/shop_images\/bg-plants_9c064dc0-ec24-43ab-93fe-152cea957ab9.jpg","bg_color":"bg--green-dark","spacing":"pt--5 pb--5","max_width":700,"show_silhouette":false}},"16265663363ec28e5f":{"type":"featured-articles","blocks":{"4b94eac9-e135-468d-a1d8-b6656c8445ca":{"type":"featured_article","disabled":true,"settings":{"article":"journal-women-health-naturopathic-supplements-blog\/read-this-before-your-next-ob-gyn-visit"}}},"block_order":["4b94eac9-e135-468d-a1d8-b6656c8445ca"],"settings":{"headline":"","show_image":true,"show_date":false,"show_author":false,"show_excerpt":false,"show_comments":false}},"16265564303ec3c376":{"type":"maincontent","disabled":true,"blocks":{"16265564303ec3c376-0":{"type":"heading","settings":{"subheading":"FEEL BETTER NATURALLY","heading":"Naturopath-designed for the symptoms of perimenopause. And life.","heading_size":"h--xxxl"}}},"block_order":["16265564303ec3c376-0"],"settings":{"show_badge":true,"bg_color":"bg--tan","spacing":"pt--1","max_width":900,"show_silhouette":false}},"16265662815248d351":{"type":"featured-product","disabled":true,"blocks":{"715a0a46-9bda-409e-a375-8d69013b01ce":{"type":"heading","settings":{"heading":"FEEL BETTER NATURALLY"}},"edea4e10-a14d-492a-b6df-6b6564314169":{"type":"text","settings":{"text":"Naturopath-designed for the symptoms of perimenopause. And life."}},"480a2954-fdae-47b9-9252-6214a42f42ef":{"type":"button","settings":{"button_label":"Learn More","button_link":"shopify:\/\/products\/perimenopause-support-supplement"}}},"block_order":["715a0a46-9bda-409e-a375-8d69013b01ce","edea4e10-a14d-492a-b6df-6b6564314169","480a2954-fdae-47b9-9252-6214a42f42ef"],"settings":{"image":"shopify:\/\/shop_images\/Untitled-1.jpg","bg_color":"bg--green-dark"}},"1626563557089c483c":{"type":"accordion","disabled":true,"blocks":{"1626563557089c483c-0":{"type":"heading","settings":{"subheading":"","heading":"FAQ","heading_size":"h--xl"}},"41d36693-795e-4f2c-84d6-5cfca6f03657":{"type":"item","settings":{"title":"Is this safe?","summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."}},"8db73a44-e501-4f94-950a-71e61d5ee33e":{"type":"item","settings":{"title":"Are there estrogens in Wile?","summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."}},"5e03fa5c-f7e9-47c9-82f3-66f2b9633d35":{"type":"item","settings":{"title":"Can you use this with HRT?","summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."}},"6ae7edb2-27d6-4cae-b0b5-0207640bf8f8":{"type":"item","settings":{"title":"When should I start taking this?","summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."}},"3aa6fc91-0d88-43cd-98b0-6a3baa5478f6":{"type":"item","settings":{"title":"Can I take other supplements with this?","summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."}},"c72ba262-f8b1-4554-9cc7-ba72bfbe0928":{"type":"item","settings":{"title":"How will it change my period?","summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."}},"a0795309-7e74-4613-b4f2-a67979784c3f":{"type":"item","settings":{"title":"What is perimenopause?","summary":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."}}},"block_order":["1626563557089c483c-0","41d36693-795e-4f2c-84d6-5cfca6f03657","8db73a44-e501-4f94-950a-71e61d5ee33e","5e03fa5c-f7e9-47c9-82f3-66f2b9633d35","6ae7edb2-27d6-4cae-b0b5-0207640bf8f8","3aa6fc91-0d88-43cd-98b0-6a3baa5478f6","c72ba262-f8b1-4554-9cc7-ba72bfbe0928","a0795309-7e74-4613-b4f2-a67979784c3f"],"settings":{"bg_color":"bg--peach","max_width":1100,"large_accordion":false}},"1626563834b2569c7e":{"type":"accordion","disabled":true,"blocks":{"1626563834b2569c7e-0":{"type":"heading","settings":{"subheading":"WHAT TO EXPECT AT EVERY STAGE","heading":"","heading_size":"h--lg"}},"12640d8e-65be-46b5-8d0a-80686ff5f7ac":{"type":"item","settings":{"title":"40-ish","summary":"Everything you need to know"}},"b2e4a437-983c-4d06-b689-4b174e8bd0f4":{"type":"item","settings":{"title":"45-ish","summary":"Everything you need to know"}},"b502c129-1948-4171-b3ac-5d7ff1249834":{"type":"item","settings":{"title":"50-ish","summary":"Everything you need to know"}},"10a46bda-7b6e-46c0-9182-cf723f56b5a8":{"type":"item","settings":{"title":"After 55","summary":"Everything you need to know"}}},"block_order":["1626563834b2569c7e-0","12640d8e-65be-46b5-8d0a-80686ff5f7ac","b2e4a437-983c-4d06-b689-4b174e8bd0f4","b502c129-1948-4171-b3ac-5d7ff1249834","10a46bda-7b6e-46c0-9182-cf723f56b5a8"],"settings":{"bg_color":"bg--tan","max_width":1100,"large_accordion":true}},"1626563842aaf47f07":{"type":"maincontent","disabled":true,"blocks":{"1626563842aaf47f07-0":{"type":"heading","settings":{"subheading":"","heading":"Wile works with your body","heading_size":"h--xl"}},"d9bb033a-4ba1-425c-a259-2a266b8640dc":{"type":"text","settings":{"text":"Hormones do far more than our health class told us, affecting overall health in the body. And grown women have stress–so much so that we call the stress hormone cortisol an honorary female hormone. It has big impacts on our system and even what we think of as perimenopause.","text_size":"t--md"}},"44bc1529-f3e3-4216-ac8c-08cbebbf00e9":{"type":"button","settings":{"button_label":"The Science","button_link":"#"}}},"block_order":["1626563842aaf47f07-0","d9bb033a-4ba1-425c-a259-2a266b8640dc","44bc1529-f3e3-4216-ac8c-08cbebbf00e9"],"settings":{"show_badge":false,"bg_color":"bg--green-dark","spacing":"pt--1","max_width":800,"show_silhouette":false}},"1626566301ae4978e1":{"type":"section-normal","disabled":true,"blocks":{"30715ee6-9548-4c70-82c0-8c050e55e200":{"type":"heading","settings":{"message":"To wonder where your hair went?"}},"1eac5bab-33d2-45e8-812c-12be98b4566e":{"type":"heading","settings":{"message":"For 3 am random wakeups?"}},"62af4aa9-d336-49c5-aae0-5c9a5fddeec4":{"type":"heading","settings":{"message":"For sudden cankles?"}},"560e45fe-3451-429d-aa12-0bd35cd4db01":{"type":"heading","settings":{"message":"For sudden onset tummy?"}},"5d28a2e9-695f-4128-be9a-ef89dad0d608":{"type":"heading","settings":{"message":"To prefer Netflix to sex?"}},"88eb84da-2644-4d95-aa76-4ea8a457e616":{"type":"heading","settings":{"message":"To get dizzy easily?"}},"1279bcb0-5a4b-462f-9650-9f94422043cf":{"type":"heading","settings":{"message":"To forget.. wait...what?"}},"1f1595e4-c15b-4ecb-9d6d-24a93f2ba032":{"type":"heading","settings":{"message":"To smell different?"}},"59667e4e-d45a-4927-8b92-23f1f7ef268c":{"type":"heading","settings":{"message":"To sneeze or wheeze?"}},"fa84d447-8bdf-4d27-9d06-272f5eabc74a":{"type":"heading","settings":{"message":"For sex to hurt?"}},"761ccdc3-2f2c-4e39-b0ff-4506e4952d4a":{"type":"heading","settings":{"message":"To go middle rager"}},"04a9b334-b9e1-49a4-b38c-38ab0e434cb8":{"type":"heading","settings":{"message":"To feel the #$@$ it?"}}},"block_order":["30715ee6-9548-4c70-82c0-8c050e55e200","1eac5bab-33d2-45e8-812c-12be98b4566e","62af4aa9-d336-49c5-aae0-5c9a5fddeec4","560e45fe-3451-429d-aa12-0bd35cd4db01","5d28a2e9-695f-4128-be9a-ef89dad0d608","88eb84da-2644-4d95-aa76-4ea8a457e616","1279bcb0-5a4b-462f-9650-9f94422043cf","1f1595e4-c15b-4ecb-9d6d-24a93f2ba032","59667e4e-d45a-4927-8b92-23f1f7ef268c","fa84d447-8bdf-4d27-9d06-272f5eabc74a","761ccdc3-2f2c-4e39-b0ff-4506e4952d4a","04a9b334-b9e1-49a4-b38c-38ab0e434cb8"],"settings":{"col1_heading":"IS IT NORMAL...","col1_subheading":"Yes, absolutely normal. \nBut why live with it?","col2_heading":"Want a free month? \nTake our survey.","col2_subheading":"","col2_body":"Tell us how you’re feeling and what you need, \nand we’ll send you a free 2nd month of Wile with purchase.","col2_button_label":"Take Survey","col2_button_link":"https:\/\/wilewomen.com\/pages\/want-a-free-month"}}},"order":["16563507299406e79e","hero_banner","16593105591ce8f066","1627846172c2617e68","1633657888fa5a6307","16336576690c02c3a1","16336577354848cf06","1634060950f9dfc18b","1651688950ec11ffc3","16265580862358a86b","1626556311bf6aa17f","162655642654c9ce78","16265663363ec28e5f","16265564303ec3c376","16265662815248d351","1626563557089c483c","1626563834b2569c7e","1626563842aaf47f07","1626566301ae4978e1"]}
+{
+  "sections": {
+    "16563507299406e79e": {
+      "type": "hero-carousel",
+      "blocks": {
+        "789ffcda-88fd-4545-82cc-bcfbd5459a6c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wile_Capsules_Group_Share2.png",
+            "image_mobile": "shopify:\/\/shop_images\/Wile-MemorialDayHeroBanner-Mobile_Image.png",
+            "text_reverse": false,
+            "heading": "FEEL MORE LIKE YOU",
+            "text": "<p>Save 20% Sitewide<\/p>",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/collections"
+          }
+        },
+        "e67de3f0-7d9d-4f1b-a4f7-9ea59f702dd8": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wile-LibidoLaunchAssets-Homepage-02_With_Badge.png",
+            "image_mobile": "shopify:\/\/shop_images\/Wile-LibidoLaunchAssets-mobile-new.jpg",
+            "text_reverse": false,
+            "heading": "Libido. \nBack in Stock.",
+            "text": "<p>Get the product that sold out in 3 days.<\/p>",
+            "button_label": "SHOP",
+            "button_link": "shopify:\/\/products\/libido-tincture"
+          }
+        },
+        "10a5ee41-e46a-4eac-93e4-e3224708f126": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_02.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_02_mobile.jpg",
+            "text_reverse": false,
+            "heading": "What's right \nfor me?",
+            "text": "<p>Get help for mood swings, sleep, stress, perimenopause & more.<\/p>",
+            "button_label": "Take The Quiz",
+            "button_link": "#quiz-17HjjZ"
+          }
+        },
+        "7d676822-d640-4d07-92bb-ba32ad39763e": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_01.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_01_mobile.jpg",
+            "text_reverse": false,
+            "heading": "It's your power.\nTake it.",
+            "text": "<p>Shop clinically backed, naturopath-formulated wellness for grown women 40+.<\/p>",
+            "button_label": "SHOP",
+            "button_link": "shopify:\/\/collections"
+          }
+        },
+        "f09e09f9-3bc3-4671-ad64-666b2c31b563": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/banner-blackfridaysale.png",
+            "image_mobile": "shopify:\/\/shop_images\/banner-blackfridaysale-mobile.png",
+            "text_reverse": false,
+            "heading": "Holiday savings \nare here!",
+            "text": "<p>Use the Holiday code below at checkout <br\/>to get instant savings.<br\/><br\/>20% off sitewide (<strong>Holiday20<\/strong>) or<br\/>30% off when you buy 3 or more (<strong>Holiday30<\/strong>)<br\/><\/p>",
+            "button_label": "Shop",
+            "button_link": "shopify:\/\/collections"
+          }
+        },
+        "3a27cb17-cacb-40f6-9bc8-ac185b7e5c93": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_03_6832ab1b-097d-4c87-afda-8bb639b8e4a2.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Wile-HeroBanner-Carrousel_03_mobile_a9061532-bedd-4f33-af07-70e26611c1ad.jpg",
+            "text_reverse": false,
+            "heading": "Find Wile at \nWhole Foods",
+            "text": "",
+            "button_label": "Find Stores",
+            "button_link": "shopify:\/\/pages\/store-locator"
+          }
+        },
+        "262397f9-f78e-472c-ac40-897131f21684": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wile-ForiaCollab-Homepage.png",
+            "image_mobile": "shopify:\/\/shop_images\/Wile-ForiaCollab-Homepage-Mobile03.png",
+            "text_reverse": false,
+            "heading": "Meet Your\nPleasure Duo",
+            "text": "",
+            "button_label": "SHOP NOW",
+            "button_link": "shopify:\/\/products\/libido-tincture"
+          }
+        }
+      },
+      "block_order": [
+        "789ffcda-88fd-4545-82cc-bcfbd5459a6c",
+        "e67de3f0-7d9d-4f1b-a4f7-9ea59f702dd8",
+        "10a5ee41-e46a-4eac-93e4-e3224708f126",
+        "7d676822-d640-4d07-92bb-ba32ad39763e",
+        "f09e09f9-3bc3-4671-ad64-666b2c31b563",
+        "3a27cb17-cacb-40f6-9bc8-ac185b7e5c93",
+        "262397f9-f78e-472c-ac40-897131f21684"
+      ],
+      "settings": {
+      }
+    },
+    "hero_banner": {
+      "type": "hero-banner",
+      "disabled": true,
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "It's your power.\nTake it."
+          }
+        },
+        "ff9b0c8d-8aa2-44b0-9ef3-2c6125b37ce8": {
+          "type": "text",
+          "settings": {
+            "text": "Over 40ish? Find the right supplements to work with your body, mind and mood."
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Take The Quiz",
+            "button_link_1": "#quiz-17HjjZ",
+            "button_label_2": "",
+            "button_link_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "ff9b0c8d-8aa2-44b0-9ef3-2c6125b37ce8",
+        "button"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Wile-WebsiteBanner-WholeFoods-02.png",
+        "image_mobile": "shopify:\/\/shop_images\/Wile-MobileBanner-WholeFoods-02_01.png",
+        "text_reverse": true,
+        "shop_all": true
+      }
+    },
+    "16593105591ce8f066": {
+      "type": "featured-locations",
+      "blocks": {
+        "3c79f9ba-631e-483d-b7f2-fefa80c456f8": {
+          "type": "logo",
+          "settings": {
+            "label": "Whole Foods Market",
+            "image": "shopify:\/\/shop_images\/logo-wholefoods.png"
+          }
+        },
+        "2d6cce50-9d81-44f6-be73-d6128f493d7a": {
+          "type": "logo",
+          "disabled": true,
+          "settings": {
+            "label": "Walgreens",
+            "image": "shopify:\/\/shop_images\/logo-walgreens_d5b12016-1847-4699-8e9a-2fd26e23f243.png"
+          }
+        },
+        "457b1934-e2aa-4a94-8444-3c9022e41b2a": {
+          "type": "logo",
+          "settings": {
+            "label": "",
+            "image": "shopify:\/\/shop_images\/cvs-logo_857e3781-73ab-42a5-a8e4-eb30d0d8c71d.png"
+          }
+        },
+        "2e3f0c8e-b36f-43e2-9767-efbe079ba481": {
+          "type": "logo",
+          "settings": {
+            "label": "",
+            "image": "shopify:\/\/shop_images\/Fresh_Thyme_new_banner_logo_Aug2020_974aee69-da0e-4460-aea2-5fbcca9ff51e.png"
+          }
+        },
+        "7383924f-6861-4aea-a007-2608210b7102": {
+          "type": "logo",
+          "settings": {
+            "label": "",
+            "image": "shopify:\/\/shop_images\/Plum_Markets.webp"
+          }
+        }
+      },
+      "block_order": [
+        "3c79f9ba-631e-483d-b7f2-fefa80c456f8",
+        "2d6cce50-9d81-44f6-be73-d6128f493d7a",
+        "457b1934-e2aa-4a94-8444-3c9022e41b2a",
+        "2e3f0c8e-b36f-43e2-9767-efbe079ba481",
+        "7383924f-6861-4aea-a007-2608210b7102"
+      ],
+      "settings": {
+        "heading": "Now available at:",
+        "max_height": 100
+      }
+    },
+    "1627846172c2617e68": {
+      "type": "featured-callouts",
+      "blocks": {
+        "614d4017-c149-4f08-b45a-2a6a5f7d9af5": {
+          "type": "list",
+          "settings": {
+            "list_item": "Improves mood"
+          }
+        },
+        "424bc1e3-fa09-4644-9075-1bfdcbc0de62": {
+          "type": "list",
+          "settings": {
+            "list_item": "Manage stress"
+          }
+        },
+        "938948f9-b907-4bc6-b8e4-0c69d36f5de7": {
+          "type": "list",
+          "settings": {
+            "list_item": "Fewer mood swings"
+          }
+        },
+        "5650d529-8ff1-405a-a673-0ffcc7a7f8d8": {
+          "type": "list",
+          "settings": {
+            "list_item": "Smoother periods"
+          }
+        },
+        "62ff92e1-d3d9-402a-b758-d37b8daef6f9": {
+          "type": "list",
+          "settings": {
+            "list_item": "Less intense PMS"
+          }
+        },
+        "b8f4d6d2-955e-43d0-96ee-abc56ed1d635": {
+          "type": "list",
+          "settings": {
+            "list_item": "Reduce hot flashes"
+          }
+        }
+      },
+      "block_order": [
+        "614d4017-c149-4f08-b45a-2a6a5f7d9af5",
+        "424bc1e3-fa09-4644-9075-1bfdcbc0de62",
+        "938948f9-b907-4bc6-b8e4-0c69d36f5de7",
+        "5650d529-8ff1-405a-a673-0ffcc7a7f8d8",
+        "62ff92e1-d3d9-402a-b758-d37b8daef6f9",
+        "b8f4d6d2-955e-43d0-96ee-abc56ed1d635"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/pill.png",
+        "heading": "It's not you. \nIt's your hormones.",
+        "text": "Start earlier, and perimenopause will travel more lightly. \nStart wherever you are, and feel more like yourself.",
+        "button_label": "Learn More",
+        "button_link": "shopify:\/\/pages\/the-science-womens-homone-support-wellness",
+        "list_header": "",
+        "bg_color": "bg--lavender"
+      }
+    },
+    "1633657888fa5a6307": {
+      "type": "section-rotator",
+      "blocks": {
+        "87c7dfcb-fc17-4628-a178-8965aa6e94da": {
+          "type": "heading",
+          "settings": {
+            "message": "To get dizzy easily?"
+          }
+        },
+        "a24923a2-1c15-4773-aceb-d596c0aa7fe9": {
+          "type": "heading",
+          "settings": {
+            "message": "For 3 am random wakeups?"
+          }
+        },
+        "60cb6cfd-0859-410f-897f-4e6c9c23b034": {
+          "type": "heading",
+          "settings": {
+            "message": "To smell different?"
+          }
+        },
+        "3e1301f1-ac6d-4738-8d5d-0a46eb4ec317": {
+          "type": "heading",
+          "settings": {
+            "message": "To go middle rager"
+          }
+        },
+        "61bb5044-7627-46db-8f4d-dbc88f3b4dd5": {
+          "type": "heading",
+          "settings": {
+            "message": "For sudden cankles?"
+          }
+        },
+        "4072be1f-8944-4128-8528-2de74b2cc1e0": {
+          "type": "heading",
+          "settings": {
+            "message": "To sneeze or wheeze?"
+          }
+        },
+        "d48af5ad-4b79-47f4-b1d9-2c779f1b7bef": {
+          "type": "heading",
+          "settings": {
+            "message": "To feel the #$@$ it?"
+          }
+        },
+        "cc55135b-9b94-44af-abaf-354168ff7f6d": {
+          "type": "heading",
+          "settings": {
+            "message": "For sudden onset tummy?"
+          }
+        },
+        "db5f1155-7715-4e05-8952-7062a47c2337": {
+          "type": "heading",
+          "settings": {
+            "message": "To forget.. wait...what?"
+          }
+        },
+        "c3ea2104-a656-42d9-8b33-07fb14e83efa": {
+          "type": "heading",
+          "settings": {
+            "message": "For sex to hurt?"
+          }
+        }
+      },
+      "block_order": [
+        "87c7dfcb-fc17-4628-a178-8965aa6e94da",
+        "a24923a2-1c15-4773-aceb-d596c0aa7fe9",
+        "60cb6cfd-0859-410f-897f-4e6c9c23b034",
+        "3e1301f1-ac6d-4738-8d5d-0a46eb4ec317",
+        "61bb5044-7627-46db-8f4d-dbc88f3b4dd5",
+        "4072be1f-8944-4128-8528-2de74b2cc1e0",
+        "d48af5ad-4b79-47f4-b1d9-2c779f1b7bef",
+        "cc55135b-9b94-44af-abaf-354168ff7f6d",
+        "db5f1155-7715-4e05-8952-7062a47c2337",
+        "c3ea2104-a656-42d9-8b33-07fb14e83efa"
+      ],
+      "settings": {
+        "top_text": "Is It Normal...",
+        "btm_text": "Yes, absolutely normal.\nBut why live with it?",
+        "min_height": 40
+      }
+    },
+    "16336576690c02c3a1": {
+      "type": "featured-products",
+      "blocks": {
+        "57f957b9-2d0e-40da-8fa7-0f90eab86e53": {
+          "type": "item",
+          "settings": {
+            "product": "hot-flash-plant-based-herbal-supplement",
+            "image": "shopify:\/\/shop_images\/Wile_HotFlash-Front.png",
+            "title": "Hot Flash",
+            "description": "Handle the #1 issue \n& nothing but."
+          }
+        },
+        "aa4b7493-43ba-4eae-8b8e-2e5d55c54370": {
+          "type": "item",
+          "settings": {
+            "product": "40-plus-period-support-supplement",
+            "image": "shopify:\/\/shop_images\/Wile_40_PeriodSupport_Front.jpg",
+            "title": "40+ Period Support",
+            "description": "Unpredictable periods? \nNo thank you."
+          }
+        },
+        "59c86010-6006-41f0-be1d-190264eb39c0": {
+          "type": "item",
+          "settings": {
+            "product": "perimenopause-support-supplement",
+            "image": "shopify:\/\/shop_images\/Wile-PSProductNoBadge1_8e148a28-87b4-4998-b7ff-00bdd73a7175.png",
+            "title": "Perimenopause Support",
+            "description": "Get ahead of perimenopause or smooth it out."
+          }
+        },
+        "f5818a39-ce51-4540-927f-5c781ba94ca5": {
+          "type": "item",
+          "settings": {
+            "product": "womens-stress-herbal-supplement",
+            "image": "shopify:\/\/shop_images\/Wile_WomensStress_Front.jpg",
+            "title": "Stress",
+            "description": "Manage daily absurdity and improve your inner ballast."
+          }
+        }
+      },
+      "block_order": [
+        "57f957b9-2d0e-40da-8fa7-0f90eab86e53",
+        "aa4b7493-43ba-4eae-8b8e-2e5d55c54370",
+        "59c86010-6006-41f0-be1d-190264eb39c0",
+        "f5818a39-ce51-4540-927f-5c781ba94ca5"
+      ],
+      "settings": {
+        "headline": "Build Your System",
+        "body": "<p>Peri is never the same. How can your plan be? <\/p>",
+        "bg_color": "bg--tan",
+        "button_label": "Button label",
+        "button_link": ""
+      }
+    },
+    "16336577354848cf06": {
+      "type": "featured-products",
+      "blocks": {
+        "e666c074-a04a-4474-bc31-405527fb1098": {
+          "type": "item",
+          "settings": {
+            "product": "un-anger",
+            "image": "shopify:\/\/shop_images\/Wile-UnAnger_Front.jpg",
+            "title": "Un-Anger",
+            "description": "Irritable? On edge? \nReady for a fight?"
+          }
+        },
+        "b53743cf-bd87-4542-8159-706e92a8e7bd": {
+          "type": "item",
+          "settings": {
+            "product": "un-worry",
+            "image": "shopify:\/\/shop_images\/Wile-UnWorry_Front.jpg",
+            "title": "Un-Worry",
+            "description": "Jittery? Fretful?\nIn the spin?"
+          }
+        },
+        "6d3be520-855e-4cbb-acf1-e8510e67c1e4": {
+          "type": "item",
+          "settings": {
+            "product": "burnout-relief",
+            "image": "shopify:\/\/shop_images\/Wile-BurnoutRelief_Front.jpg",
+            "title": "Burnout Relief",
+            "description": ""
+          }
+        },
+        "c3f67a84-1aa4-45e0-8c54-db9e1b62b4e4": {
+          "type": "item",
+          "settings": {
+            "product": "stave-the-crave-chai-herbal-powder",
+            "image": "shopify:\/\/shop_images\/stc-featured.jpg",
+            "title": "",
+            "description": "Anti-Stress Eating Chai.\nYep, you read that right."
+          }
+        }
+      },
+      "block_order": [
+        "e666c074-a04a-4474-bc31-405527fb1098",
+        "b53743cf-bd87-4542-8159-706e92a8e7bd",
+        "6d3be520-855e-4cbb-acf1-e8510e67c1e4",
+        "c3f67a84-1aa4-45e0-8c54-db9e1b62b4e4"
+      ],
+      "settings": {
+        "headline": "FEEL BETTER. NOW-ER.",
+        "body": "<p>Get a ritual for on-demand H.E.L.P. for stress, mood and what comes with them. <\/p>",
+        "bg_color": "bg--white",
+        "button_label": "Button label",
+        "button_link": ""
+      }
+    },
+    "1634060950f9dfc18b": {
+      "type": "cross-sell",
+      "disabled": true,
+      "blocks": {
+        "df8fe0af-60f4-4458-b60a-ea32565698cf": {
+          "type": "item",
+          "settings": {
+            "product": "perimenopause-support-supplement",
+            "image": "shopify:\/\/shop_images\/Wile_40_HormonalWellness_Front.png",
+            "title": "40+ Hormone Wellness",
+            "description": "Around 35 or 40, our female hormone levels naturally start to decrease. Stress and stress hormones often skyrocket. This disrupts our bodies and lives in big ways that few women know about."
+          }
+        },
+        "186c2c46-0998-4aba-9a47-e32c55620ca5": {
+          "type": "item",
+          "settings": {
+            "product": "perimenopause-support-supplement",
+            "image": "shopify:\/\/shop_images\/Wile-BurnoutRelief_Front.png",
+            "title": "Burnout",
+            "description": ""
+          }
+        },
+        "c4050a82-60bb-4756-90f6-9fd3dff8fc94": {
+          "type": "item",
+          "settings": {
+            "product": "perimenopause-support-supplement",
+            "image": "shopify:\/\/shop_images\/Wile_HotFlash-Front_c29c2619-3ed0-4497-9a75-f186f97c08f8.png",
+            "title": "Hot Flash Relief",
+            "description": ""
+          }
+        },
+        "55deb8d5-33c5-4f28-b8c1-2c37571e2805": {
+          "type": "item",
+          "settings": {
+            "product": "perimenopause-support-supplement",
+            "image": "shopify:\/\/shop_images\/Wile_WomensStress_Front.png",
+            "title": "Stress",
+            "description": ""
+          }
+        }
+      },
+      "block_order": [
+        "df8fe0af-60f4-4458-b60a-ea32565698cf",
+        "186c2c46-0998-4aba-9a47-e32c55620ca5",
+        "c4050a82-60bb-4756-90f6-9fd3dff8fc94",
+        "55deb8d5-33c5-4f28-b8c1-2c37571e2805"
+      ],
+      "settings": {
+        "headline": "Shop Your Solution",
+        "body": "<p>PERIMENOPAUSE IS NEVER THE SAME<\/p>",
+        "bg_color": "bg--tan"
+      }
+    },
+    "1651688950ec11ffc3": {
+      "type": "section-rotator-quotes",
+      "blocks": {
+        "4f8c6742-96f6-4510-be9c-f2ddd209dbee": {
+          "type": "heading",
+          "settings": {
+            "quote": "“This brand is on a mission \nto help women over 40.”",
+            "logo": "shopify:\/\/shop_images\/logo-instyle.png",
+            "logo_text": "InStyle"
+          }
+        },
+        "3c0bf463-3d87-48f0-afc4-ca30851a7c94": {
+          "type": "heading",
+          "settings": {
+            "quote": "“Wile is ushering in an era \nof a shame-free menopause.”",
+            "logo": "shopify:\/\/shop_images\/logo-forbes.png",
+            "logo_text": "Forbes"
+          }
+        },
+        "56fbd60c-703e-4131-ab37-15f5789c87bc": {
+          "type": "heading",
+          "settings": {
+            "quote": "“The mission of empowering \nwomen over 40.”",
+            "logo": "shopify:\/\/shop_images\/logo-beautyindependent.png",
+            "logo_text": "Beauty Independent"
+          }
+        },
+        "e4819ac9-176b-4f02-95a8-eb7b65b01fd3": {
+          "type": "heading",
+          "settings": {
+            "quote": "Judy Greer’s new supplement \nbrand is redefining her 40s.”",
+            "logo": "shopify:\/\/shop_images\/logo-hollywood.png",
+            "logo_text": "The Hollywood Reporter"
+          }
+        }
+      },
+      "block_order": [
+        "4f8c6742-96f6-4510-be9c-f2ddd209dbee",
+        "3c0bf463-3d87-48f0-afc4-ca30851a7c94",
+        "56fbd60c-703e-4131-ab37-15f5789c87bc",
+        "e4819ac9-176b-4f02-95a8-eb7b65b01fd3"
+      ],
+      "settings": {
+        "top_text": "",
+        "btm_text": "",
+        "min_height": 50,
+        "logo_width": 200
+      }
+    },
+    "16265580862358a86b": {
+      "type": "maincontent",
+      "disabled": true,
+      "blocks": {
+        "16265580862358a86b-0": {
+          "type": "heading",
+          "settings": {
+            "subheading": "",
+            "heading": "“This is the product of thousands of hours of working with women inside my practice. It’s a process of listening and understanding our lives and bodies.",
+            "heading_size": "h--xl"
+          }
+        },
+        "01687705-5308-4eee-a50c-4396e441d020": {
+          "type": "text",
+          "settings": {
+            "text": "I formulate for them and now I’m excited to help many more take the reins of their own well-being and transformation through this era of life. Feeling ‘old’ is optional. Plants truly do have the capacity to work with us to return us to our full power and perhaps find something even better.”",
+            "text_size": "t--md"
+          }
+        },
+        "31098937-e805-44d8-8c3b-65587f4f9a1f": {
+          "type": "quote",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/jillian_128ba74b-213a-4b0d-8749-baacf8bc62e2.png",
+            "image_width": 100,
+            "caption": "Dr. Jillian Stansbury\nNaturopathic Family Physician,\nHealing Arts Apothecary"
+          }
+        }
+      },
+      "block_order": [
+        "16265580862358a86b-0",
+        "01687705-5308-4eee-a50c-4396e441d020",
+        "31098937-e805-44d8-8c3b-65587f4f9a1f"
+      ],
+      "settings": {
+        "show_badge": false,
+        "bg_image": "shopify:\/\/shop_images\/bg-plants.jpg",
+        "bg_color": "bg--green-dark",
+        "spacing": "pt--5 pb--5",
+        "max_width": 1000,
+        "show_silhouette": false
+      }
+    },
+    "1626556311bf6aa17f": {
+      "type": "ticker",
+      "blocks": {
+        "c530a39a-559d-4e6d-8022-7009776c3965": {
+          "type": "text",
+          "settings": {
+            "text": "Clinically backed"
+          }
+        },
+        "1626556311bf6aa17f-0": {
+          "type": "text",
+          "settings": {
+            "text": "Vegan"
+          }
+        },
+        "cc5e4404-2ef7-40bf-868e-2453dde6f71c": {
+          "type": "text",
+          "settings": {
+            "text": "100% plant derived"
+          }
+        },
+        "27a39da7-5b10-49c0-9680-aa6014164714": {
+          "type": "text",
+          "settings": {
+            "text": "Naturopath-formulated"
+          }
+        }
+      },
+      "block_order": [
+        "c530a39a-559d-4e6d-8022-7009776c3965",
+        "1626556311bf6aa17f-0",
+        "cc5e4404-2ef7-40bf-868e-2453dde6f71c",
+        "27a39da7-5b10-49c0-9680-aa6014164714"
+      ],
+      "settings": {
+        "bg_color": "bg--green-dark"
+      }
+    },
+    "162655642654c9ce78": {
+      "type": "maincontent",
+      "blocks": {
+        "162655642654c9ce78-0": {
+          "type": "heading",
+          "settings": {
+            "subheading": "IT’S ALL ABOUT THE INGREDIENTS, BABE.",
+            "heading": "Plants work almost as \nhard as women do.",
+            "heading_size": "h--xxl"
+          }
+        },
+        "50c1ba8a-a0f4-411d-8809-fdacaab9abce": {
+          "type": "text",
+          "settings": {
+            "text": "Feel like you again without synthetic formulas. Wile uses adaptogens, phytoestrogens nervines, all clinically backed.",
+            "text_size": "t--md"
+          }
+        },
+        "2cb7beb2-12b9-4b64-a3cf-10e954f01cf5": {
+          "type": "button",
+          "settings": {
+            "button_label": "The Science",
+            "button_link": "shopify:\/\/pages\/the-science-womens-homone-support-wellness"
+          }
+        }
+      },
+      "block_order": [
+        "162655642654c9ce78-0",
+        "50c1ba8a-a0f4-411d-8809-fdacaab9abce",
+        "2cb7beb2-12b9-4b64-a3cf-10e954f01cf5"
+      ],
+      "settings": {
+        "show_badge": false,
+        "bg_image": "shopify:\/\/shop_images\/bg-plants_9c064dc0-ec24-43ab-93fe-152cea957ab9.jpg",
+        "bg_color": "bg--green-dark",
+        "spacing": "pt--5 pb--5",
+        "max_width": 700,
+        "show_silhouette": false
+      }
+    },
+    "16265663363ec28e5f": {
+      "type": "featured-articles",
+      "blocks": {
+        "4b94eac9-e135-468d-a1d8-b6656c8445ca": {
+          "type": "featured_article",
+          "disabled": true,
+          "settings": {
+            "article": "journal-women-health-naturopathic-supplements-blog\/read-this-before-your-next-ob-gyn-visit"
+          }
+        }
+      },
+      "block_order": [
+        "4b94eac9-e135-468d-a1d8-b6656c8445ca"
+      ],
+      "settings": {
+        "headline": "",
+        "show_image": true,
+        "show_date": false,
+        "show_author": false,
+        "show_excerpt": false,
+        "show_comments": false
+      }
+    },
+    "16265564303ec3c376": {
+      "type": "maincontent",
+      "disabled": true,
+      "blocks": {
+        "16265564303ec3c376-0": {
+          "type": "heading",
+          "settings": {
+            "subheading": "FEEL BETTER NATURALLY",
+            "heading": "Naturopath-designed for the symptoms of perimenopause. And life.",
+            "heading_size": "h--xxxl"
+          }
+        }
+      },
+      "block_order": [
+        "16265564303ec3c376-0"
+      ],
+      "settings": {
+        "show_badge": true,
+        "bg_color": "bg--tan",
+        "spacing": "pt--1",
+        "max_width": 900,
+        "show_silhouette": false
+      }
+    },
+    "16265662815248d351": {
+      "type": "featured-product",
+      "disabled": true,
+      "blocks": {
+        "715a0a46-9bda-409e-a375-8d69013b01ce": {
+          "type": "heading",
+          "settings": {
+            "heading": "FEEL BETTER NATURALLY"
+          }
+        },
+        "edea4e10-a14d-492a-b6df-6b6564314169": {
+          "type": "text",
+          "settings": {
+            "text": "Naturopath-designed for the symptoms of perimenopause. And life."
+          }
+        },
+        "480a2954-fdae-47b9-9252-6214a42f42ef": {
+          "type": "button",
+          "settings": {
+            "button_label": "Learn More",
+            "button_link": "shopify:\/\/products\/perimenopause-support-supplement"
+          }
+        }
+      },
+      "block_order": [
+        "715a0a46-9bda-409e-a375-8d69013b01ce",
+        "edea4e10-a14d-492a-b6df-6b6564314169",
+        "480a2954-fdae-47b9-9252-6214a42f42ef"
+      ],
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Untitled-1.jpg",
+        "bg_color": "bg--green-dark"
+      }
+    },
+    "1626563557089c483c": {
+      "type": "accordion",
+      "disabled": true,
+      "blocks": {
+        "1626563557089c483c-0": {
+          "type": "heading",
+          "settings": {
+            "subheading": "",
+            "heading": "FAQ",
+            "heading_size": "h--xl"
+          }
+        },
+        "41d36693-795e-4f2c-84d6-5cfca6f03657": {
+          "type": "item",
+          "settings": {
+            "title": "Is this safe?",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."
+          }
+        },
+        "8db73a44-e501-4f94-950a-71e61d5ee33e": {
+          "type": "item",
+          "settings": {
+            "title": "Are there estrogens in Wile?",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."
+          }
+        },
+        "5e03fa5c-f7e9-47c9-82f3-66f2b9633d35": {
+          "type": "item",
+          "settings": {
+            "title": "Can you use this with HRT?",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."
+          }
+        },
+        "6ae7edb2-27d6-4cae-b0b5-0207640bf8f8": {
+          "type": "item",
+          "settings": {
+            "title": "When should I start taking this?",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."
+          }
+        },
+        "3aa6fc91-0d88-43cd-98b0-6a3baa5478f6": {
+          "type": "item",
+          "settings": {
+            "title": "Can I take other supplements with this?",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."
+          }
+        },
+        "c72ba262-f8b1-4554-9cc7-ba72bfbe0928": {
+          "type": "item",
+          "settings": {
+            "title": "How will it change my period?",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."
+          }
+        },
+        "a0795309-7e74-4613-b4f2-a67979784c3f": {
+          "type": "item",
+          "settings": {
+            "title": "What is perimenopause?",
+            "summary": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et lobortis purus, in imperdiet turpis. Donec id nisi a ligula feugiat venenatis vel eget risus. Aliquam dictum augue sit amet tortor consectetur fermentum. Vivamus sagittis urna mi, quis lacinia leo ultrices vitae. Suspendisse vulputate sem massa."
+          }
+        }
+      },
+      "block_order": [
+        "1626563557089c483c-0",
+        "41d36693-795e-4f2c-84d6-5cfca6f03657",
+        "8db73a44-e501-4f94-950a-71e61d5ee33e",
+        "5e03fa5c-f7e9-47c9-82f3-66f2b9633d35",
+        "6ae7edb2-27d6-4cae-b0b5-0207640bf8f8",
+        "3aa6fc91-0d88-43cd-98b0-6a3baa5478f6",
+        "c72ba262-f8b1-4554-9cc7-ba72bfbe0928",
+        "a0795309-7e74-4613-b4f2-a67979784c3f"
+      ],
+      "settings": {
+        "bg_color": "bg--peach",
+        "max_width": 1100,
+        "large_accordion": false
+      }
+    },
+    "1626563834b2569c7e": {
+      "type": "accordion",
+      "disabled": true,
+      "blocks": {
+        "1626563834b2569c7e-0": {
+          "type": "heading",
+          "settings": {
+            "subheading": "WHAT TO EXPECT AT EVERY STAGE",
+            "heading": "",
+            "heading_size": "h--lg"
+          }
+        },
+        "12640d8e-65be-46b5-8d0a-80686ff5f7ac": {
+          "type": "item",
+          "settings": {
+            "title": "40-ish",
+            "summary": "Everything you need to know"
+          }
+        },
+        "b2e4a437-983c-4d06-b689-4b174e8bd0f4": {
+          "type": "item",
+          "settings": {
+            "title": "45-ish",
+            "summary": "Everything you need to know"
+          }
+        },
+        "b502c129-1948-4171-b3ac-5d7ff1249834": {
+          "type": "item",
+          "settings": {
+            "title": "50-ish",
+            "summary": "Everything you need to know"
+          }
+        },
+        "10a46bda-7b6e-46c0-9182-cf723f56b5a8": {
+          "type": "item",
+          "settings": {
+            "title": "After 55",
+            "summary": "Everything you need to know"
+          }
+        }
+      },
+      "block_order": [
+        "1626563834b2569c7e-0",
+        "12640d8e-65be-46b5-8d0a-80686ff5f7ac",
+        "b2e4a437-983c-4d06-b689-4b174e8bd0f4",
+        "b502c129-1948-4171-b3ac-5d7ff1249834",
+        "10a46bda-7b6e-46c0-9182-cf723f56b5a8"
+      ],
+      "settings": {
+        "bg_color": "bg--tan",
+        "max_width": 1100,
+        "large_accordion": true
+      }
+    },
+    "1626563842aaf47f07": {
+      "type": "maincontent",
+      "disabled": true,
+      "blocks": {
+        "1626563842aaf47f07-0": {
+          "type": "heading",
+          "settings": {
+            "subheading": "",
+            "heading": "Wile works with your body",
+            "heading_size": "h--xl"
+          }
+        },
+        "d9bb033a-4ba1-425c-a259-2a266b8640dc": {
+          "type": "text",
+          "settings": {
+            "text": "Hormones do far more than our health class told us, affecting overall health in the body. And grown women have stress–so much so that we call the stress hormone cortisol an honorary female hormone. It has big impacts on our system and even what we think of as perimenopause.",
+            "text_size": "t--md"
+          }
+        },
+        "44bc1529-f3e3-4216-ac8c-08cbebbf00e9": {
+          "type": "button",
+          "settings": {
+            "button_label": "The Science",
+            "button_link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "1626563842aaf47f07-0",
+        "d9bb033a-4ba1-425c-a259-2a266b8640dc",
+        "44bc1529-f3e3-4216-ac8c-08cbebbf00e9"
+      ],
+      "settings": {
+        "show_badge": false,
+        "bg_color": "bg--green-dark",
+        "spacing": "pt--1",
+        "max_width": 800,
+        "show_silhouette": false
+      }
+    },
+    "1626566301ae4978e1": {
+      "type": "section-normal",
+      "disabled": true,
+      "blocks": {
+        "30715ee6-9548-4c70-82c0-8c050e55e200": {
+          "type": "heading",
+          "settings": {
+            "message": "To wonder where your hair went?"
+          }
+        },
+        "1eac5bab-33d2-45e8-812c-12be98b4566e": {
+          "type": "heading",
+          "settings": {
+            "message": "For 3 am random wakeups?"
+          }
+        },
+        "62af4aa9-d336-49c5-aae0-5c9a5fddeec4": {
+          "type": "heading",
+          "settings": {
+            "message": "For sudden cankles?"
+          }
+        },
+        "560e45fe-3451-429d-aa12-0bd35cd4db01": {
+          "type": "heading",
+          "settings": {
+            "message": "For sudden onset tummy?"
+          }
+        },
+        "5d28a2e9-695f-4128-be9a-ef89dad0d608": {
+          "type": "heading",
+          "settings": {
+            "message": "To prefer Netflix to sex?"
+          }
+        },
+        "88eb84da-2644-4d95-aa76-4ea8a457e616": {
+          "type": "heading",
+          "settings": {
+            "message": "To get dizzy easily?"
+          }
+        },
+        "1279bcb0-5a4b-462f-9650-9f94422043cf": {
+          "type": "heading",
+          "settings": {
+            "message": "To forget.. wait...what?"
+          }
+        },
+        "1f1595e4-c15b-4ecb-9d6d-24a93f2ba032": {
+          "type": "heading",
+          "settings": {
+            "message": "To smell different?"
+          }
+        },
+        "59667e4e-d45a-4927-8b92-23f1f7ef268c": {
+          "type": "heading",
+          "settings": {
+            "message": "To sneeze or wheeze?"
+          }
+        },
+        "fa84d447-8bdf-4d27-9d06-272f5eabc74a": {
+          "type": "heading",
+          "settings": {
+            "message": "For sex to hurt?"
+          }
+        },
+        "761ccdc3-2f2c-4e39-b0ff-4506e4952d4a": {
+          "type": "heading",
+          "settings": {
+            "message": "To go middle rager"
+          }
+        },
+        "04a9b334-b9e1-49a4-b38c-38ab0e434cb8": {
+          "type": "heading",
+          "settings": {
+            "message": "To feel the #$@$ it?"
+          }
+        }
+      },
+      "block_order": [
+        "30715ee6-9548-4c70-82c0-8c050e55e200",
+        "1eac5bab-33d2-45e8-812c-12be98b4566e",
+        "62af4aa9-d336-49c5-aae0-5c9a5fddeec4",
+        "560e45fe-3451-429d-aa12-0bd35cd4db01",
+        "5d28a2e9-695f-4128-be9a-ef89dad0d608",
+        "88eb84da-2644-4d95-aa76-4ea8a457e616",
+        "1279bcb0-5a4b-462f-9650-9f94422043cf",
+        "1f1595e4-c15b-4ecb-9d6d-24a93f2ba032",
+        "59667e4e-d45a-4927-8b92-23f1f7ef268c",
+        "fa84d447-8bdf-4d27-9d06-272f5eabc74a",
+        "761ccdc3-2f2c-4e39-b0ff-4506e4952d4a",
+        "04a9b334-b9e1-49a4-b38c-38ab0e434cb8"
+      ],
+      "settings": {
+        "col1_heading": "IS IT NORMAL...",
+        "col1_subheading": "Yes, absolutely normal. \nBut why live with it?",
+        "col2_heading": "Want a free month? \nTake our survey.",
+        "col2_subheading": "",
+        "col2_body": "Tell us how you’re feeling and what you need, \nand we’ll send you a free 2nd month of Wile with purchase.",
+        "col2_button_label": "Take Survey",
+        "col2_button_link": "https:\/\/wilewomen.com\/pages\/want-a-free-month"
+      }
+    }
+  },
+  "order": [
+    "16563507299406e79e",
+    "hero_banner",
+    "16593105591ce8f066",
+    "1627846172c2617e68",
+    "1633657888fa5a6307",
+    "16336576690c02c3a1",
+    "16336577354848cf06",
+    "1634060950f9dfc18b",
+    "1651688950ec11ffc3",
+    "16265580862358a86b",
+    "1626556311bf6aa17f",
+    "162655642654c9ce78",
+    "16265663363ec28e5f",
+    "16265564303ec3c376",
+    "16265662815248d351",
+    "1626563557089c483c",
+    "1626563834b2569c7e",
+    "1626563842aaf47f07",
+    "1626566301ae4978e1"
+  ]
+}
