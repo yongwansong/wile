@@ -10,7 +10,7 @@
             "image_mobile": "shopify:\/\/shop_images\/Wile-MemorialDayHeroBanner-Mobile_Image.png",
             "text_reverse": false,
             "heading": "FEEL MORE LIKE YOU",
-            "text": "<p>Save 20% Sitewide<\/p>",
+            "text": "<h2>Save 20% Sitewide<\/h2>",
             "button_label": "SHOP NOW",
             "button_link": "shopify:\/\/collections"
           }
