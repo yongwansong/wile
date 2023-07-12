@@ -10,6 +10,11 @@
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">{% endcomment %}
 
 <link rel="stylesheet" href="{{ 'product-zoom.css' | asset_url }}" media="print" onload="this.media='all'">
+<script>
+		$(document).ready(function(){
+			$('#pimg').zoom();
+		});
+	</script>
 <section class="bg--white">
 	<div class="product inner">
 		<div class="product-media mb--2">
