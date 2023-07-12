@@ -38,6 +38,7 @@
 				{%- if media.media_type == 'image' -%}
 					<div class=”image-container”>
                       <img
+                        id="pimg"
                         class=”image-zoom”
 						src="{{ media.preview_image }}"
 						alt="{{ media.alt | escape }}"
