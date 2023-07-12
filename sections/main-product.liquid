@@ -35,12 +35,14 @@
 			<div class="pdp-slider-nav">
 				{%- for media in product.media -%}
 				{%- if media.media_type == 'image' -%}
-					<div><img
+					<div class=”image-container”><img
+                        class=”image-zoom”
 						src="{{ media.preview_image }}"
 						alt="{{ media.alt | escape }}"
 						height=""
 						width=""
 						loading="lazy"
+                        data-zoom="{{ featured_image | img_url: '1024x1024', scale: 2 }}
 						>
 					</div>
 				{%- endif -%}
