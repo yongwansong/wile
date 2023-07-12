@@ -32,9 +32,9 @@
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 		crossorigin="anonymous"
         defer="defer"></script>
-<!--   {% if template contains 'product' %}
+  {% if template contains 'product' %}
   <script type="text/javascript" src="{{ 'jquery.zoom.min.js' | asset_url }}" defer=”defer”>
-{% endif %} -->
+{% endif %}
 	{{ 'theme.min.css' | append: '?v=1.5' | asset_url | stylesheet_tag }}
 	<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 	<script src="{{ 'site.min.js' | asset_url }}" defer="defer"></script>
