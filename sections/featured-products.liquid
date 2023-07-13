@@ -29,7 +29,38 @@
         </div>
         {% endif %}
 
-        <div class="splide products-slider slide__arrows mt--2" data-splide='{"type":"slide","perPage":4,"pagination":false,"clones":0,"breakpoints": {"600": {"perPage": 1}}}'>
+        <div class="original-splide-test splide products-slider slide__arrows mt--2" data-splide='{"type":"slide","perPage":4,"pagination":false,"clones":0,"breakpoints": {"600": {"perPage": 1}}}'>
+            <div class="splide__arrows">
+                <button class="splide__arrow splide__arrow--prev" aria-label="Previous"></button>
+                <button class="splide__arrow splide__arrow--next" aria-label="Next"></button>
+            </div>
+            <div class="splide__track">
+                <div class="splide__list">
+                    {% for block in section.blocks %}
+                        {%- case block.type -%}
+                            {%- when 'item' -%}
+                            <div class="splide__slide">
+                                {%- capture title -%}
+                                    {% if block.settings.title != blank %}
+                                    {{ block.settings.title }}
+                                    {% else %}
+                                    {{ block.settings.product.title }}
+                                    {% endif %}
+                                {%- endcapture -%}
+                                {%- render 'card-product', 
+                                    product: block.settings.product,
+                                    image: block.settings.image,
+                                    title: title,
+                                    description: block.settings.description | default: ''
+                                -%}
+                            </div>
+                        {%- endcase -%}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <div class="custom-splide-test splide products-slider slide__arrows mt--2" data-splide='{"type":"slide","perPage":4,"pagination":false,"clones":0,"breakpoints": {"600": {"perPage": 2}}}'>
             <div class="splide__arrows">
                 <button class="splide__arrow splide__arrow--prev" aria-label="Previous"></button>
                 <button class="splide__arrow splide__arrow--next" aria-label="Next"></button>
