@@ -1,0 +1,372 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-main",
+      "blocks": {
+        "095d5bd7-144e-4b88-a53d-2612f87f58c0": {
+          "type": "cutline",
+          "settings": {
+            "cutline_text": "TINCTURE (15 SERVINGS)"
+          }
+        },
+        "74e3fcce-362c-4cba-927d-dd9b1c03814b": {
+          "type": "pricing_note",
+          "disabled": true,
+          "settings": {
+            "pricing_text": "<p>Bundle & Save 20% on any 2 products or 25% on any 3+ products<\/p>"
+          }
+        },
+        "df0ca7c5-9167-45e7-9207-f6524002b6df": {
+          "type": "promo_note",
+          "settings": {
+            "promo_text": "<p><a href=\"\/policies\/refund-policy\" target=\"_blank\" title=\"Refund Policy\">Satisfaction Guaranteed<\/a> | <a href=\"\/policies\/shipping-policy\" target=\"_blank\" title=\"Shipping Policy\">Free Shipping & Easy Returns<\/a><\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "095d5bd7-144e-4b88-a53d-2612f87f58c0",
+        "74e3fcce-362c-4cba-927d-dd9b1c03814b",
+        "df0ca7c5-9167-45e7-9207-f6524002b6df"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "show_dynamic_checkout": true
+      }
+    },
+    "1634240261fb756b34": {
+      "type": "section-icons",
+      "blocks": {
+        "6c3ba904-501e-49fc-9dc4-dce534f47f2d": {
+          "type": "icon",
+          "settings": {
+            "label": "Gluten Free",
+            "image": "shopify:\/\/shop_images\/icon-gluten-free.png"
+          }
+        },
+        "a2d53e6d-b19a-40b2-944e-e97ddbc41a0d": {
+          "type": "icon",
+          "settings": {
+            "label": "Non-sedative",
+            "image": "shopify:\/\/shop_images\/icon-nonsedative_69d39d54-2f7d-477c-8649-ef4410b90130.png"
+          }
+        },
+        "98497eb9-e45b-4d0e-9314-8db2170ae600": {
+          "type": "icon",
+          "settings": {
+            "label": "Vegan",
+            "image": "shopify:\/\/shop_images\/icon-vegan_f81e393d-2926-4a2f-9dc0-3674b9f149df.png"
+          }
+        },
+        "d3061084-e89a-4f4e-afc9-291e20676cc9": {
+          "type": "icon",
+          "settings": {
+            "label": "Non-habit \nForming",
+            "image": "shopify:\/\/shop_images\/icon-nonhabit_d89a9809-4a94-4242-b40a-6d2f4b0e59f1.png"
+          }
+        },
+        "d66b0170-3699-4557-b993-193349a5c5f9": {
+          "type": "icon",
+          "settings": {
+            "label": "Naturopathic",
+            "image": "shopify:\/\/shop_images\/icon-naturopathic_76b0589e-d5ec-4852-9af9-18ed7acc1658.png"
+          }
+        },
+        "4b10f948-f549-4893-b1fe-40e08275a74a": {
+          "type": "icon",
+          "settings": {
+            "label": "Fast Acting",
+            "image": "shopify:\/\/shop_images\/icon-fastacting.png"
+          }
+        }
+      },
+      "block_order": [
+        "6c3ba904-501e-49fc-9dc4-dce534f47f2d",
+        "a2d53e6d-b19a-40b2-944e-e97ddbc41a0d",
+        "98497eb9-e45b-4d0e-9314-8db2170ae600",
+        "d3061084-e89a-4f4e-afc9-291e20676cc9",
+        "d66b0170-3699-4557-b993-193349a5c5f9",
+        "4b10f948-f549-4893-b1fe-40e08275a74a"
+      ],
+      "settings": {
+        "heading": "",
+        "max_width": 70,
+        "bg_color": "bg--green-dark",
+        "txt_color": "c--tan"
+      }
+    },
+    "e8d7d90b-ed43-4cb3-8c0d-75df6ff3f9f6": {
+      "type": "section-text-with-image",
+      "blocks": {
+        "c3246fa1-e9c0-406e-8ff2-8e2133099b11": {
+          "type": "headline",
+          "settings": {
+            "headline_text": "Spinning? Mental Chatter? We got you.",
+            "headline_color": "c--base"
+          }
+        },
+        "004f7eb3-585a-4ffa-bb69-164b1d317b21": {
+          "type": "body",
+          "settings": {
+            "body_text": "<p>Is the to-do list in your head never off and never done? De-clutter your mind and calm your body with herbs that let you feel like you. <\/p><p>Women are taught to worry with the idea it helps us do better. Let go of the chatter and find peace whenever needed.<\/p>"
+          }
+        },
+        "3047d760-8531-4dcb-9846-2ff9f9edd574": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2021_10_05_WILE_WOMEN_3075.png",
+            "image_mobile": "shopify:\/\/shop_images\/uw-dropper.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "c3246fa1-e9c0-406e-8ff2-8e2133099b11",
+        "004f7eb3-585a-4ffa-bb69-164b1d317b21",
+        "3047d760-8531-4dcb-9846-2ff9f9edd574"
+      ],
+      "settings": {
+        "bg_color": "#cdaccf",
+        "text_color": "c--base",
+        "align": "left"
+      }
+    },
+    "edc74766-2e80-4997-9b1f-831756fad93f": {
+      "type": "section-pdp-fullimage",
+      "settings": {
+        "bg_color": "",
+        "image": "shopify:\/\/shop_images\/uw-fullimage.jpg",
+        "image_mobile": "shopify:\/\/shop_images\/uw-fullimage-mobile.jpg"
+      }
+    },
+    "66b7118f-60a8-48df-936c-7dbfce224d07": {
+      "type": "section-pdp-quotes",
+      "blocks": {
+        "49daed2b-9144-4aeb-9a0c-312076266fd0": {
+          "type": "item",
+          "settings": {
+            "quote": "Exactly what I needed… they should give you a bag full of these when you usign up to run a non-profit.",
+            "author": "Heyhannahd"
+          }
+        },
+        "6b7ca92a-9ae5-4346-b5c0-b2c8716110de": {
+          "type": "item",
+          "settings": {
+            "quote": "Feel the difference already",
+            "author": "Tamy"
+          }
+        }
+      },
+      "block_order": [
+        "49daed2b-9144-4aeb-9a0c-312076266fd0",
+        "6b7ca92a-9ae5-4346-b5c0-b2c8716110de"
+      ],
+      "settings": {
+      }
+    },
+    "74cf7d4e-e9f0-4547-9322-0f049484c0f5": {
+      "type": "section-ingredients-new",
+      "settings": {
+        "headline": "Ingredients",
+        "bg_color": "bg--tan"
+      }
+    },
+    "f549296d-caa8-4afb-ba4c-2904723542d0": {
+      "type": "section-text-with-image",
+      "blocks": {
+        "5e9eca9c-3009-4c2a-858d-e7dd1e14adef": {
+          "type": "headline",
+          "settings": {
+            "headline_text": "New to tinctures?",
+            "headline_color": "c--base"
+          }
+        },
+        "2ee89c18-2620-4f59-b3b3-3c9a69181075": {
+          "type": "list",
+          "settings": {
+            "list_text": "<p>Un-Worry can be taken at multiple points of the day or night.<\/p>",
+            "list_icon": "shopify:\/\/shop_images\/icon-daynight.png"
+          }
+        },
+        "7351df8d-bb4c-46fe-8517-1e9142d86342": {
+          "type": "list",
+          "settings": {
+            "list_text": "<p>Try it before a high-nerves situation like a presentation.<\/p>",
+            "list_icon": "shopify:\/\/shop_images\/icon-presentation.png"
+          }
+        },
+        "9f44a34f-8826-4908-992a-5737f3ac549d": {
+          "type": "list",
+          "settings": {
+            "list_text": "<p>Try it on your nightstand. Take 2 full droppers when you can’t fall or stay asleep.<\/p>",
+            "list_icon": "shopify:\/\/shop_images\/icon-sleep.png"
+          }
+        },
+        "b7c4d7e5-3138-44aa-b725-b66155465587": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wile_AllTinctures-New1_459637e5-d3f1-4076-9618-5ff420ab2882.png",
+            "image_mobile": "shopify:\/\/shop_images\/Wile_AllTinctures-New1_459637e5-d3f1-4076-9618-5ff420ab2882.png"
+          }
+        }
+      },
+      "block_order": [
+        "5e9eca9c-3009-4c2a-858d-e7dd1e14adef",
+        "2ee89c18-2620-4f59-b3b3-3c9a69181075",
+        "7351df8d-bb4c-46fe-8517-1e9142d86342",
+        "9f44a34f-8826-4908-992a-5737f3ac549d",
+        "b7c4d7e5-3138-44aa-b725-b66155465587"
+      ],
+      "settings": {
+        "bg_color": "#cdaccf",
+        "text_color": "c--base",
+        "align": "right"
+      }
+    },
+    "31ad7657-4a47-4593-b940-439208614e68": {
+      "type": "section-marquee",
+      "blocks": {
+        "bd103332-739b-4ec8-a893-528ae7a1f56c": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/forbes-logo_b9ba8a3f-04a2-452d-a036-a2ccdcbfc2ba.png"
+          }
+        },
+        "324d6773-1d05-4c93-8945-01c12595d0d3": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/thecut-logo.png"
+          }
+        },
+        "06c97034-28c6-45b5-b5ed-7a698106b3f2": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-instyle_3299884b-5676-4268-af44-ccf227eb3dc1.png"
+          }
+        },
+        "35e9329a-1088-4449-baa9-306735b619ab": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-oprahdaily.png"
+          }
+        },
+        "943cc1c3-ba15-453b-8778-2398dbc213c6": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-fortune.png"
+          }
+        },
+        "d1f8151f-80c8-4581-a4f1-f9a4cb9d162d": {
+          "type": "item",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/logo-sheknows.png"
+          }
+        }
+      },
+      "block_order": [
+        "bd103332-739b-4ec8-a893-528ae7a1f56c",
+        "324d6773-1d05-4c93-8945-01c12595d0d3",
+        "06c97034-28c6-45b5-b5ed-7a698106b3f2",
+        "35e9329a-1088-4449-baa9-306735b619ab",
+        "943cc1c3-ba15-453b-8778-2398dbc213c6",
+        "d1f8151f-80c8-4581-a4f1-f9a4cb9d162d"
+      ],
+      "settings": {
+        "image_max": 60
+      }
+    },
+    "1635002959ae15c915": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1634240465c0b5c17b": {
+      "type": "accordion",
+      "blocks": {
+        "1634240465c0b5c17b-0": {
+          "type": "heading",
+          "settings": {
+            "subheading": "",
+            "heading": "FAQs",
+            "heading_size": "h--xl"
+          }
+        },
+        "0c60312d-d6fa-4924-b672-eca2864022f3": {
+          "type": "item",
+          "settings": {
+            "title": "What's a tincture?",
+            "summary": "Tinctures are highly concentrated herbal formulas in liquid form. You can drink or \"dropper\" them directly into your mouth to get the benefits of the active ingredients even faster than a capsule, gummy or candle as they do not need to be broken down in your stomach. They go directly into your system, particularly if you squirt them under your tongue."
+          }
+        },
+        "ce154542-d448-4045-9f65-09f78778b21f": {
+          "type": "item",
+          "settings": {
+            "title": "Can I use the Un-Worry Tincture every day?",
+            "summary": "Yes. Our formulas are made up of all natural ingredients and can be used for daily support."
+          }
+        },
+        "0184240e-c75c-41ad-b224-9ac78518789d": {
+          "type": "item",
+          "settings": {
+            "title": "Can I use Un-Worry Tincture with other medication?",
+            "summary": "Our products are all-natural and can be used in conjunction with other Wile products. Please speak to your primary physician before taking Un-Worry Tincture with other medications."
+          }
+        },
+        "2a67c572-b5b7-4040-b550-58b3589756ca": {
+          "type": "item",
+          "settings": {
+            "title": "Can I use Un-Worry with the other tinctures or products?",
+            "summary": "Absolutely. Our product line is designed to mix and match. You can take more than 1 type of tincture in the same day, or pair it with our capsules or drinks."
+          }
+        },
+        "8bedb954-f745-49b9-bba6-6b88933489cd": {
+          "type": "item",
+          "settings": {
+            "title": "How do I use Un-Worry?",
+            "summary": "This is an herbal tincture with a dropper inside. Use a full dropper (or 2) directly into your mouth, under your tongue or on it. Some people prefer to add the tincture to water or tea."
+          }
+        },
+        "0cd0d0ea-530d-4019-aa13-907ebe4f32f4": {
+          "type": "item",
+          "settings": {
+            "title": "What is the shelf life?",
+            "summary": "18 months."
+          }
+        },
+        "5e55146c-1386-445b-af33-397995cefdb0": {
+          "type": "item",
+          "settings": {
+            "title": "Are there clincial studies supporting Un-Worry Tincture?",
+            "summary": "Ingredient studies include:\n\nCalabrese C, Gregory WL, Leo M, Kraemer D, Bone K, Oken B. Effects of a standardized Bacopa monnieri extract on cognitive performance, anxiety, and depression in the elderly: a randomized, double-blind, placebo-controlled trial. J Altern Complement Med.\n2008;14(6):707-713.\n\nKongkeaw C, Dilokthornsakul P, Thanarangsarit P, Limpeanchob N, Norman Scholfield C. Meta-analysis of randomized controlled trials on cognitive effects of Bacopa monnieri extract. J Ethnopharmacol.\n2014;151(1):528-535.\n\nJamshidi N, Cohen MM. The clinical efficacy and safety of tulsi in humans: a systematic review of the literature. Evid Based\nComplement Alternat Med. 2017;2017:9217567.\n\nJothie Richard E, Illuri R, Bethapudi B, et al. Anti-stress activity of ocimum sanctum: possible effects on hypothalamic-pituitary-\nadrenal axis. Phytother Res. 2016;30(5):805-814.\n\nJanda K, Wojtkowska K, Jakubczyk K, Antoniewicz J, Skonieczna-\nŻydecka K. Passiflora incarnata in neuropsychiatric disorders-a systematic review. Nutrients. 2020;12(12):E3894.\n\nTang W, Gao Y, Chen G, et al. A randomized, double-blind and placebo-controlled study of a Ganoderma lucidum polysaccharide\nextract in neurasthenia. J Med Food. 2005;8(1):53-58."
+          }
+        }
+      },
+      "block_order": [
+        "1634240465c0b5c17b-0",
+        "0c60312d-d6fa-4924-b672-eca2864022f3",
+        "ce154542-d448-4045-9f65-09f78778b21f",
+        "0184240e-c75c-41ad-b224-9ac78518789d",
+        "2a67c572-b5b7-4040-b550-58b3589756ca",
+        "8bedb954-f745-49b9-bba6-6b88933489cd",
+        "0cd0d0ea-530d-4019-aa13-907ebe4f32f4",
+        "5e55146c-1386-445b-af33-397995cefdb0"
+      ],
+      "settings": {
+        "bg_color": "bg--tan",
+        "max_width": 1400,
+        "large_accordion": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1634240261fb756b34",
+    "e8d7d90b-ed43-4cb3-8c0d-75df6ff3f9f6",
+    "edc74766-2e80-4997-9b1f-831756fad93f",
+    "66b7118f-60a8-48df-936c-7dbfce224d07",
+    "74cf7d4e-e9f0-4547-9322-0f049484c0f5",
+    "f549296d-caa8-4afb-ba4c-2904723542d0",
+    "31ad7657-4a47-4593-b940-439208614e68",
+    "1635002959ae15c915",
+    "1634240465c0b5c17b"
+  ]
+}
