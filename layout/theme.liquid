@@ -32,12 +32,16 @@
 		integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
 		crossorigin="anonymous"
         defer="defer"></script>
+<!--   {% if template contains 'product' %}
+  <script type="text/javascript" src="{{ 'jquery.zoom.min.js' | asset_url }}" defer=”defer”>
+{% endif %} -->
 	{{ 'theme.min.css' | append: '?v=1.5' | asset_url | stylesheet_tag }}
 	<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
 	<script src="{{ 'site.min.js' | asset_url }}" defer="defer"></script>
 	{%- render 'bold-subscription-widget' -%}
 	{{ 'bsub.js' | asset_url | script_tag }}
 	{{ 'bsub.scss.css' | asset_url | stylesheet_tag }}
+	{{ 'custom-main.min.css' | asset_url | stylesheet_tag: preload: true }}
 	{%  comment %}{% render 'taboola_base' %}{% endcomment %}
 	{% comment %}{% render 'quantcast_base' %}{% endcomment %}
 	<script type="text/javascript">
@@ -69,7 +73,10 @@ page-inner
 {%- endif -%}
 {%- endcapture -%}
 
-<body class=" {{ pageLayout }}{% if template.name == 'product' %} bg--tan{% endif %}">
+<body 
+	class=" {{ pageLayout }}{% if template.name == 'product' %} bg--tan{% endif %}"
+	data-ribbon="a"
+>
 	
 	<noscript>
 		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3Q8LJ5" height="0" width="0" style="display:none;visibility:hidden"></iframe>

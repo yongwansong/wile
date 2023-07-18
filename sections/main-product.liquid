@@ -9,6 +9,12 @@
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">{% endcomment %}
 
+<link rel="stylesheet" href="{{ 'product-zoom.css' | asset_url }}" media="print" onload="this.media='all'">
+<script>
+		$(document).ready(function(){
+			$('#pimg').zoom();
+		});
+	</script>
 <section class="bg--white">
 	<div class="product inner">
 		<div class="product-media mb--2">
@@ -35,13 +41,17 @@
 			<div class="pdp-slider-nav">
 				{%- for media in product.media -%}
 				{%- if media.media_type == 'image' -%}
-					<div><img
+					<div class=”image-container”>
+                      <img
+                        id="pimg"
+                        class=”image-zoom”
 						src="{{ media.preview_image }}"
 						alt="{{ media.alt | escape }}"
 						height=""
 						width=""
 						loading="lazy"
-						>
+                        data-zoom="{{ featured_image | img_url: '1024x1024', scale: 2 }}">
+                         <div class="image-details"> </div>
 					</div>
 				{%- endif -%}
 			{%- endfor -%}

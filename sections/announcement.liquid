@@ -5,50 +5,50 @@
 {%- for block in section.blocks -%}
 
 	{% assign pdpOnly = block.settings.pdp_only %}
+	{% assign isABtest = block.settings.ab_test %}
   {%- case block.type -%}
-    {%- when 'announcement' -%}
-
+  {%- when 'announcement' -%}
+    
 	  {% if pdpOnly == true %}
+      {% if template contains 'product' %}
+        {% comment %} To be shown on the PDPs ribbon only{% endcomment %}
+        {%- if block.settings.text != blank -%}
+          {%- if block.settings.link != blank -%}
+            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
+          {%- endif -%}
+        <span class="announcement-bar__text">
+                {{ block.settings.text | escape }}
+              </span>
+          {%- if block.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
+        {% comment %} END OF {% endcomment %}
+      {% endif %}
+	  {% else %}
+    {% if isABtest != true%}
+      {%- if block.settings.text != blank -%}
+        {%- if block.settings.link != blank -%}
+          <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow original-announcement">
+        {%- endif -%}
+          <span class="announcement-bar__text original-announcement">
+            {{ block.settings.text | escape }}
+          </span>
+        {%- if block.settings.link != blank -%}
+          </a>
+        {%- endif -%}
+      {%- endif -%}
+    {% else %}
+    
+      <span class="test-announcement" style="color: white;">{{ block.settings.text }}</span>
+    {% endif %}
 
-		{% if template contains 'product' %}
-
+   
+      
+        
  
-        {%- if block.settings.text != blank -%}
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
-          {%- endif -%}
-              <span class="announcement-bar__text">
-                {{ block.settings.text | escape }}
-                {% comment %}{%- if block.settings.link != blank -%}
-                  {% render 'icon-arrow' %}
-                {%- endif -%}{% endcomment %}
-              </span>
-          {%- if block.settings.link != blank -%}
-            </a>
-          {%- endif -%}
-        {%- endif -%}
-
-		{% endif %}
-
-	 {% else %}
-
-	
-        {%- if block.settings.text != blank -%}
-          {%- if block.settings.link != blank -%}
-            <a href="{{ block.settings.link }}" class="announcement-bar__link link link--text focus-inset animate-arrow">
-          {%- endif -%}
-              <span class="announcement-bar__text">
-                {{ block.settings.text | escape }}
-                {% comment %}{%- if block.settings.link != blank -%}
-                  {% render 'icon-arrow' %}
-                {%- endif -%}{% endcomment %}
-              </span>
-          {%- if block.settings.link != blank -%}
-            </a>
-          {%- endif -%}
-        {%- endif -%}
-
-	 {% endif %}
+        
+      {% endif %}
 
 
   {%- endcase -%}
@@ -56,6 +56,51 @@
 
   </div>
   
+
+<script>
+// AB test - variant B logic
+
+const experimentVariant = document.querySelector('body').dataset.ribbon
+
+if (experimentVariant == 'b') {
+  const $testAnnouncements = [...document.querySelectorAll('.test-announcement')]
+  const rotationInterval = 2500
+  
+  function rotateRibbon($rotatingElements, interval) {
+    let nextAnnouncementIndex = 1
+    
+    $rotatingElements[0].style.display = 'block'
+    
+    setInterval(() => {
+      $rotatingElements.forEach($announcement => {
+        $announcement.style.display = 'none'
+      })
+      $rotatingElements[nextAnnouncementIndex].style.display = 'block';
+      nextAnnouncementIndex++
+      if (nextAnnouncementIndex >= $rotatingElements.length) {
+        nextAnnouncementIndex = 0
+      }
+    }, interval)
+  }
+
+  rotateRibbon($testAnnouncements, rotationInterval)
+}
+</script>
+
+<style>
+  .test-announcement {
+    display: none;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  .test-announcement strong {
+    font-family: 'wigrum-bold';
+  }
+  body[data-ribbon="b"] .original-announcement {
+    display: none;
+  }
+
+</style>
   
 {% javascript %}
 
@@ -130,7 +175,14 @@
   			"id": "pdp_only",
   			"label": "PDP Only",
   			"default": false
+		},
+		{
+      "type":"checkbox",
+      "id": "ab_test",
+      "label": "Belongs to AB test",
+      "default": false
 		}
+
       ]
     }
   ],
