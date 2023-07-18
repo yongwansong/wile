@@ -3,18 +3,6 @@
     "16563507299406e79e": {
       "type": "hero-carousel",
       "blocks": {
-        "789ffcda-88fd-4545-82cc-bcfbd5459a6c": {
-          "type": "item",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Wile_Capsules_Group_Share2_763265e7-e4ac-4a07-a811-991dc51f15ab.png",
-            "image_mobile": "shopify:\/\/shop_images\/Wile_Capsules_Group_Share2_763265e7-e4ac-4a07-a811-991dc51f15ab.png",
-            "text_reverse": false,
-            "heading": "FEEL MORE LIKE YOU",
-            "text": "<h2>Save 20% Sitewide<\/h2><h2>Offer Code SUMMER20<\/h2>",
-            "button_label": "SHOP NOW",
-            "button_link": "shopify:\/\/collections"
-          }
-        },
         "e67de3f0-7d9d-4f1b-a4f7-9ea59f702dd8": {
           "type": "item",
           "settings": {
@@ -48,6 +36,19 @@
             "heading": "It's your power.\nTake it.",
             "text": "<p>Shop clinically backed, naturopath-formulated wellness for grown women 40+.<\/p>",
             "button_label": "SHOP",
+            "button_link": "shopify:\/\/collections"
+          }
+        },
+        "789ffcda-88fd-4545-82cc-bcfbd5459a6c": {
+          "type": "item",
+          "disabled": true,
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Wile_Capsules_Group_Share2_763265e7-e4ac-4a07-a811-991dc51f15ab.png",
+            "image_mobile": "shopify:\/\/shop_images\/Wile_Capsules_Group_Share2_763265e7-e4ac-4a07-a811-991dc51f15ab.png",
+            "text_reverse": false,
+            "heading": "FEEL MORE LIKE YOU",
+            "text": "<h2>Save 20% Sitewide<\/h2><h2>Offer Code SUMMER20<\/h2>",
+            "button_label": "SHOP NOW",
             "button_link": "shopify:\/\/collections"
           }
         },
@@ -92,10 +93,10 @@
         }
       },
       "block_order": [
-        "789ffcda-88fd-4545-82cc-bcfbd5459a6c",
         "e67de3f0-7d9d-4f1b-a4f7-9ea59f702dd8",
         "10a5ee41-e46a-4eac-93e4-e3224708f126",
         "7d676822-d640-4d07-92bb-ba32ad39763e",
+        "789ffcda-88fd-4545-82cc-bcfbd5459a6c",
         "f09e09f9-3bc3-4671-ad64-666b2c31b563",
         "3a27cb17-cacb-40f6-9bc8-ac185b7e5c93",
         "262397f9-f78e-472c-ac40-897131f21684"
