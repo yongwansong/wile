@@ -20,7 +20,7 @@
         <ul class="siteheader-nav-list" role="list">
 
           {%- for link in section.settings.menu.links -%}
-            <li class="siteheader-nav-list__item" id="{{link.title | handleize}}">
+            <li class="siteheader-nav-list__item">
               <a
                 href="{{ link.url }}"
                 class="siteheader-nav-link{% if link.current %} siteheader-nav-link--active{% endif %}"
@@ -76,9 +76,6 @@
       </a>
     </div>
     <div class="siteheader-menu">
-      {%- if section.settings.quiz_link != blank -%}
-        <a href="{{ section.settings.quiz_link }}" class="siteheader-nav-link siteheader-nav-btn">{{ section.settings.quiz_label }}</a>
-      {%- endif -%}
       <a href="/pages/store-locator" class="siteheader-nav-link m--hidden">Find Us</a>
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_login_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="siteheader-nav-link m--hidden">
@@ -106,21 +103,7 @@
     </div>
   </div>
 </header>
-<style>
-  @media screen and (min-width: 1024px) {
-    .hide-on-desktop {
-      display: none;
-    }
-  }
-  @media screen and (max-width: 1024px) {
-    .hide-on-mobile {
-      display: none;
-    }
-  }
-  #best-sellers {
-    display: none;
-  }
-</style>
+
 {%- if request.page_type != 'cart' -%}
   {%- render 'cart-notification' -%}
 {%- endif -%}
