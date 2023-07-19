@@ -152,14 +152,6 @@
             "image": "shopify:\/\/shop_images\/logo-wholefoods.png"
           }
         },
-        "2d6cce50-9d81-44f6-be73-d6128f493d7a": {
-          "type": "logo",
-          "disabled": true,
-          "settings": {
-            "label": "Walgreens",
-            "image": "shopify:\/\/shop_images\/logo-walgreens_d5b12016-1847-4699-8e9a-2fd26e23f243.png"
-          }
-        },
         "457b1934-e2aa-4a94-8444-3c9022e41b2a": {
           "type": "logo",
           "settings": {
@@ -167,11 +159,12 @@
             "image": "shopify:\/\/shop_images\/cvs-logo_857e3781-73ab-42a5-a8e4-eb30d0d8c71d.png"
           }
         },
-        "2e3f0c8e-b36f-43e2-9767-efbe079ba481": {
+        "2d6cce50-9d81-44f6-be73-d6128f493d7a": {
           "type": "logo",
+          "disabled": true,
           "settings": {
-            "label": "",
-            "image": "shopify:\/\/shop_images\/Fresh_Thyme_new_banner_logo_Aug2020_974aee69-da0e-4460-aea2-5fbcca9ff51e.png"
+            "label": "Walgreens",
+            "image": "shopify:\/\/shop_images\/logo-walgreens_d5b12016-1847-4699-8e9a-2fd26e23f243.png"
           }
         },
         "7383924f-6861-4aea-a007-2608210b7102": {
@@ -188,15 +181,22 @@
             "label": "",
             "image": "shopify:\/\/shop_images\/Sprouts-Farmers-Market-Emblem.png"
           }
+        },
+        "2e3f0c8e-b36f-43e2-9767-efbe079ba481": {
+          "type": "logo",
+          "settings": {
+            "label": "",
+            "image": "shopify:\/\/shop_images\/Fresh_Thyme_new_banner_logo_Aug2020_974aee69-da0e-4460-aea2-5fbcca9ff51e.png"
+          }
         }
       },
       "block_order": [
         "3c79f9ba-631e-483d-b7f2-fefa80c456f8",
-        "2d6cce50-9d81-44f6-be73-d6128f493d7a",
         "457b1934-e2aa-4a94-8444-3c9022e41b2a",
-        "2e3f0c8e-b36f-43e2-9767-efbe079ba481",
+        "2d6cce50-9d81-44f6-be73-d6128f493d7a",
         "7383924f-6861-4aea-a007-2608210b7102",
-        "de74d358-3ba2-4257-8ed9-956f0d9706aa"
+        "de74d358-3ba2-4257-8ed9-956f0d9706aa",
+        "2e3f0c8e-b36f-43e2-9767-efbe079ba481"
       ],
       "settings": {
         "heading": "Now available at:",
