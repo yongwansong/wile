@@ -176,9 +176,17 @@
         },
         "7383924f-6861-4aea-a007-2608210b7102": {
           "type": "logo",
+          "disabled": true,
           "settings": {
             "label": "",
             "image": "shopify:\/\/shop_images\/Plum_Markets.webp"
+          }
+        },
+        "de74d358-3ba2-4257-8ed9-956f0d9706aa": {
+          "type": "logo",
+          "settings": {
+            "label": "",
+            "image": "shopify:\/\/shop_images\/Sprouts-Farmers-Market-Emblem.png"
           }
         }
       },
@@ -187,7 +195,8 @@
         "2d6cce50-9d81-44f6-be73-d6128f493d7a",
         "457b1934-e2aa-4a94-8444-3c9022e41b2a",
         "2e3f0c8e-b36f-43e2-9767-efbe079ba481",
-        "7383924f-6861-4aea-a007-2608210b7102"
+        "7383924f-6861-4aea-a007-2608210b7102",
+        "de74d358-3ba2-4257-8ed9-956f0d9706aa"
       ],
       "settings": {
         "heading": "Now available at:",
