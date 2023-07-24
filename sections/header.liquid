@@ -6,10 +6,7 @@
 {% endcomment %}
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
-{%- if settings.predictive_search_enabled -%}
-  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
-  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
-{%- endif -%}
+
 <script src="{{ 'search-form.js' | asset_url }}" defer="defer"></script>
 <header class="siteheader-content">
   <div class="siteheader-inner">
@@ -153,6 +150,10 @@
   </script>
 {%- endif -%}
 
+{%- if settings.predictive_search_enabled -%}
+  <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
+  <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
+{%- endif -%}
 
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
 
